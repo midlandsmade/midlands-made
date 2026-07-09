@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Midlands Made — Websites for Local Businesses in Mullingar & the Midlands</title>
+<meta name="description" content="Professional, mobile-friendly websites for local businesses in Mullingar and across the Irish Midlands. Live in a few days. €300 setup + €20/month — no agency prices." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#0e1116; --ink2:#1a2030; --muted:#5b6472; --line:#e7e9ef;
+    --bg:#ffffff; --soft:#f6f7fb; --accent:#4f46e5; --accent2:#06b6d4;
+    --grad:linear-gradient(120deg,#4f46e5 0%,#06b6d4 100%);
+    --shadow:0 18px 50px -20px rgba(20,25,50,.35);
+    --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.logo{font-family:'Poppins',sans-serif;letter-spacing:-.02em;line-height:1.12}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:min(1120px,92vw);margin:0 auto}
+  .accent{color:var(--accent)}
+  .grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+  /* header */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .logo{font-weight:800;font-size:1.25rem;display:flex;align-items:center;gap:9px}
+  .logo .dot{width:12px;height:12px;border-radius:4px;background:var(--grad);box-shadow:0 0 0 4px rgba(79,70,229,.12)}
+  .nav-links{display:flex;align-items:center;gap:28px}
+  .nav-links a{color:var(--muted);font-weight:500;font-size:.95rem}
+  .nav-links a:hover{color:var(--ink)}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Poppins';font-weight:600;font-size:.95rem;padding:12px 22px;border-radius:12px;border:0;cursor:pointer;transition:.18s;white-space:nowrap}
+  .btn-primary{background:var(--grad);color:#fff;box-shadow:0 10px 24px -10px rgba(79,70,229,.7)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 30px -10px rgba(79,70,229,.8)}
+  .btn-ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+  .nav .btn{padding:10px 18px}
+  .burger{display:none;background:none;border:0;cursor:pointer;padding:6px}
+  .burger span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;border-radius:2px;transition:.2s}
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;padding:74px 0 84px;background:
+    radial-gradient(1000px 500px at 80% -10%,rgba(6,182,212,.10),transparent 60%),
+    radial-gradient(800px 500px at 0% 0%,rgba(79,70,229,.10),transparent 55%)}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.82rem;color:var(--accent);background:rgba(79,70,229,.08);padding:7px 14px;border-radius:100px;margin-bottom:22px}
+  .hero h1{font-size:clamp(2.1rem,5.4vw,3.6rem);font-weight:800;max-width:14ch}
+  .hero p.lead{font-size:clamp(1.05rem,2.2vw,1.28rem);color:var(--muted);max-width:52ch;margin:20px 0 30px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .hero-trust{margin-top:26px;display:flex;gap:22px;flex-wrap:wrap;color:var(--muted);font-size:.9rem}
+  .hero-trust b{color:var(--ink)}
+  .hero-trust .ck{color:#10b981;font-weight:700}
+
+  section{padding:80px 0}
+  .sec-head{text-align:center;max-width:640px;margin:0 auto 52px}
+  .sec-head .kick{font-weight:600;color:var(--accent);font-size:.85rem;text-transform:uppercase;letter-spacing:.08em}
+  .sec-head h2{font-size:clamp(1.7rem,3.6vw,2.5rem);font-weight:700;margin:12px 0}
+  .sec-head p{color:var(--muted);font-size:1.05rem}
+
+  /* features */
+  .grid{display:grid;gap:20px}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+  .feat .ico{width:46px;height:46px;border-radius:12px;background:var(--grad);display:grid;place-items:center;margin-bottom:16px}
+  .feat .ico svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .feat h3{font-size:1.15rem;font-weight:600;margin-bottom:6px}
+  .feat p{color:var(--muted);font-size:.96rem}
+  .card.feat{transition:transform .2s,box-shadow .2s,border-color .2s}
+  .card.feat:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#d6dbec}
+  .work-card{transition:transform .2s}
+  .work-card:hover{transform:translateY(-5px)}
+  .wa-float{position:fixed;right:20px;bottom:20px;z-index:60;display:none;align-items:center;gap:9px;background:#25d366;color:#fff;font-family:'Poppins';font-weight:600;font-size:.95rem;padding:12px 18px;border-radius:100px;box-shadow:0 12px 30px -8px rgba(37,211,102,.6);transition:.18s}
+  .wa-float:hover{transform:translateY(-2px);box-shadow:0 16px 34px -8px rgba(37,211,102,.78)}
+  .wa-float svg{width:22px;height:22px;fill:#fff}
+
+  /* motion */
+  .hero .wrap{position:relative;z-index:1}
+  .blob{position:absolute;border-radius:50%;filter:blur(66px);z-index:0;pointer-events:none;opacity:0}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+  @keyframes floaty{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(12px,28px) scale(1.08)}}
+  header.scrolled{box-shadow:0 8px 26px -16px rgba(20,25,50,.55)}
+  .nav-links a:not(.btn){position:relative}
+  .nav-links a:not(.btn)::after{content:'';position:absolute;left:0;bottom:-5px;height:2px;width:0;background:var(--grad);border-radius:2px;transition:width .22s}
+  .nav-links a:not(.btn):hover::after{width:100%}
+  @media (prefers-reduced-motion: no-preference){
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s cubic-bezier(.22,.7,.2,1),transform .6s cubic-bezier(.22,.7,.2,1)}
+    .reveal.in{opacity:1;transform:none}
+    .hero .eyebrow{animation:fadeUp .7s both}
+    .hero h1{animation:fadeUp .7s .08s both}
+    .hero .lead{animation:fadeUp .7s .18s both}
+    .hero .hero-cta{animation:fadeUp .7s .28s both}
+    .hero .hero-trust{animation:fadeUp .7s .38s both}
+    .blob{opacity:.32;animation:floaty 15s ease-in-out infinite}
+    .blob.b1{width:360px;height:360px;background:#4f46e5;top:-90px;right:4%}
+    .blob.b2{width:300px;height:300px;background:#06b6d4;top:30px;left:-70px;animation-delay:-7s}
+  }
+
+  /* rotating hero word */
+  .rotwrap{display:inline-block}
+  .rot-word{display:inline-block;will-change:transform,opacity}
+  .rot-cursor{display:inline-block;width:3px;height:.9em;background:var(--accent);margin-left:5px;transform:translateY(2px);animation:blink 1.05s steps(1) infinite}
+  @keyframes blink{50%{opacity:0}}
+
+  /* grey→white scroll statement */
+  .statement{background:var(--ink);padding:104px 0}
+  .statement h2{font-family:'Poppins';font-weight:700;font-size:clamp(1.55rem,4vw,2.8rem);line-height:1.3;text-align:center;max-width:22ch;margin:0 auto;letter-spacing:-.01em}
+  .sw{color:rgba(255,255,255,.16);transition:color .1s linear}
+
+  /* numbered feature cards */
+  .grid.feat{counter-reset:feat}
+  .card.feat{counter-increment:feat;position:relative;overflow:hidden}
+  .card.feat::before{content:counter(feat,decimal-leading-zero);position:absolute;top:0;right:14px;font-family:'Poppins';font-weight:800;font-size:3.1rem;color:#eef1f8;z-index:0;transform:translateY(8px);opacity:.7;transition:transform .28s,opacity .28s,color .28s;pointer-events:none}
+  .card.feat:hover::before{transform:translateY(-2px) scale(1.06);opacity:1;color:#e2e6f4}
+  .card.feat>*{position:relative;z-index:1}
+  .card.feat .ico{transition:transform .28s,box-shadow .28s}
+  .card.feat:hover .ico{transform:translateY(-6px) rotate(-4deg)}
+
+  /* steps */
+  .steps{background:var(--ink);color:#fff;border-radius:26px;padding:56px 40px}
+  .steps .sec-head h2{color:#fff}
+  .steps .sec-head p{color:#aab2c5}
+  .step-row{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .step{position:relative;padding:26px;background:#161c2b;border:1px solid #232c40;border-radius:16px}
+  .step .n{font-family:'Poppins';font-weight:800;font-size:1.1rem;width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:var(--grad);margin-bottom:14px}
+  .step h3{font-size:1.12rem;margin-bottom:6px}
+  .step p{color:#aab2c5;font-size:.95rem}
+
+  /* work */
+  .work-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .work-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+  .browser{background:#eef0f6;padding:11px 14px;display:flex;align-items:center;gap:7px;border-bottom:1px solid var(--line)}
+  .browser i{width:11px;height:11px;border-radius:50%;background:#cfd4e0;display:block}
+  .browser .bar{margin-left:10px;flex:1;height:22px;background:#fff;border-radius:7px;font-size:.72rem;color:#9aa2b1;display:flex;align-items:center;padding:0 12px;font-family:'Inter'}
+  .shot{aspect-ratio:16/10;position:relative;display:grid;place-items:center;text-align:center;color:#fff;overflow:hidden}
+  .shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center}
+  .shot .ph{padding:24px}
+  .shot .ph .nm{font-family:'Poppins';font-weight:800;font-size:1.5rem}
+  .shot .ph .tag{opacity:.9;font-size:.9rem;margin-top:4px}
+  .work-body{padding:22px 24px 26px}
+  .work-body h3{font-size:1.25rem;font-weight:700}
+  .work-body .type{color:var(--accent);font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em}
+  .work-body p{color:var(--muted);font-size:.96rem;margin:8px 0 16px}
+  .work-body .tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+  .work-body .tags span{font-size:.78rem;color:var(--muted);background:var(--soft);border:1px solid var(--line);padding:4px 11px;border-radius:100px}
+
+  /* pricing */
+  .pricing{background:var(--soft)}
+  .price-card{max-width:560px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);overflow:hidden}
+  .price-top{padding:38px 40px;text-align:center;border-bottom:1px solid var(--line);background:radial-gradient(600px 200px at 50% 0,rgba(79,70,229,.07),transparent)}
+  .price-top .plan{font-weight:600;color:var(--accent);letter-spacing:.04em;text-transform:uppercase;font-size:.82rem}
+  .price-top .amt{font-family:'Poppins';font-weight:800;font-size:3rem;margin:10px 0 2px}
+  .price-top .amt small{font-size:1.05rem;color:var(--muted);font-weight:500}
+  .price-top .sub{color:var(--muted)}
+  .price-list{padding:30px 40px;display:grid;gap:13px}
+  .price-list li{list-style:none;display:flex;gap:11px;align-items:flex-start;font-size:.98rem}
+  .price-list .ck{color:#10b981;font-weight:800;flex-shrink:0}
+  .price-foot{padding:0 40px 38px;text-align:center}
+  .price-foot .btn{width:100%;justify-content:center;padding:15px}
+  .price-foot .note{color:var(--muted);font-size:.85rem;margin-top:12px}
+
+  /* faq */
+  .faq-item{border-bottom:1px solid var(--line)}
+  .faq-q{width:100%;text-align:left;background:none;border:0;cursor:pointer;padding:22px 0;display:flex;justify-content:space-between;gap:20px;align-items:center;font-family:'Poppins';font-weight:600;font-size:1.06rem;color:var(--ink)}
+  .faq-q .pm{flex-shrink:0;width:26px;height:26px;transition:.2s;color:var(--accent);font-size:1.5rem;line-height:1;display:grid;place-items:center}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .28s ease;color:var(--muted)}
+  .faq-a p{padding:0 0 22px}
+  .faq-item.open .pm{transform:rotate(45deg)}
+
+  /* contact */
+  .contact{background:var(--ink);color:#fff}
+  .contact .sec-head h2{color:#fff}
+  .contact .sec-head p{color:#aab2c5}
+  .form{max-width:620px;margin:0 auto;background:#161c2b;border:1px solid #232c40;border-radius:22px;padding:34px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:.88rem;color:#c7cede;margin-bottom:7px;font-weight:500}
+  .field input,.field textarea,.field select{width:100%;background:#0e1422;border:1px solid #2b364c;border-radius:12px;padding:13px 15px;color:#fff;font-family:'Inter';font-size:.97rem;transition:.15s}
+  .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(79,70,229,.25)}
+  .field textarea{resize:vertical;min-height:110px}
+  .form .btn{width:100%;justify-content:center;padding:15px;margin-top:6px}
+  .form-msg{text-align:center;margin-top:14px;font-size:.95rem;min-height:1.2em}
+  .hp{position:absolute;left:-9999px}
+
+  footer{background:var(--ink);color:#8b93a7;padding:30px 0;border-top:1px solid #232c40;text-align:center;font-size:.9rem}
+  footer a{color:#c7cede}
+
+  @media(max-width:820px){
+    .g3,.step-row,.work-grid{grid-template-columns:1fr}
+    .nav-links{position:fixed;inset:68px 0 auto 0;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;padding:8px 0;transform:translateY(-140%);transition:.25s;box-shadow:var(--shadow)}
+    .nav-links.open{transform:translateY(0)}
+    .nav-links a{padding:14px 24px}
+    .nav-links .btn{margin:8px 24px}
+    .burger{display:block}
+    .steps{padding:44px 22px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo"><span class="dot"></span>Midlands&nbsp;Made</a>
+    <nav class="nav-links" id="nav">
+      <a href="#what">What you get</a>
+      <a href="#work">Recent work</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="btn btn-primary">Get a quote</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="wrap">
+    <span class="eyebrow">◆ Mullingar &amp; the Irish Midlands</span>
+    <h1>A website that brings your local business <span class="rotwrap"><span class="rot-word grad-text">more customers</span><span class="rot-cursor"></span></span></h1>
+    <p class="lead">Clean, mobile-friendly websites for local businesses — with a booking form built in, ready for Google, and live in a few days. No agency prices, no monthly SaaS traps.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-primary">Get a free quote →</a>
+      <a href="#work" class="btn btn-ghost">See recent work</a>
+    </div>
+    <div class="hero-trust">
+      <span class="ck">✓</span> <span><b>Live in ~3 days</b></span>
+      <span class="ck">✓</span> <span><b>Built &amp; hosted for you</b></span>
+      <span class="ck">✓</span> <span><b>Local, not an agency</b></span>
+    </div>
+  </div>
+</section>
+
+<section class="statement">
+  <div class="wrap">
+    <h2 class="reveal-text">Most people check you online before they ever walk in — I make sure what they find looks worth choosing.</h2>
+  </div>
+</section>
+
+<section id="what">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kick">What you get</div>
+      <h2>Everything a local business needs online — nothing it doesn't.</h2>
+      <p>A site that looks great on a phone, gets found on Google, and turns visitors into bookings.</p>
+    </div>
+    <div class="grid g3 feat">
+      <div class="card feat">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
+        <h3>Looks perfect on mobile</h3>
+        <p>Most of your customers will find you on their phone. Your site will look sharp on every screen, automatically.</p>
+      </div>
+      <div class="card feat">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <h3>Booking &amp; enquiry form</h3>
+        <p>Customers send you their details in one tap — straight to your inbox or WhatsApp. No third-party fees.</p>
+      </div>
+      <div class="card feat">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg></div>
+        <h3>Ready for Google</h3>
+        <p>Set up with a Google Maps pin, your real address, and the basics search engines look for — so locals can find you.</p>
+      </div>
+      <div class="card feat">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></div>
+        <h3>Fast &amp; secure</h3>
+        <p>Loads in a blink on modern hosting with HTTPS. Nothing to update, nothing to break.</p>
+      </div>
+      <div class="card feat">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg></div>
+        <h3>Done completely for you</h3>
+        <p>Send me your photos and details — I do the rest. You review it, we tweak it, then it goes live.</p>
+      </div>
+      <div class="card feat">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Real support, from a local</h3>
+        <p>Need a price changed or a photo swapped? Message me. No ticket queues, no call centres.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="steps">
+      <div class="sec-head">
+        <div class="kick" style="color:#8ab4ff">How it works</div>
+        <h2>From your photos to live — in three steps.</h2>
+        <p>Most sites are ready to review within a few days.</p>
+      </div>
+      <div class="step-row">
+        <div class="step"><div class="n">1</div><h3>You send the details</h3><p>Your services, prices, a few photos, and how you want customers to reach you. A quick chat or a few messages.</p></div>
+        <div class="step"><div class="n">2</div><h3>I build it</h3><p>I design and build the whole site around your business — usually ready to look at within 2–3 days.</p></div>
+        <div class="step"><div class="n">3</div><h3>Review &amp; go live</h3><p>You check it, we fine-tune anything, then it goes live on your own web address. I keep it running.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kick">Recent work</div>
+      <h2>Real, polished sites — built end to end.</h2>
+      <p>From an elegant local dance studio to a full trading web app with accounts and billing — a sense of the range.</p>
+    </div>
+    <div class="work-grid">
+      <div class="work-card">
+        <div class="browser"><i></i><i></i><i></i><div class="bar">mullingarlatindance.ie</div></div>
+        <div class="shot" style="background:linear-gradient(135deg,#7a1420,#c9a24d)">
+          <img src="work/mullingar.jpg" alt="Mullingar Latin Dance website" onerror="this.style.display='none'" />
+          <div class="ph"><div class="nm">Mullingar Latin Dance</div><div class="tag">Latin dance classes</div></div>
+        </div>
+        <div class="work-body">
+          <div class="type">Dance studio</div>
+          <h3>Mullingar Latin Dance</h3>
+          <p>A warm, elegant site with class times, a Google-review carousel, and a smart booking form that recommends the right class for each enquiry.</p>
+          <div class="tags"><span>Booking form</span><span>Class schedule</span><span>Reviews</span><span>Mobile-first</span></div>
+          <a href="#" class="btn btn-ghost" data-live="mullingar">View live site →</a>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="browser"><i></i><i></i><i></i><div class="bar">tradingbuddyapp.com</div></div>
+        <div class="shot" style="background:linear-gradient(135deg,#0e1217,#3fb96a)">
+          <img src="work/tradingbuddy.jpg" alt="Trading Buddy web app" onerror="this.style.display='none'" />
+          <div class="ph"><div class="nm">Trading Buddy</div><div class="tag">Web app &amp; Chrome extension</div></div>
+        </div>
+        <div class="work-body">
+          <div class="type">Web app / SaaS</div>
+          <h3>Trading Buddy</h3>
+          <p>A full web application with user accounts, subscriptions and live dashboards — plus a companion Chrome extension. Built end to end: proof I handle serious, production-grade builds, not just brochure sites.</p>
+          <div class="tags"><span>Web app</span><span>Accounts &amp; billing</span><span>Dashboard</span><span>Chrome extension</span></div>
+          <a href="#" class="btn btn-ghost" data-live="tradingbuddy">View live site →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kick">Simple pricing</div>
+      <h2>One clear price. No surprises.</h2>
+      <p>What a local agency charges thousands for — for the price of a coffee a week.</p>
+    </div>
+    <div class="price-card">
+      <div class="price-top">
+        <div class="plan">Complete website</div>
+        <div class="amt">€300 <small>once</small></div>
+        <div class="sub">then just €20/month — hosting, updates &amp; support</div>
+      </div>
+      <ul class="price-list">
+        <li><span class="ck">✓</span> A complete, custom website built around your business</li>
+        <li><span class="ck">✓</span> Looks perfect on phones, tablets and computers</li>
+        <li><span class="ck">✓</span> Booking / enquiry form to your inbox or WhatsApp</li>
+        <li><span class="ck">✓</span> Set up for Google &amp; Google Maps</li>
+        <li><span class="ck">✓</span> Your own web address (.ie or .com)</li>
+        <li><span class="ck">✓</span> Fast, secure hosting handled for you</li>
+        <li><span class="ck">✓</span> Small edits &amp; changes any time — just message me</li>
+      </ul>
+      <div class="price-foot">
+        <a href="#contact" class="btn btn-primary">Get my free quote →</a>
+        <div class="note">No deposit to enquire. Cancel the monthly any time — the site is yours.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap" style="max-width:760px">
+    <div class="sec-head">
+      <div class="kick">Questions</div>
+      <h2>Good questions, straight answers.</h2>
+    </div>
+    <div class="faq">
+      <div class="faq-item"><button class="faq-q">How long does it take? <span class="pm">+</span></button><div class="faq-a"><p>Most sites are ready for you to review within 2–3 days of getting your photos and details. Once you're happy, it goes live the same day.</p></div></div>
+      <div class="faq-item"><button class="faq-q">What do you need from me? <span class="pm">+</span></button><div class="faq-a"><p>Your services and prices, a handful of decent photos (your phone is fine), and how you'd like customers to reach you. That's it — I handle everything else.</p></div></div>
+      <div class="faq-item"><button class="faq-q">What's the €20/month for? <span class="pm">+</span></button><div class="faq-a"><p>Hosting, your web address, security, keeping the site online and fast, and any small edits you need along the way. No separate hosting bills or SaaS subscriptions to manage.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Do I own the website? <span class="pm">+</span></button><div class="faq-a"><p>Yes. The site and your domain are yours. If you ever want to stop the monthly, we'll hand everything over.</p></div></div>
+      <div class="faq-item"><button class="faq-q">I already have a Facebook/Instagram — do I need a site? <span class="pm">+</span></button><div class="faq-a"><p>Social is great for staying in touch, but a website is where new customers check you're real, see your prices, and book. It's the one place Google can send people looking for exactly what you do.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kick" style="color:#8ab4ff">Get started</div>
+      <h2>Get a free quote.</h2>
+      <p>Tell me about your business and I'll come back with ideas and a price — no obligation. I usually reply the same day.</p>
+    </div>
+    <form class="form" id="quoteForm">
+      <input type="hidden" name="access_key" value="44ef8cf3-73b3-463f-a77f-a37281648c9b" />
+      <input type="hidden" name="subject" value="New Midlands Web quote request" />
+      <input type="hidden" name="from_name" value="Midlands Web site" />
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" />
+      <div class="field"><label>Your name</label><input type="text" name="name" required placeholder="Jane Doe" /></div>
+      <div class="field"><label>Your business</label><input type="text" name="business" required placeholder="e.g. Jane's Hair Studio, Mullingar" /></div>
+      <div class="field"><label>Email or phone</label><input type="text" name="contact" required placeholder="you@email.com or 08X..." /></div>
+      <div class="field"><label>What do you need? <span style="color:#7a8296">(optional)</span></label><textarea name="message" placeholder="A quick line about your business and what you'd like — services, a booking form, a fresh look, etc."></textarea></div>
+      <button type="submit" class="btn btn-primary">Send my request →</button>
+      <div class="form-msg" id="formMsg"></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong style="color:#fff">Midlands Made</strong> — websites for local businesses in Mullingar &amp; across the Irish Midlands.</p>
+    <p style="margin-top:6px">Made locally. <a href="#contact">Get a quote →</a></p>
+  </div>
+</footer>
+
+<a class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="Message on WhatsApp"><svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.39.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>WhatsApp me</a>
+
+<script>
+  // mobile nav
+  const burger=document.getElementById('burger'), nav=document.getElementById('nav');
+  burger.addEventListener('click',()=>nav.classList.toggle('open'));
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+
+  // faq accordion
+  document.querySelectorAll('.faq-q').forEach(q=>{
+    q.addEventListener('click',()=>{
+      const item=q.parentElement, a=q.nextElementSibling, open=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;});
+      if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+    });
+  });
+
+  // live-site links (fill these in once the two sites are deployed)
+  const LIVE={ mullingar:'', tradingbuddy:'https://www.tradingbuddyapp.com' };
+  document.querySelectorAll('[data-live]').forEach(el=>{
+    const url=LIVE[el.dataset.live];
+    if(url){el.href=url;el.target='_blank';el.rel='noopener';}
+    else{el.addEventListener('click',e=>{e.preventDefault();alert('Live link coming soon — this site is being deployed.');});}
+  });
+
+  // whatsapp float
+  const WHATSAPP='353851161036';
+  if(WHATSAPP){const w=document.getElementById('waFloat');w.href='https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent("Hi! I saw Midlands Made — I'd like a website for my business.");w.style.display='inline-flex';}
+
+  // scroll-reveal (respects reduced-motion)
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    const targets=[...document.querySelectorAll('.sec-head,.card,.step,.work-card,.price-card,.faq-item,.form')];
+    targets.forEach(el=>el.classList.add('reveal'));
+    const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    targets.forEach(el=>{const sibs=[...el.parentElement.children].filter(c=>c.classList.contains('reveal'));const i=sibs.indexOf(el);if(i>0)el.style.transitionDelay=(i*70)+'ms';io.observe(el);});
+  }
+  // header shadow on scroll
+  const hdr=document.querySelector('header'),onScroll=()=>hdr.classList.toggle('scrolled',scrollY>10);
+  onScroll();addEventListener('scroll',onScroll,{passive:true});
+
+  // rotating hero word
+  const rot=document.querySelector('.rot-word');
+  if(rot && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    const WORDS=['more customers','more bookings','found on Google','taken seriously'];
+    let wi=0;
+    setInterval(()=>{
+      rot.style.transition='transform .35s ease,opacity .35s ease';
+      rot.style.transform='translateX(-22px)';rot.style.opacity='0';
+      setTimeout(()=>{
+        wi=(wi+1)%WORDS.length;rot.textContent=WORDS[wi];
+        rot.style.transition='none';rot.style.transform='translateX(26px)';
+        requestAnimationFrame(()=>{rot.style.transition='transform .4s ease,opacity .4s ease';rot.style.transform='translateX(0)';rot.style.opacity='1';});
+      },360);
+    },3000);
+  }
+
+  // scroll-driven grey→white statement
+  const rt=document.querySelector('.reveal-text');
+  if(rt){
+    rt.innerHTML=rt.textContent.split(' ').map(w=>'<span class="sw">'+w+'</span>').join(' ');
+    const sw=[...rt.querySelectorAll('.sw')];
+    const paint=()=>{const mid=innerHeight*0.5;sw.forEach(s=>{const r=s.getBoundingClientRect();const c=r.top+r.height/2;let p=(mid-c)/(innerHeight*0.28)+0.5;p=Math.max(0,Math.min(1,p));s.style.color='rgba(255,255,255,'+(0.16+0.84*p).toFixed(3)+')';});};
+    paint();addEventListener('scroll',paint,{passive:true});addEventListener('resize',paint);
+  }
+
+  // web3forms submit
+  const form=document.getElementById('quoteForm'), msg=document.getElementById('formMsg');
+  form.addEventListener('submit',async e=>{
+    e.preventDefault();
+    if(form.botcheck.checked)return;
+    msg.style.color='#8ab4ff';msg.textContent='Sending…';
+    try{
+      const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(form)))});
+      const data=await res.json();
+      if(data.success){msg.style.color='#34d399';msg.textContent='Got it! I\'ll be in touch shortly. 🎉';form.reset();}
+      else{msg.style.color='#f87171';msg.textContent='Something went wrong — email hello@ or try again.';}
+    }catch(err){msg.style.color='#f87171';msg.textContent='Network error — please try again.';}
+  });
+</script>
+</body>
+</html>

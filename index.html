@@ -4,18 +4,18 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Midlands Made — Websites for Local Businesses in Mullingar & the Midlands</title>
-<meta name="description" content="Professional, mobile-friendly websites for local businesses in Mullingar and across the Irish Midlands. Live in a few days. €300 flat — you own it, no monthly fees." />
+<meta name="description" content="Websites for local businesses in Mullingar and the Irish Midlands. Free homepage preview first — then €300 flat, you own it, no monthly fees. Live in days." />
 <meta name="theme-color" content="#101114" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%234f46e5'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Arial,sans-serif' font-weight='800' fill='white' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" />
 <!-- Open Graph / social cards. TODO(boss): once the domain is chosen, add og:url + absolute og:image. -->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Midlands Made" />
 <meta property="og:title" content="Midlands Made — Websites for Local Businesses in Mullingar & the Midlands" />
-<meta property="og:description" content="Professional, mobile-friendly websites for local businesses in Mullingar and across the Irish Midlands. Live in a few days. €300 flat — you own it, no monthly fees." />
+<meta property="og:description" content="Websites for local businesses in Mullingar and the Irish Midlands. Free homepage preview first — then €300 flat, you own it, no monthly fees." />
 <meta property="og:locale" content="en_IE" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Midlands Made — Websites for Local Businesses" />
-<meta name="twitter:description" content="Mobile-friendly websites for Mullingar & Midlands businesses. Live in days. €300 flat — no monthly fees." />
+<meta name="twitter:description" content="Free homepage preview first — then €300 flat, you own it. Websites for Mullingar & Midlands businesses." />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -51,6 +51,7 @@
   body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
   h1,h2,h3,.logo{font-family:'Poppins',sans-serif;letter-spacing:-.02em;line-height:1.12}
   a{color:inherit;text-decoration:none}
+  a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
   .wrap{width:min(1120px,92vw);margin:0 auto}
   .accent{color:var(--accent)}
   .grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -229,7 +230,7 @@
   .form{max-width:620px;margin:0 auto;background:var(--card);border:1px solid var(--line2);border-radius:22px;padding:34px}
   .field{margin-bottom:16px}
   .field label{display:block;font-size:.88rem;color:#c3c8d2;margin-bottom:7px;font-weight:500}
-  .field input,.field textarea,.field select{width:100%;background:var(--bg);border:1px solid var(--line2);border-radius:12px;padding:13px 15px;color:#fff;font-family:'Inter';font-size:.97rem;transition:.15s}
+  .field input,.field textarea,.field select{width:100%;background:var(--bg);border:1px solid var(--line2);border-radius:12px;padding:13px 15px;color:#fff;font-family:'Inter';font-size:16px;transition:.15s}
   .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(109,112,246,.25)}
   .field textarea{resize:vertical;min-height:110px}
   .form .btn{width:100%;justify-content:center;padding:15px;margin-top:6px}
@@ -254,6 +255,16 @@
   }
 
   @media(max-width:820px){
+    .hero{padding:56px 0 64px}
+    section{padding:64px 0}
+    .statement{padding:80px 0}
+    .sec-head{margin-bottom:40px}
+    .blob{filter:blur(46px)}
+    .blob.b2{display:none}
+    body::after{display:none}
+    .btn{padding:14px 24px}
+    .price-top,.price-list,.price-foot{padding-left:24px;padding-right:24px}
+    .form{padding:24px 18px}
     .g3,.step-row,.work-grid{grid-template-columns:1fr}
     .nav-links{position:fixed;inset:68px 0 auto 0;background:var(--bg2);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;padding:8px 0;transform:translateY(-140%);transition:.25s;box-shadow:var(--shadow)}
     .nav-links.open{transform:translateY(0)}
@@ -277,7 +288,7 @@
       <a href="#work">Recent work</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
-      <a href="#contact" class="btn btn-primary magnetic">Free site plan</a>
+      <a href="#contact" class="btn btn-primary magnetic">Free preview</a>
     </nav>
     <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
@@ -292,7 +303,7 @@
     <h1><span class="split-hero">A website that brings your local business</span> <span class="rotwrap"><span class="rot-word grad-text">more customers</span><span class="rot-cursor"></span></span></h1>
     <p class="lead">Clean, mobile-friendly websites for local businesses — with a booking form built in, ready for Google, and live in a few days. €300 flat, and the site is completely yours. No agency prices, no monthly fees.</p>
     <div class="hero-cta">
-      <a href="#contact" class="btn btn-primary magnetic">Get your free site plan →</a>
+      <a href="#contact" class="btn btn-primary magnetic">Get a free preview of your site →</a>
       <a href="#work" class="btn btn-ghost magnetic">See recent work</a>
     </div>
     <div class="hero-trust">
@@ -438,7 +449,7 @@
         <li><span class="ck">✓</span> Full handover — every login and password is yours</li>
       </ul>
       <div class="price-foot">
-        <a href="#contact" class="btn btn-primary magnetic">Get my free site plan →</a>
+        <a href="#contact" class="btn btn-primary magnetic">Get my free homepage preview →</a>
         <div class="note">No deposit to enquire. No subscriptions to me — ever. Need changes down the line? Small updates quoted from €30.</div>
       </div>
     </div>
@@ -452,6 +463,7 @@
       <h2 class="split-up">Good questions, straight answers.</h2>
     </div>
     <div class="faq">
+      <div class="faq-item"><button class="faq-q">How does the free preview work? <span class="pm">+</span></button><div class="faq-a"><p>Send the form with a line about your business. Within a couple of days I'll send you a preview of your new homepage — built around your actual business, not a template. If you love it, we finish the full site for €300. If it's not for you, no charge and no hard feelings.</p></div></div>
       <div class="faq-item"><button class="faq-q">How long does it take? <span class="pm">+</span></button><div class="faq-a"><p>Most sites are ready for you to review within 2–3 days of getting your photos and details. Once you're happy, it goes live the same day.</p></div></div>
       <div class="faq-item"><button class="faq-q">What do you need from me? <span class="pm">+</span></button><div class="faq-a"><p>Your services and prices, a handful of decent photos (your phone is fine), and how you'd like customers to reach you. That's it — I handle everything else.</p></div></div>
       <div class="faq-item"><button class="faq-q">Are there any ongoing costs? <span class="pm">+</span></button><div class="faq-a"><p>None to me. Your only recurring cost is your domain — about €25 a year for a .ie, paid directly to the registrar in your own name. Hosting for a typical local-business site is free. If your site ever grows into something heavier (very high traffic, online ordering, extra tools), those services have their own subscriptions — I'll set them up in your name, at cost, so there's never a surprise bill from me.</p></div></div>
@@ -465,12 +477,12 @@
   <div class="wrap">
     <div class="sec-head">
       <div class="kick">Get started</div>
-      <h2 class="split-up">Get a free plan for your site.</h2>
-      <p>Tell me about your business and I'll come back with ideas and a straight price — no obligation, nothing to pay now. I usually reply the same day.</p>
+      <h2 class="split-up">See your homepage before you pay a cent.</h2>
+      <p>Tell me about your business and I'll build you a <b style="color:#fff">free preview of your new homepage</b> — no obligation, nothing to pay. Love it, and we finish the site for €300. Not for you? You owe nothing.</p>
     </div>
     <form class="form clipin" id="quoteForm">
       <input type="hidden" name="access_key" value="44ef8cf3-73b3-463f-a77f-a37281648c9b" />
-      <input type="hidden" name="subject" value="New Midlands Web quote request" />
+      <input type="hidden" name="subject" value="New Midlands Made preview request" />
       <input type="hidden" name="from_name" value="Midlands Web site" />
       <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" />
       <div class="field"><label>Your name</label><input type="text" name="name" required placeholder="Jane Doe" /></div>

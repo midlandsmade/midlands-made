@@ -122,8 +122,9 @@
   @media (prefers-reduced-motion: reduce){.blob,.orb{display:none}}
 
   /* rotating hero word (typewriter) */
-  .rotwrap{display:inline-block}
+  .rotwrap{display:block;min-height:1.25em;white-space:nowrap}
   .rot-word{display:inline-block;min-height:1em}
+  @media(max-width:480px){.rotwrap{white-space:normal;min-height:2.5em}}
   .rot-cursor{display:inline-block;width:3px;height:.9em;background:var(--accent2);margin-left:5px;transform:translateY(2px);animation:blink 1.05s steps(1) infinite}
   @keyframes blink{50%{opacity:0}}
 
@@ -564,7 +565,7 @@
     let wi=0, txt=WORDS[0];
     const type=(s,i,done)=>{rot.textContent=s.slice(0,i);if(i<s.length)setTimeout(()=>type(s,i+1,done),55+Math.random()*45);else done&&done();};
     const del=(done)=>{const s=rot.textContent;if(s.length){rot.textContent=s.slice(0,-1);setTimeout(()=>del(done),26);}else done&&done();};
-    setInterval(()=>{del(()=>{wi=(wi+1)%WORDS.length;type(WORDS[wi],0);});},3600);
+    setInterval(()=>{del(()=>{wi=(wi+1)%WORDS.length;type(WORDS[wi],0);});},5000);
   }
 
   // scroll-driven grey→white statement (centos wa_bg_position text-fill)

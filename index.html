@@ -234,6 +234,9 @@
   .field textarea{resize:vertical;min-height:110px}
   .form .btn{width:100%;justify-content:center;padding:15px;margin-top:6px}
   .form-msg{text-align:center;margin-top:14px;font-size:.95rem;min-height:1.2em}
+  .alt-contact{text-align:center;margin-top:16px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+  .alt-contact a{color:#4ade80;font-weight:600}
+  .alt-contact a:hover{color:#86efac}
   .hp{position:absolute;left:-9999px}
 
   footer{background:var(--bg2);color:var(--muted);padding:30px 0;border-top:1px solid var(--line);text-align:center;font-size:.9rem}
@@ -274,7 +277,7 @@
       <a href="#work">Recent work</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
-      <a href="#contact" class="btn btn-primary magnetic">Get a quote</a>
+      <a href="#contact" class="btn btn-primary magnetic">Free site plan</a>
     </nav>
     <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
@@ -289,7 +292,7 @@
     <h1><span class="split-hero">A website that brings your local business</span> <span class="rotwrap"><span class="rot-word grad-text">more customers</span><span class="rot-cursor"></span></span></h1>
     <p class="lead">Clean, mobile-friendly websites for local businesses — with a booking form built in, ready for Google, and live in a few days. €300 flat, and the site is completely yours. No agency prices, no monthly fees.</p>
     <div class="hero-cta">
-      <a href="#contact" class="btn btn-primary magnetic">Get a free quote →</a>
+      <a href="#contact" class="btn btn-primary magnetic">Get your free site plan →</a>
       <a href="#work" class="btn btn-ghost magnetic">See recent work</a>
     </div>
     <div class="hero-trust">
@@ -435,7 +438,7 @@
         <li><span class="ck">✓</span> Full handover — every login and password is yours</li>
       </ul>
       <div class="price-foot">
-        <a href="#contact" class="btn btn-primary magnetic">Get my free quote →</a>
+        <a href="#contact" class="btn btn-primary magnetic">Get my free site plan →</a>
         <div class="note">No deposit to enquire. No subscriptions to me — ever. Need changes down the line? Small updates quoted from €30.</div>
       </div>
     </div>
@@ -462,8 +465,8 @@
   <div class="wrap">
     <div class="sec-head">
       <div class="kick">Get started</div>
-      <h2 class="split-up">Get a free quote.</h2>
-      <p>Tell me about your business and I'll come back with ideas and a price — no obligation. I usually reply the same day.</p>
+      <h2 class="split-up">Get a free plan for your site.</h2>
+      <p>Tell me about your business and I'll come back with ideas and a straight price — no obligation, nothing to pay now. I usually reply the same day.</p>
     </div>
     <form class="form clipin" id="quoteForm">
       <input type="hidden" name="access_key" value="44ef8cf3-73b3-463f-a77f-a37281648c9b" />
@@ -476,6 +479,7 @@
       <div class="field"><label>What do you need? <span style="color:#7a8296">(optional)</span></label><textarea name="message" data-typeph placeholder="A quick line about your business and what you'd like — services, a booking form, a fresh look, etc."></textarea></div>
       <button type="submit" class="btn btn-primary magnetic">Send my request →</button>
       <div class="form-msg" id="formMsg"></div>
+      <div class="alt-contact">Prefer to just chat? <a id="waAlt" target="_blank" rel="noopener">WhatsApp me directly →</a></div>
     </form>
   </div>
 </section>
@@ -517,7 +521,11 @@
 
   // whatsapp float
   const WHATSAPP='353851161036';
-  if(WHATSAPP){const w=document.getElementById('waFloat');w.href='https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent("Hi! I saw Midlands Made — I'd like a website for my business.");w.style.display='inline-flex';}
+  if(WHATSAPP){
+    const waUrl='https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent("Hi! I saw Midlands Made — I'd like a website for my business.");
+    const w=document.getElementById('waFloat');w.href=waUrl;w.style.display='inline-flex';
+    const wa2=document.getElementById('waAlt');if(wa2)wa2.href=waUrl;
+  }
 
   // scroll-reveal fallback (works with or without GSAP)
   if(MOTION_OK){

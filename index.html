@@ -6,7 +6,7 @@
 <title>Midlands Made — Websites for Local Businesses in Mullingar & the Midlands</title>
 <meta name="description" content="Websites for local businesses in Mullingar and the Irish Midlands. Free homepage preview first — then €300 flat, you own it, no monthly fees. Live in days." />
 <meta name="theme-color" content="#101114" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%234f46e5'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Arial,sans-serif' font-weight='800' fill='white' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236d70f6'/%3E%3Cstop offset='1' stop-color='%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Arial,sans-serif' font-weight='800' fill='white' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" />
 <link rel="canonical" href="https://midlandsmade.ie/" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://midlandsmade.ie/" />
@@ -78,11 +78,12 @@
   header.hide{transform:translateY(-100%)}
   header.scrolled{box-shadow:0 14px 34px -20px rgba(0,0,0,.8)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-  .logo{font-weight:800;font-size:1.25rem;display:flex;align-items:center;gap:9px;color:#fff}
-  .logo .dot{width:12px;height:12px;border-radius:4px;background:var(--grad);box-shadow:0 0 14px rgba(109,112,246,.8)}
+  .logo{font-weight:800;font-size:1.25rem;display:flex;align-items:center;gap:11px;color:#fff}
+  .logo .mark{width:34px;height:34px;border-radius:9px;background:var(--grad);display:grid;place-items:center;font-family:'Poppins';font-weight:800;font-size:1.05rem;color:#fff;box-shadow:0 0 16px rgba(109,112,246,.7);flex-shrink:0}
   .nav-links{display:flex;align-items:center;gap:28px}
   .nav-links a{color:var(--muted);font-weight:500;font-size:.95rem}
   .nav-links a:hover{color:#fff}
+  .nav-links a.btn-primary,.nav-links a.btn-primary:hover{color:#fff}
   .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Poppins';font-weight:600;font-size:.95rem;padding:12px 22px;border-radius:12px;border:0;cursor:pointer;transition:transform .18s,box-shadow .18s,border-color .18s,color .18s;white-space:nowrap;will-change:transform}
   .btn-primary{background:var(--grad);color:#fff;box-shadow:0 10px 26px -10px rgba(109,112,246,.75)}
   .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 34px -10px rgba(109,112,246,.85)}
@@ -169,7 +170,7 @@
   .card.feat{transition:transform .25s,box-shadow .25s,border-color .25s;counter-increment:feat;position:relative;overflow:hidden}
   .grid.feat{counter-reset:feat}
   .card.feat::before{content:counter(feat,decimal-leading-zero);position:absolute;top:0;right:14px;font-family:'Poppins';font-weight:800;font-size:3.1rem;color:#22242c;z-index:0;transform:translateY(8px);opacity:.9;transition:transform .28s,color .28s;pointer-events:none}
-  .card.feat:hover::before{transform:translateY(-2px) scale(1.06);color:#2b2e39}
+  .card.feat:hover::before{transform:translateY(-2px) scale(1.06);color:#eef0f5;opacity:1}
   .card.feat>*{position:relative;z-index:1}
   .card.feat:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:var(--line2)}
   .card.feat .ico{transition:transform .28s}
@@ -290,7 +291,7 @@
 
 <header id="hdr">
   <div class="wrap nav">
-    <a href="#top" class="logo"><span class="dot"></span>Midlands&nbsp;Made</a>
+    <a href="#top" class="logo"><span class="mark">M</span>Midlands&nbsp;Made</a>
     <nav class="nav-links" id="nav">
       <a href="#what">What you get</a>
       <a href="#work">Recent work</a>
@@ -405,7 +406,7 @@
       <div class="work-card clipin">
         <div class="browser"><i></i><i></i><i></i><div class="bar">mullingarlatindance.ie</div></div>
         <div class="shot" style="background:linear-gradient(135deg,#7a1420,#c9a24d)">
-          <img src="work/mullingar.jpg" alt="Mullingar Latin Dance website" onerror="this.style.display='none'" />
+          <img src="work/mullingar.jpg" alt="Mullingar Latin Dance website" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'" />
           <div class="ph"><div class="nm">Mullingar Latin Dance</div><div class="tag">Latin dance classes</div></div>
         </div>
         <div class="work-body">
@@ -419,7 +420,7 @@
       <div class="work-card clipin">
         <div class="browser"><i></i><i></i><i></i><div class="bar">tradingbuddyapp.com</div></div>
         <div class="shot" style="background:linear-gradient(135deg,#0e1217,#3fb96a)">
-          <img src="work/tradingbuddy.jpg" alt="Trading Buddy web app" onerror="this.style.display='none'" />
+          <img src="work/tradingbuddy.jpg" alt="Trading Buddy web app" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'" />
           <div class="ph"><div class="nm">Trading Buddy</div><div class="tag">Web app &amp; Chrome extension</div></div>
         </div>
         <div class="work-body">
@@ -569,10 +570,18 @@
   const rot=document.querySelector('.rot-word');
   if(rot && MOTION_OK){
     const WORDS=['more customers','more bookings','found on Google','taken seriously'];
-    let wi=0, txt=WORDS[0];
+    let wi=0, busy=false;
     const type=(s,i,done)=>{rot.textContent=s.slice(0,i);if(i<s.length)setTimeout(()=>type(s,i+1,done),55+Math.random()*45);else done&&done();};
     const del=(done)=>{const s=rot.textContent;if(s.length){rot.textContent=s.slice(0,-1);setTimeout(()=>del(done),26);}else done&&done();};
-    setInterval(()=>{del(()=>{wi=(wi+1)%WORDS.length;type(WORDS[wi],0);});},5000);
+    // one cycle at a time, and never start a cycle while the tab is hidden —
+    // stops the rapid catch-up spam when you come back to the tab
+    const cycle=()=>{
+      if(document.hidden||busy)return;
+      busy=true;
+      del(()=>{wi=(wi+1)%WORDS.length;type(WORDS[wi],0,()=>{busy=false;});});
+    };
+    setInterval(cycle,5000);
+    document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!busy&&!rot.textContent){type(WORDS[wi],0,()=>{});}});
   }
 
   // scroll-driven grey→white statement (centos wa_bg_position text-fill)

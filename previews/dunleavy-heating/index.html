@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Damien Dunleavy Heating & Plumbing — Mullingar</title>
+<meta name="description" content="Heating and plumbing in Mullingar and Westmeath. Boiler services, heating installs, repairs and emergency call-outs.">
+<meta name="robots" content="noindex,nofollow"><!-- concept preview -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f8fa;--panel:#fff;--ink:#182432;--muted:#5d6d7e;--line:#e3eaf1;--blue:#1667b8;--blue-dark:#0f4c8c;--flame:#f07c2e}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Manrope',system-ui,sans-serif;line-height:1.6}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.ribbon{background:#0f2a44;color:#bcd9f2;font-size:12.5px;text-align:center;padding:8px 14px}
+.ribbon b{color:#fff}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:22px;height:62px}
+.logo{font-weight:800;font-size:18px}
+.logo span{color:var(--flame)}
+.logo small{display:block;font-size:9px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
+nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600}
+.call{margin-left:auto;background:var(--flame);color:#fff;padding:10px 18px;border-radius:10px;font-weight:800;font-size:14.5px;text-decoration:none}
+.hero{padding:66px 0 50px;background:linear-gradient(170deg,#eaf3fb 0%,var(--bg) 70%)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
+.trust{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:13px;color:var(--muted);margin-bottom:16px}
+.trust b{color:var(--blue-dark)}
+h1{font-size:clamp(29px,4.6vw,44px);font-weight:800;line-height:1.16}
+h1 em{font-style:normal;color:var(--blue)}
+.sub{margin:15px 0 24px;font-size:16.5px;color:var(--muted);max-width:460px}
+.btn{display:inline-block;padding:14px 26px;border-radius:11px;font-weight:800;text-decoration:none;font-size:15.5px;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.flame{background:var(--flame);color:#fff}
+.btn.line{border:2px solid var(--blue);color:var(--blue-dark);margin-left:10px}
+.side{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 18px 44px -24px rgba(24,36,50,.18)}
+.side b{font-size:16.5px}
+.side a.phone{display:block;margin:10px 0;font-size:25px;font-weight:800;color:var(--blue-dark);text-decoration:none}
+.side p{font-size:13.5px;color:var(--muted)}
+.numbers{background:#fff;border-block:1px solid var(--line)}
+.numbers .wrap{display:flex;gap:38px;flex-wrap:wrap;padding-block:24px}
+.n b{font-size:23px;color:var(--blue-dark)}
+.n span{display:block;font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+section{padding:54px 0}
+h2{font-size:clamp(23px,3.1vw,31px);font-weight:800;margin-bottom:8px}
+.lead{color:var(--muted);max-width:540px;margin-bottom:24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:14px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:19px;transition:transform .18s,box-shadow .18s}
+.svc:hover{transform:translateY(-4px);box-shadow:0 14px 30px -16px rgba(24,36,50,.22)}
+.svc i{font-style:normal;font-size:23px}
+.svc b{display:block;margin:9px 0 4px;font-size:15px}
+.svc p{font-size:13px;color:var(--muted)}
+.svc .from{display:inline-block;margin-top:9px;font-size:12px;font-weight:800;color:var(--blue-dark);background:#e8f1fa;border:1px solid #cfe2f3;padding:3px 10px;border-radius:999px}
+.cta{background:linear-gradient(160deg,var(--blue-dark),var(--blue));border-radius:22px}
+.cta .inner{display:grid;grid-template-columns:1fr 1fr;gap:34px;padding:40px}
+.cta h2,.cta p{color:#fff}
+.cta p{color:#cfe3f5}
+form .f{margin-bottom:12px}
+label{display:block;font-size:11.5px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#cfe3f5;margin-bottom:5px}
+input,select{width:100%;background:#fff;border:0;border-radius:10px;padding:13px 14px;font-family:inherit;font-size:15px}
+form button{width:100%;background:var(--flame);color:#fff;border:0;border-radius:11px;padding:15px;font-weight:800;font-size:16px;cursor:pointer;font-family:inherit;margin-top:4px}
+footer{padding:26px 0 60px;color:var(--muted);font-size:13.5px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer a{color:var(--blue-dark)}
+.sticky-call{display:none}
+@media(prefers-reduced-motion:no-preference){
+  .rise{opacity:0;transform:translateY(18px);transition:all .55s cubic-bezier(.2,.7,.3,1)}
+  .rise.in{opacity:1;transform:none}
+}
+@media(max-width:800px){
+  .hero .wrap,.cta .inner{grid-template-columns:1fr}
+  nav a:not(.call){display:none}
+  .btn.line{margin-left:0;margin-top:10px}
+  .sticky-call{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--flame);color:#fff;font-weight:800;font-size:16.5px;padding:16px;justify-content:center;text-decoration:none}
+  footer{padding-bottom:100px}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">✦ <b>Concept preview</b> — built for Damien Dunleavy Heating by <b>Midlands Made</b> · your old Google site link is gone; this replaces it, owned by you · €300 flat</div>
+
+<nav><div class="wrap">
+  <div class="logo">Dunleavy <span>Heating</span><small>Mullingar · Westmeath</small></div>
+  <a href="#services">Services</a><a href="#quote">Get a Callback</a>
+  <a class="call" href="tel:+353879376156">📞 087 937 6156</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div>
+    <div class="trust rise">★★★★★ <b>Trusted local trade</b> · Mullingar & Westmeath</div>
+    <h1 class="rise">Heating & plumbing done right — <em>by a local you can actually get on the phone.</em></h1>
+    <p class="sub rise">Boiler services, heating installs, repairs and emergency call-outs across Mullingar and Westmeath. One number, straight answers, tidy work.</p>
+    <div class="rise">
+      <a class="btn flame" href="#quote">Request a callback →</a>
+      <a class="btn line" href="tel:+353879376156">Call Damien now</a>
+    </div>
+  </div>
+  <div class="side rise">
+    <b>💧 No heat? Leak? Call now.</b>
+    <a class="phone" href="tel:+353879376156">087 937 6156</a>
+    <p>Emergency call-outs across Mullingar and surrounds — evenings and weekends included where possible.</p>
+  </div>
+</div></header>
+
+<div class="numbers"><div class="wrap">
+  <div class="n rise"><b>Local</b><span>Mullingar based</span></div>
+  <div class="n rise"><b>Boilers</b><span>serviced & installed</span></div>
+  <div class="n rise"><b>Fast</b><span>callback same day</span></div>
+  <div class="n rise"><b>Tidy</b><span>work, fair prices</span></div>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <h2 class="rise">Services</h2>
+  <p class="lead rise">Sample pricing below — exact quote before any job starts, always.</p>
+  <div class="grid">
+    <div class="svc rise"><i>🔥</i><b>Boiler service</b><p>Annual service keeps it efficient, safe, and warrantied.</p><span class="from">from €90*</span></div>
+    <div class="svc rise"><i>🏠</i><b>Heating installs</b><p>Full systems, upgrades, rads and controls.</p><span class="from">quoted per job</span></div>
+    <div class="svc rise"><i>🚿</i><b>Bathroom plumbing</b><p>Showers, taps, toilets — fitted and fixed.</p><span class="from">from €80*</span></div>
+    <div class="svc rise"><i>💧</i><b>Leaks & repairs</b><p>Found fast, fixed properly.</p><span class="from">call-out rate</span></div>
+    <div class="svc rise"><i>🌡️</i><b>Heating controls</b><p>Zone valves, smart stats — cut the bills.</p><span class="from">from €150*</span></div>
+    <div class="svc rise"><i>🚨</i><b>Emergency call-out</b><p>No heat or active leak? Ring straight away.</p><span class="from">priority rate</span></div>
+  </div>
+  <p style="margin-top:13px;font-size:12px;color:var(--muted)" class="rise">*Illustrative preview pricing — Damien sets final rates.</p>
+</div></section>
+
+<section id="quote"><div class="wrap">
+  <div class="cta"><div class="inner">
+    <div class="rise">
+      <h2>Get a callback today</h2>
+      <p>Three fields — Damien rings you back, usually same day.</p>
+      <p style="margin-top:14px;font-size:14px">📍 Mullingar, Co. Westmeath<br>📞 Emergencies: 087 937 6156</p>
+    </div>
+    <form class="rise" onsubmit="event.preventDefault();this.innerHTML='<h3 style=\'font-size:22px;color:#fff\'>Got it — expect a call today. ✓</h3>'">
+      <div class="f"><label>Name</label><input required placeholder="Your name"></div>
+      <div class="f"><label>Phone</label><input required placeholder="Best number"></div>
+      <div class="f"><label>Job</label><select><option>Boiler service</option><option>No heating / hot water</option><option>Leak or repair</option><option>New install / upgrade</option><option>Something else</option></select></div>
+      <button>Request callback →</button>
+    </form>
+  </div></div>
+</div></section>
+
+<footer><div class="wrap">
+  <div>© Damien Dunleavy Heating & Plumbing · Mullingar</div>
+  <div>Concept preview by <a href="https://midlandsmade.ie">Midlands Made</a> — €300 flat · you own it · live in days</div>
+</div></footer>
+<a class="sticky-call" href="tel:+353879376156">📞 Tap to call Damien</a>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".rise").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

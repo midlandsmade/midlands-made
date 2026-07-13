@@ -46,7 +46,13 @@ a{color:inherit}
 #bar{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--red),var(--ember));width:0%;z-index:60}
 nav{position:sticky;top:0;z-index:50;background:rgba(23,17,13,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;align-items:center;gap:26px;height:70px}
-nav .logo img{height:34px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand .mark{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;background:radial-gradient(circle at 38% 28%,#ff9d42,#c40606);box-shadow:0 6px 18px -6px rgba(255,122,26,.65)}
+.brand .mark .ic{font-size:22px;color:#fff}
+.brand .wm{line-height:1.05}
+.brand .wm b{font-family:'Playfair Display',serif;font-size:20px;font-weight:800;color:var(--cream);letter-spacing:.2px}
+.brand .wm b em{font-style:italic;color:var(--ember2)}
+.brand .wm span{display:block;font-size:8.5px;letter-spacing:2.3px;text-transform:uppercase;color:var(--muted);margin-top:3px}
 nav a.lk{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600;transition:color .2s}
 nav a.lk:hover{color:var(--ember2)}
 .nav-cta{margin-left:auto;display:flex;gap:9px}
@@ -238,7 +244,10 @@ footer a{color:var(--ember2)}
 <div class="ribbon"><svg class="ic flick"><use href="#i-flame"/></svg> <b>OFTEC-registered</b> stove &amp; fireplace showroom · we supply <b>and</b> we fit · Monasterevin Road, Co. Kildare</div>
 
 <nav><div class="wrap">
-  <div class="logo"><img src="./img/logo.png" alt="Kildare Stoves"></div>
+  <a class="brand" href="#top" aria-label="Kildare Stoves home">
+    <span class="mark"><svg class="ic"><use href="#i-flame"/></svg></span>
+    <span class="wm"><b>Kildare <em>Stoves</em></b><span>Stove &amp; Fireplace Specialists</span></span>
+  </a>
   <a class="lk" href="#stoves">Stoves</a><a class="lk" href="#size">Size Guide</a><a class="lk" href="#fitting">Supply &amp; Fit</a><a class="lk" href="#showroom">Showroom</a>
   <div class="nav-cta">
     <a class="cta wa" href="https://wa.me/353858754191" aria-label="WhatsApp"><svg class="ic"><use href="#i-wa"/></svg></a>

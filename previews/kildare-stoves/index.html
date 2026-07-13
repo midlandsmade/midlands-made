@@ -56,9 +56,10 @@ nav a.lk:hover{color:var(--ember2)}
 .cta:hover{transform:translateY(-2px)}
 .cta.wa{background:var(--green);box-shadow:none}
 /* hero */
-.hero{position:relative;overflow:hidden;padding:76px 0 64px;
-  background:radial-gradient(120% 90% at 78% 8%,rgba(255,122,26,.28),transparent 55%),radial-gradient(80% 70% at 90% 40%,rgba(196,6,6,.22),transparent 60%),linear-gradient(180deg,#1b140f,#17110d)}
-.hero .wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:44px;align-items:center;position:relative;z-index:2}
+.hero{position:relative;overflow:hidden;padding:104px 0 78px;
+  background:linear-gradient(90deg,rgba(13,9,6,.95) 0%,rgba(13,9,6,.82) 44%,rgba(13,9,6,.40) 100%),linear-gradient(180deg,rgba(13,9,6,.15),rgba(23,17,13,.92)),url('./img/hero-room.webp') center/cover no-repeat}
+.hero .wrap{position:relative;z-index:2}
+.hero-copy{max-width:600px}
 .est{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(255,171,82,.35);background:rgba(255,122,26,.08);color:var(--ember2);font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:800;padding:8px 16px;border-radius:999px;margin-bottom:22px}
 .est .dot{width:6px;height:6px;border-radius:50%;background:var(--ember);box-shadow:0 0 10px var(--ember)}
 h1{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(34px,5.2vw,56px);line-height:1.08}
@@ -78,7 +79,7 @@ h1 em{font-style:italic;color:var(--ember2)}
 .hero-art{position:relative}
 .hero-art .glow{position:absolute;inset:-6% -6% -6% -6%;background:radial-gradient(circle at 50% 42%,rgba(255,122,26,.35),transparent 62%);filter:blur(10px);z-index:0}
 .hero-art img{position:relative;z-index:1;margin:0 auto;max-height:440px;width:auto;filter:drop-shadow(0 30px 50px rgba(0,0,0,.55))}
-.stats{display:flex;margin-top:44px;border:1px solid var(--line);border-radius:16px;overflow:hidden;max-width:660px;background:rgba(255,255,255,.02)}
+.stats{display:flex;margin-top:44px;border:1px solid var(--line);border-radius:16px;overflow:hidden;max-width:660px;background:rgba(13,9,6,.45);backdrop-filter:blur(8px)}
 .stat{flex:1;padding:18px 8px;text-align:center}
 .stat+.stat{border-left:1px solid var(--line)}
 .stat b{font-family:'Playfair Display',serif;font-size:30px;color:var(--ember2)}
@@ -153,6 +154,11 @@ footer a{color:var(--ember2)}
 .lb.on{display:flex}
 .lb img{max-width:92vw;max-height:88vh;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.7);background:#fff}
 .lb .x{position:absolute;top:18px;right:26px;color:#fff;font-size:34px;font-weight:300;cursor:pointer;line-height:1}
+.ambiance{position:relative;display:flex;align-items:center;justify-content:center;text-align:center;padding:88px 24px;background:linear-gradient(rgba(13,9,6,.5),rgba(13,9,6,.72)),url('./img/ambiance-mantel.webp') center/cover no-repeat}
+.ambiance .in{max-width:660px}
+.ambiance h3{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(26px,3.6vw,40px);line-height:1.18}
+.ambiance h3 em{font-style:italic;color:var(--ember2)}
+.ambiance p{color:#ead7c8;margin-top:14px;font-size:16.5px}
 .sticky-call{display:none}
 @media(max-width:860px){
   .hero .wrap,.fit .wrap,.show .wrap{grid-template-columns:1fr}
@@ -182,7 +188,7 @@ footer a{color:var(--ember2)}
 </div></nav>
 
 <header class="hero"><div class="wrap">
-  <div>
+  <div class="hero-copy">
     <div class="est g-reveal"><span class="dot"></span> OFTEC-registered · Monasterevin Road, Co. Kildare</div>
     <h1 id="headline">
       <span class="l"><span>Real warmth, done right —</span></span>
@@ -199,7 +205,6 @@ footer a{color:var(--ember2)}
       <span class="chip"><b>✓</b> Free showroom advice</span>
     </div>
   </div>
-  <div class="hero-art g-reveal"><div class="glow"></div><img src="./img/kratki-koza.jpg" alt="Kratki Koza K9 stove"></div>
 </div>
 <div class="wrap"><div class="stats g-reveal">
   <div class="stat"><b data-count="8">0</b><span>stove &amp; fire ranges</span></div>
@@ -237,6 +242,11 @@ footer a{color:var(--ember2)}
     <div class="prod g-reveal"><div class="ph"><img src="./img/atlas.jpg" alt="Atlas 1000"></div><div class="body"><h3>Atlas 1000</h3><div class="kw">Cassette fire</div><a href="#contact">Enquire →</a></div></div>
   </div>
 </div></section>
+
+<div class="ambiance"><div class="in g-reveal">
+  <h3>Come see the fire <em>lit</em> before you buy it.</h3>
+  <p>Our showroom fires are burning — feel the heat, judge the size, and get honest advice from people who fit them for a living.</p>
+</div></div>
 
 <section id="fitting" class="fit"><div class="wrap">
   <div class="g-reveal">

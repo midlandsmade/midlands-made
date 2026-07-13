@@ -32,13 +32,16 @@ def watermark(img, size, opacity):
     crop = (big - size) // 2
     layer = layer.crop((crop, crop, crop + size, crop + size))
     out = Image.alpha_composite(img.convert("RGBA"), layer)
-    # solid corner mark
+    # solid corner mark (kept well inside the frame so display-crop can't clip it)
     d2 = ImageDraw.Draw(out)
-    fc = font(int(size * 0.034))
+    fc = font(int(size * 0.030))
     label = "KILDARE STOVES"
     tw = d2.textlength(label, font=fc)
-    pad = int(size * 0.028)
-    d2.text((size - tw - pad, size - int(size*0.06)), label, font=fc, fill=(255, 220, 180, 235))
+    padx = int(size * 0.05)
+    pady = int(size * 0.075)
+    # subtle shadow for legibility on light images
+    d2.text((size - tw - padx + 2, size - pady + 2), label, font=fc, fill=(0, 0, 0, 120))
+    d2.text((size - tw - padx, size - pady), label, font=fc, fill=(255, 224, 186, 240))
     return out.convert("RGB")
 
 def main():

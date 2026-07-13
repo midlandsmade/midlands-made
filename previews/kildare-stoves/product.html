@@ -24,7 +24,7 @@ nav .wrap{display:flex;align-items:center;gap:20px;height:70px}
 .brand{display:flex;align-items:center;gap:12px}
 .brand .mark{display:grid;place-items:center}
 .brand .mark .ic{font-size:44px;color:var(--ember2);filter:drop-shadow(0 3px 8px rgba(255,122,26,.28))}
-.brand b{font-family:'Playfair Display',serif;font-size:20px;font-weight:800}
+.brand b{font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:800}
 .brand b em{font-style:italic;color:var(--ember2)}
 .brand span{display:block;font-size:8.5px;letter-spacing:2.3px;text-transform:uppercase;color:var(--muted);margin-top:3px}
 .nav-cta{margin-left:auto;display:flex;gap:9px}
@@ -38,8 +38,8 @@ nav .wrap{display:flex;align-items:center;gap:20px;height:70px}
 .pimg img{width:100%;height:100%;object-fit:cover}
 .pimg .ph-empty{color:#3a2c22;font-size:90px}
 .pcat{font-size:11.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ember2);font-weight:800}
-h1{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(28px,4vw,42px);line-height:1.1;margin:10px 0 8px}
-.price{font-family:'Playfair Display',serif;font-size:30px;color:var(--ember2);font-weight:800;margin-bottom:6px}
+h1{font-family:'Playfair Display',Georgia,serif;font-weight:800;font-size:clamp(28px,4vw,42px);line-height:1.1;margin:10px 0 8px}
+.price{font-family:'Playfair Display',Georgia,serif;font-size:30px;color:var(--ember2);font-weight:800;margin-bottom:6px}
 .price small{display:block;font-family:'Manrope';font-size:12.5px;color:var(--muted);font-weight:600;letter-spacing:.3px;margin-top:4px}
 .lead{color:var(--muted);font-size:15.5px;margin:18px 0 24px;max-width:520px}
 .feat{display:grid;gap:12px;margin-bottom:28px}
@@ -56,7 +56,7 @@ h1{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(28px,4vw
 .strip b{color:var(--cream)}
 .strip .ic{color:var(--ember2);font-size:16px}
 .rel{padding:56px 0}
-.rel h2{font-family:'Playfair Display',serif;font-size:26px;margin-bottom:22px}
+.rel h2{font-family:'Playfair Display',Georgia,serif;font-size:26px;margin-bottom:22px}
 .rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
 .rcard{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:transform .3s,border-color .3s}
 .rcard:hover{transform:translateY(-5px);border-color:rgba(255,171,82,.4)}
@@ -64,7 +64,7 @@ h1{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(28px,4vw
 .rcard .rph img{width:100%;height:100%;object-fit:cover}
 .rcard .rb{padding:13px 14px 15px}
 .rcard h3{font-size:14px;font-weight:800;line-height:1.25}
-.rcard .rp{color:var(--ember2);font-weight:800;font-size:13.5px;margin-top:5px;font-family:'Playfair Display',serif}
+.rcard .rp{color:var(--ember2);font-weight:800;font-size:13.5px;margin-top:5px;font-family:'Playfair Display',Georgia,serif}
 footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:13px}
 footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 footer a{color:var(--ember2)}
@@ -78,7 +78,7 @@ footer a{color:var(--ember2)}
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c.7 2.6-.6 4-1.8 5.3C9 9.6 8.1 11 8.1 12.6a3.9 3.9 0 0 0 7.8 0c0-1.6-.7-2.8-1.4-3.7-.3.6-.7 1-1.3 1.3.5-2.5-.6-4.6-1.2-5.5z" fill="currentColor"/></symbol>
-<symbol id="i-stovemark" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M32 21V10"/><path d="M32 10h6.5"/><rect x="15" y="21" width="34" height="29" rx="6"/><rect x="21" y="28.5" width="22" height="15.5" rx="2.6"/><path d="M20.5 50l-3 6M43.5 50l3 6"/></g><path d="M32 31c1.3 2.4-.8 3.7-1.1 5.2a2.5 2.5 0 0 0 4.9.9c.3-1.7-.7-3-1.2-4 1.5.6 2.3 1.7 2.3 3.2a4.3 4.3 0 1 1-7.2-3.1c1.1-.8 1.8-1.6 2.3-2.2z" fill="#ff8a2a"/></symbol>
+<symbol id="i-stovemark" viewBox="0 0 64 64"><defs><linearGradient id="ksBody" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc072"/><stop offset="1" stop-color="#c07322"/></linearGradient><linearGradient id="ksFlame" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ff4d12"/><stop offset=".55" stop-color="#ff9020"/><stop offset="1" stop-color="#ffe07a"/></linearGradient></defs><path d="M31 22V12a3 3 0 0 1 3-3h5" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 24a6 6 0 0 1 6-6h20a6 6 0 0 1 6 6v26H16z" fill="url(#ksBody)"/><rect x="13" y="21.5" width="38" height="4.5" rx="2.2" fill="url(#ksBody)"/><path d="M21 50l-3 6M43 50l3 6" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/><rect x="21" y="29" width="22" height="17" rx="3" fill="#160c05"/><path d="M32 31.5c1.8 3-.8 4.8-1.3 6.8a3.4 3.4 0 0 0 6.6 1c.4-2.1-.9-3.7-1.5-5 1.9.7 2.9 2.2 2.9 4.1a5.6 5.6 0 1 1-9.3-4.1c1.5-1 2.4-2 2.6-2.8z" fill="url(#ksFlame)"/></symbol>
 <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 10.9a15 15 0 0 0 6.5 6.5l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.4.55 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.3a1 1 0 0 1 1 1 11 11 0 0 0 .54 3.4 1 1 0 0 1-.24 1z" fill="currentColor"/></symbol>
 <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 1.9a8.1 8.1 0 0 1 0 16.2 8 8 0 0 1-4-1.1l-.3-.2-2.4.6.6-2.3-.2-.3A8.1 8.1 0 0 1 12 3.9z" fill="currentColor"/></symbol>
 <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>

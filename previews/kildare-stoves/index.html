@@ -302,9 +302,10 @@ footer a{color:var(--ember2)}
 .visit .vt .ic{color:var(--ember2);font-size:20px;flex-shrink:0;margin-top:2px}
 .visit .vt b{font-family:'Playfair Display',serif;font-size:17px;line-height:1.2}
 .visit .addr{color:var(--muted);font-size:13.5px;margin:12px 0;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);line-height:1.5}
-.visit .vopen{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:800;color:var(--ember2)}
-.visit .vopen .dot{width:8px;height:8px;border-radius:50%;background:#5ff0a0;box-shadow:0 0 8px #5ff0a0}
-.visit .vopen.shut .dot{background:var(--ember2);box-shadow:0 0 8px var(--ember2)}
+.visit .vopen{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:800;color:#5ff0a0;white-space:nowrap}
+.visit .vopen .dot{width:9px;height:9px;min-width:9px;border-radius:50%;background:#4ade80;box-shadow:0 0 8px #4ade80;flex-shrink:0}
+.visit .vopen.shut{color:#ff7a6a}
+.visit .vopen.shut .dot{background:#ff4d4d;box-shadow:0 0 8px #ff4d4d}
 /* cream booking form */
 .book{background:var(--cream);border:1px solid rgba(0,0,0,.06);border-radius:22px;padding:34px;color:#241a12}
 .book .bh{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;border-bottom:1px solid rgba(36,26,18,.12);padding-bottom:20px;margin-bottom:22px}
@@ -421,6 +422,11 @@ footer a{color:var(--ember2)}
   .brand .wm b{font-size:18px}
   .btnrow{flex-direction:column}
   .btnrow .btn{width:100%;justify-content:center}
+  .hero-copy{max-width:100%}
+  .tagline{font-size:clamp(19px,6vw,26px);white-space:normal}
+  h1{font-size:clamp(30px,8.5vw,44px)}
+  .hero-meta{max-width:100%;gap:12px}
+  .hero-meta .m{font-size:13px}
   .firecards{grid-template-columns:1fr 1fr;gap:12px}
   .shop{grid-template-columns:1fr 1fr;gap:12px}
   .pcard h3{font-size:13px;min-height:34px}
@@ -460,7 +466,7 @@ footer a{color:var(--ember2)}
 <symbol id="i-boiler" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="5" width="12" height="12" rx="2"/><circle cx="10.5" cy="11" r="2.6"/><path d="M16.5 8h2a1.5 1.5 0 0 1 1.5 1.5v6"/><path d="M10.5 17.5v2M6.5 17.5v2"/></symbol>
 <symbol id="i-pellet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="7" width="14" height="10.5" rx="2"/><circle cx="12" cy="12.3" r="2.5"/><path d="M8 4.5h8M9.5 4.5l-1 2.5M14.5 4.5l1 2.5M12 4.5v2.5" stroke-width="1.3"/><path d="M7.5 17.5v2M16.5 17.5v2"/></symbol>
 <symbol id="i-electric" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4.5" width="14" height="13" rx="2"/><path d="M12.5 7.5 10 11.5h2.2L11.5 15l3-4h-2.2z" fill="currentColor" stroke="none"/><path d="M7.5 17.5v2M16.5 17.5v2"/></symbol>
-<symbol id="i-fireplace" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 21V7a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v14"/><path d="M2.8 6.6h18.4"/><rect x="8" y="9.5" width="8" height="11.5" rx="1"/><path d="M12 12.2c.9 1.1.2 1.9-.2 2.5a1.35 1.35 0 0 0 2.5.6c.2-.9-.35-1.6-.5-2.1" stroke-width="1.3"/></symbol>
+<symbol id="i-fireplace" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 21V7a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v14"/><path d="M2.8 6.6h18.4"/><rect x="8" y="9.5" width="8" height="11.5" rx="1"/></g><path d="M12 11.6c.5 1.3-.5 1.9-.7 2.8a1.5 1.5 0 0 0 2.9.4c.2-1-.4-1.7-.6-2.3.8.3 1.2.9 1.2 1.7a2.35 2.35 0 1 1-3.9-2c.4-.2.8-.4 1.1-.6z" fill="currentColor"/></symbol>
 <symbol id="i-mantel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h18M4 8V6.5h16V8"/><path d="M6 8v11M18 8v11M6 19h12"/><rect x="9" y="12" width="6" height="7" rx=".5"/></symbol>
 <symbol id="i-hearth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17h16l-2.5-4h-11z"/><path d="M20 17v2H4v-2"/><path d="M12 6c.6 1.2-.5 1.9-.5 2.8a1.2 1.2 0 0 0 2.4 0c0-1.1-.8-1.7-1-2.4" stroke-width="1.2"/></symbol>
 <symbol id="i-flue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v6l6 4v8"/><path d="M9 3h4M13 13h4"/><circle cx="9" cy="3" r=".3"/></symbol>
@@ -695,7 +701,7 @@ footer a{color:var(--ember2)}
       <b>Visit</b>
       <a href="#showroom">Showroom</a>
       <a href="size-guide.html">Size Guide</a>
-      <a href="#fitting">About Us</a>
+      <a href="gallery.html">Gallery</a>
     </div>
     <div class="fsocial">
       <a href="https://www.facebook.com/wesplumbingprofesional/" target="_blank" rel="noopener" aria-label="Facebook"><svg class="ic"><use href="#i-fb"/></svg></a>
@@ -705,7 +711,7 @@ footer a{color:var(--ember2)}
   </div>
   <div class="foot-base"><div class="wrap">
     <div>© <span id="yr">2026</span> Kildare Stoves · Monasterevin Road, Co. Kildare · R51 XK64</div>
-    <div>Website by <a href="https://midlandsmade.ie" target="_blank" rel="noopener">Midlands Made</a></div>
+    <div><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="gallery.html">Gallery</a> · Website by <a href="https://midlandsmade.ie" target="_blank" rel="noopener">Midlands Made</a></div>
   </div></div>
 </footer>
 
@@ -817,7 +823,7 @@ document.getElementById('yr').textContent=new Date().getFullYear();
   if(day>=1&&day<=5){open=mins>=540&&mins<1080;todayHrs='9:00–18:00';}
   else if(day===6){open=mins>=540&&mins<900;todayHrs='9:00–15:00';}
   const vo=document.getElementById('vopen'),vt=document.getElementById('vopentxt');
-  if(vo&&vt){vo.classList.toggle('shut',!open);vt.textContent=open?('Open today '+todayHrs):(day===0?'Closed Sundays':'Closed now · '+todayHrs);}
+  if(vo&&vt){vo.classList.toggle('shut',!open);vt.textContent=(open?'Open now · ':'Closed now · ')+(day===0?'Sun closed':todayHrs);}
 })();
 
 /* lightbox with keyboard nav */

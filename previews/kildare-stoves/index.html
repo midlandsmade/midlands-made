@@ -3,30 +3,58 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kildare Stoves — Stoves, Fireplaces & Fitting, Monasterevin Road, Co. Kildare</title>
+<meta name="robots" content="noindex,nofollow"><!-- staging; make indexable when it goes on kildarestoves.ie -->
+<title>Kildare Stoves | Stoves, Fireplaces &amp; Fitting — Monasterevin Road, Co. Kildare</title>
 <meta name="description" content="Stove & fireplace showroom on the Monasterevin Road, Co. Kildare. OFTEC-registered solid-fuel installers — we supply and fit stoves, flues, hearths and handmade mantelpieces.">
-<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#ff7a1a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2317110d'/%3E%3Ctext x='50' y='74' font-size='60' text-anchor='middle'%3E%F0%9F%94%A5%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Kildare Stoves — Stoves, Fireplaces & Fitting, Co. Kildare">
+<meta property="og:description" content="OFTEC-registered installers — we supply and fit stoves, fireplaces, flues, hearths & handmade mantelpieces. Showroom on the Monasterevin Road.">
+<meta property="og:image" content="./img/kratki-koza.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Store",
+  "name":"Kildare Stoves",
+  "description":"Stove and fireplace showroom and OFTEC-registered solid-fuel installers in Co. Kildare. We supply and fit stoves, fireplaces, flues, hearths and handmade mantelpieces.",
+  "url":"https://kildarestoves.ie",
+  "telephone":"+353455531563",
+  "email":"kildarestoves@gmail.com",
+  "image":"./img/kratki-koza.jpg",
+  "priceRange":"€€",
+  "address":{"@type":"PostalAddress","streetAddress":"Whitesland West Business Park, Monasterevin Road","addressLocality":"Co. Kildare","postalCode":"R51 XK64","addressCountry":"IE"},
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"15:00"}
+  ]
+}
+</script>
 <style>
-:root{--char:#17110d;--panel:#201813;--panel2:#271d16;--cream:#f5ede3;--muted:#b0a297;--ember:#ff7a1a;--ember2:#ffab52;--red:#c40606;--line:rgba(255,255,255,.10)}
+:root{--char:#17110d;--panel:#201813;--panel2:#271d16;--cream:#f5ede3;--muted:#b0a297;--ember:#ff7a1a;--ember2:#ffab52;--red:#c40606;--green:#25D366;--line:rgba(255,255,255,.10)}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--char);color:var(--cream);font-family:'Manrope',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
 .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
 ::selection{background:var(--ember);color:#17110d}
 img{max-width:100%;display:block}
-.ribbon{background:#0e0a07;color:#e7b98f;font-size:12.5px;text-align:center;padding:8px 14px;border-bottom:1px solid var(--line)}
+a{color:inherit}
+.ribbon{background:#0e0a07;color:#e7b98f;font-size:12.5px;text-align:center;padding:9px 14px;border-bottom:1px solid var(--line)}
 .ribbon b{color:#fff}
 #bar{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--red),var(--ember));width:0%;z-index:60}
 nav{position:sticky;top:0;z-index:50;background:rgba(23,17,13,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;align-items:center;gap:26px;height:70px}
 nav .logo img{height:34px}
-nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600;transition:color .2s}
-nav a:hover{color:var(--ember2)}
-nav .cta{margin-left:auto;background:linear-gradient(135deg,var(--red),var(--ember));color:#fff;padding:11px 20px;border-radius:11px;font-weight:800;box-shadow:0 10px 26px -12px rgba(255,122,26,.6);transition:transform .15s}
-nav .cta:hover{transform:translateY(-2px)}
+nav a.lk{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600;transition:color .2s}
+nav a.lk:hover{color:var(--ember2)}
+.nav-cta{margin-left:auto;display:flex;gap:9px}
+.cta{background:linear-gradient(135deg,var(--red),var(--ember));color:#fff;padding:11px 18px;border-radius:11px;font-weight:800;text-decoration:none;box-shadow:0 10px 26px -12px rgba(255,122,26,.6);transition:transform .15s}
+.cta:hover{transform:translateY(-2px)}
+.cta.wa{background:var(--green);box-shadow:none}
 /* hero */
 .hero{position:relative;overflow:hidden;padding:76px 0 64px;
   background:radial-gradient(120% 90% at 78% 8%,rgba(255,122,26,.28),transparent 55%),radial-gradient(80% 70% at 90% 40%,rgba(196,6,6,.22),transparent 60%),linear-gradient(180deg,#1b140f,#17110d)}
@@ -68,17 +96,17 @@ h2{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(28px,3.8
 .sec-head p{color:var(--muted);max-width:400px}
 /* category grid */
 .cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:18px}
-.cat{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:5/4;background:var(--panel)}
+.cat{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:5/4;background:var(--panel);cursor:zoom-in}
 .cat img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.3,1);opacity:.86}
 .cat:hover img{transform:scale(1.07);opacity:1}
-.cat .lbl{position:absolute;inset:auto 0 0 0;padding:34px 18px 16px;background:linear-gradient(180deg,transparent,rgba(14,10,7,.9));font-weight:800;font-size:16.5px;display:flex;align-items:center;justify-content:space-between}
+.cat .lbl{position:absolute;inset:auto 0 0 0;padding:34px 18px 16px;background:linear-gradient(180deg,transparent,rgba(14,10,7,.9));font-weight:800;font-size:16.5px;display:flex;align-items:center;justify-content:space-between;pointer-events:none}
 .cat .lbl span{color:var(--ember2);transition:transform .2s}
 .cat:hover .lbl span{transform:translateX(4px)}
 /* featured */
 .feat{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
 .prod{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s}
 .prod:hover{transform:translateY(-6px);box-shadow:0 26px 50px -26px rgba(0,0,0,.7);border-color:rgba(255,171,82,.4)}
-.prod .ph{aspect-ratio:1/1;background:#fff;display:grid;place-items:center;padding:14px}
+.prod .ph{aspect-ratio:1/1;background:#fff;display:grid;place-items:center;padding:14px;cursor:zoom-in}
 .prod .ph img{max-height:100%;object-fit:contain}
 .prod .body{padding:15px 17px 18px}
 .prod h3{font-size:15.5px;font-weight:800}
@@ -105,36 +133,52 @@ h2{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(28px,3.8
 .hours div{display:flex;justify-content:space-between;padding:10px 16px;font-size:14px}
 .hours div:nth-child(odd){background:rgba(255,255,255,.02)}
 .hours .now{color:var(--ember2);font-weight:800}
+.map{border-radius:14px;overflow:hidden;border:1px solid var(--line);height:210px;margin-top:16px}
+.map iframe{width:100%;height:100%;border:0}
 form{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:32px;height:fit-content}
+form h3{font-family:'Playfair Display',serif;font-size:21px;margin-bottom:4px}
+form .note{color:var(--muted);font-size:13.5px;margin-bottom:18px}
 form .f{margin-bottom:15px}
 label{display:block;font-size:11.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);font-weight:800;margin-bottom:6px}
-input,select{width:100%;background:var(--char);border:1px solid var(--line);border-radius:11px;color:var(--cream);padding:14px;font-family:inherit;font-size:15px;transition:border-color .2s,box-shadow .2s}
-input:focus,select:focus{outline:none;border-color:var(--ember);box-shadow:0 0 0 3px rgba(255,122,26,.15)}
+input,select,textarea{width:100%;background:var(--char);border:1px solid var(--line);border-radius:11px;color:var(--cream);padding:14px;font-family:inherit;font-size:15px;transition:border-color .2s,box-shadow .2s}
+textarea{min-height:80px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--ember);box-shadow:0 0 0 3px rgba(255,122,26,.15)}
 form button{width:100%;background:linear-gradient(135deg,var(--red),var(--ember));color:#fff;border:0;border-radius:12px;padding:16px;font-weight:800;font-size:16px;cursor:pointer;font-family:inherit;transition:transform .15s}
 form button:hover{transform:translateY(-2px)}
 footer{padding:30px 0 44px;color:var(--muted);font-size:13.5px;border-top:1px solid var(--line)}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 footer a{color:var(--ember2)}
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(8,5,3,.92);z-index:90;display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+.lb.on{display:flex}
+.lb img{max-width:92vw;max-height:88vh;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.7);background:#fff}
+.lb .x{position:absolute;top:18px;right:26px;color:#fff;font-size:34px;font-weight:300;cursor:pointer;line-height:1}
 .sticky-call{display:none}
 @media(max-width:860px){
   .hero .wrap,.fit .wrap,.show .wrap{grid-template-columns:1fr}
   .hero-art{order:-1}
-  nav a:not(.cta){display:none}
+  nav a.lk{display:none}
   section{padding:54px 0}
   .stat b{font-size:23px}
-  .sticky-call{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;background:linear-gradient(135deg,var(--red),var(--ember));color:#fff;font-weight:800;font-size:16px;padding:15px;justify-content:center;text-decoration:none;gap:8px}
-  footer{padding-bottom:96px}
+  .sticky-call{display:grid;grid-template-columns:1fr 1fr;position:fixed;bottom:0;left:0;right:0;z-index:60}
+  .sticky-call a{padding:15px;text-align:center;font-weight:800;text-decoration:none;color:#fff;font-size:15px}
+  .sticky-call .c{background:linear-gradient(135deg,var(--red),var(--ember))}
+  .sticky-call .w{background:var(--green)}
+  footer{padding-bottom:80px}
 }
 </style>
 </head>
 <body>
 <div id="bar"></div>
-<div class="ribbon">✦ <b>Concept preview</b> — built for Kildare Stoves by <b>Midlands Made</b> · faster, mobile-first, showroom online · €500 build + optional care plan</div>
+<div class="ribbon">🔥 <b>OFTEC-registered</b> stove &amp; fireplace showroom · we supply <b>and</b> we fit · Monasterevin Road, Co. Kildare</div>
 
 <nav><div class="wrap">
   <div class="logo"><img src="./img/logo.png" alt="Kildare Stoves"></div>
-  <a href="#stoves">Stoves</a><a href="#fitting">Supply &amp; Fit</a><a href="#showroom">Showroom</a><a href="#contact">Contact</a>
-  <a class="cta" href="tel:+353455531563">📞 045 531563</a>
+  <a class="lk" href="#stoves">Stoves</a><a class="lk" href="#fitting">Supply &amp; Fit</a><a class="lk" href="#showroom">Showroom</a><a class="lk" href="#contact">Contact</a>
+  <div class="nav-cta">
+    <a class="cta wa" href="https://wa.me/353858754191" aria-label="WhatsApp">💬</a>
+    <a class="cta" href="tel:+353455531563">📞 045 531563</a>
+  </div>
 </div></nav>
 
 <header class="hero"><div class="wrap">
@@ -221,30 +265,71 @@ footer a{color:var(--ember2)}
     <div class="info">
       <div>📍 <span><b>Kildare Stoves</b><br>Whitesland West Business Park, Monasterevin Road,<br>Co. Kildare, R51 XK64</span></div>
       <div>📞 <span><b>Showroom</b> <a href="tel:+353455531563">045 531563</a> · <b>Mobile</b> <a href="tel:+353858754191">085 875 4191</a></span></div>
+      <div>💬 <span><b>WhatsApp</b> <a href="https://wa.me/353858754191">085 875 4191</a></span></div>
       <div>✉️ <span><a href="mailto:kildarestoves@gmail.com">kildarestoves@gmail.com</a></span></div>
-      <div>🗺️ <span><a href="https://www.google.com/maps/search/?api=1&query=Kildare+Stoves+Monasterevin+Road+R51+XK64" target="_blank" rel="noopener">Get directions →</a></span></div>
     </div>
     <div class="hours">
       <div><span>Mon – Fri</span><span class="now">9:00 – 18:00</span></div>
       <div><span>Saturday</span><span>9:00 – 15:00</span></div>
       <div><span>Sunday</span><span>Closed</span></div>
     </div>
+    <div class="map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Kildare%20Stoves%20Monasterevin%20Road%20R51%20XK64&output=embed" title="Kildare Stoves location"></iframe></div>
   </div>
-  <form id="contact" onsubmit="event.preventDefault();this.innerHTML='<h3 style=\'font-family:Playfair Display,serif;font-size:24px\'>Thanks — we\'ll be in touch today. <span style=\'color:var(--ember2)\'>🔥</span></h3>'">
-    <div class="f"><label>Your name</label><input required placeholder="Name"></div>
-    <div class="f"><label>Phone or email</label><input required placeholder="How do we reach you?"></div>
-    <div class="f"><label>What are you after?</label><select><option>General enquiry</option><option>Room heater stove</option><option>Boiler stove</option><option>Pellet stove</option><option>Electric stove</option><option>Fireplace / insert</option><option>Mantelpiece / hearth</option><option>Supply &amp; fit quote</option></select></div>
-    <button>Send Enquiry →</button>
+  <form id="enqForm">
+    <h3>Ask about a stove</h3>
+    <p class="note">Tell us what you're after — a stove, a fireplace, or a full supply-and-fit. We'll come back to you the same day.</p>
+    <input type="hidden" name="access_key" value="37a94c10-2fb6-448e-bd9a-8676709824d6">
+    <input type="hidden" name="subject" value="New enquiry from Kildare Stoves website">
+    <input type="hidden" name="from_name" value="Kildare Stoves website">
+    <input type="checkbox" name="botcheck" style="display:none">
+    <div class="f"><label>Your name</label><input name="name" required placeholder="Name"></div>
+    <div class="f"><label>Phone or email</label><input name="contact" required placeholder="How do we reach you?"></div>
+    <div class="f"><label>What are you after?</label><select name="looking_for"><option>General enquiry</option><option>Room heater stove</option><option>Boiler stove</option><option>Pellet stove</option><option>Electric stove</option><option>Fireplace / insert</option><option>Mantelpiece / hearth</option><option>Supply &amp; fit quote</option></select></div>
+    <div class="f"><label>Message <span style="text-transform:none;font-weight:600">(optional)</span></label><textarea name="message" placeholder="Anything you'd like us to know — room size, existing fireplace, etc."></textarea></div>
+    <button type="submit" id="enqBtn">Send Enquiry →</button>
+    <p id="formMsg" style="margin-top:12px;font-weight:700;font-size:14px"></p>
   </form>
 </div></section>
 
 <footer><div class="wrap">
-  <div>© Kildare Stoves · Whitesland West Business Park, Monasterevin Road, Co. Kildare</div>
-  <div>Concept preview by <a href="https://midlandsmade.ie">Midlands Made</a> — €500 build · optional care plan</div>
+  <div>© <span id="yr">2026</span> Kildare Stoves · Whitesland West Business Park, Monasterevin Road, Co. Kildare · R51 XK64</div>
+  <div>Website by <a href="https://midlandsmade.ie" target="_blank" rel="noopener">Midlands Made</a></div>
 </div></footer>
-<a class="sticky-call" href="tel:+353455531563">📞 Call the showroom — 045 531563</a>
+
+<div class="sticky-call">
+  <a class="c" href="tel:+353455531563">📞 Call the showroom</a>
+  <a class="w" href="https://wa.me/353858754191">💬 WhatsApp</a>
+</div>
+
+<div class="lb" id="lightbox"><span class="x">&times;</span><img id="lbImg" src="" alt=""></div>
 
 <script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+// lightbox for category + product images
+const lb=document.getElementById('lightbox'),lbImg=document.getElementById('lbImg');
+document.querySelectorAll('.cat, .prod .ph').forEach(el=>{
+  el.addEventListener('click',e=>{
+    const img=el.querySelector('img'); if(!img)return;
+    if(el.classList.contains('cat'))e.preventDefault();
+    lbImg.src=img.src; lbImg.alt=img.alt; lb.classList.add('on');
+  });
+});
+lb.onclick=()=>lb.classList.remove('on');
+
+// working enquiry form -> Web3Forms
+const form=document.getElementById('enqForm'),msg=document.getElementById('formMsg'),btn=document.getElementById('enqBtn');
+form.addEventListener('submit',async e=>{
+  e.preventDefault(); btn.textContent='Sending…'; btn.disabled=true; msg.textContent='';
+  try{
+    const r=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(form)))});
+    const j=await r.json();
+    if(j.success){form.reset();msg.style.color='var(--ember2)';msg.textContent='✓ Thanks — we\'ll be in touch today. 🔥';btn.textContent='Sent ✓';}
+    else{throw new Error(j.message||'failed')}
+  }catch(err){msg.style.color='#ff8a7a';msg.textContent='Sorry — something went wrong. Please ring us on 045 531563.';btn.textContent='Send Enquiry →';btn.disabled=false;}
+});
+
+// scroll progress + reveals
 addEventListener('scroll',()=>{const h=document.documentElement;document.getElementById('bar').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'},{passive:true});
 addEventListener('load',()=>{
   if(!window.gsap)return;

@@ -51,8 +51,12 @@
 <style>
 :root{--char:#17110d;--panel:#201813;--panel2:#271d16;--cream:#f5ede3;--muted:#b0a297;--ember:#ff7a1a;--ember2:#ffab52;--red:#c40606;--green:#25D366;--line:rgba(255,255,255,.10)}
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scrollbar-color:var(--ember) #140f0b;scrollbar-width:thin}
 body{background:var(--char);color:var(--cream);font-family:'Manrope',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+::-webkit-scrollbar{width:12px;height:12px}
+::-webkit-scrollbar-track{background:#140f0b}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--ember2),var(--red));border-radius:10px;border:3px solid #140f0b}
+::-webkit-scrollbar-thumb:hover{background:var(--ember)}
 .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
 ::selection{background:var(--ember);color:#17110d}
 img{max-width:100%;display:block}
@@ -68,12 +72,12 @@ nav{position:sticky;top:0;z-index:50;background:rgba(23,17,13,.82);backdrop-filt
 nav .wrap{display:flex;align-items:center;gap:26px;height:70px;position:relative}
 .nav-links{position:absolute;left:50%;transform:translateX(-50%);display:flex;gap:28px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand .mark{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;background:radial-gradient(circle at 38% 28%,#ff9d42,#c40606);box-shadow:0 6px 18px -6px rgba(255,122,26,.65)}
-.brand .mark .ic{font-size:22px;color:#fff}
+.brand .mark{width:52px;height:52px;border-radius:13px;display:grid;place-items:center;background:radial-gradient(circle at 38% 28%,#ff9d42,#c40606);box-shadow:0 8px 22px -6px rgba(255,122,26,.7)}
+.brand .mark .ic{font-size:30px;color:#fff}
 .brand .wm{line-height:1.05}
-.brand .wm b{font-family:'Playfair Display',serif;font-size:20px;font-weight:800;color:var(--cream);letter-spacing:.2px}
+.brand .wm b{font-family:'Playfair Display',serif;font-size:25px;font-weight:800;color:var(--cream);letter-spacing:.2px}
 .brand .wm b em{font-style:italic;color:var(--ember2)}
-.brand .wm span{display:block;font-size:8.5px;letter-spacing:2.3px;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.brand .wm span{display:block;font-size:9.5px;letter-spacing:2.4px;text-transform:uppercase;color:var(--muted);margin-top:3px}
 nav a.lk{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600;transition:color .2s}
 nav a.lk:hover{color:var(--ember2)}
 .nav-cta{margin-left:auto;display:flex;gap:9px}
@@ -274,6 +278,17 @@ footer a{color:var(--ember2)}
 .tq p{font-family:'Playfair Display',serif;font-style:italic;font-size:17px;line-height:1.5;color:#ecdfd2;margin:2px 0 12px}
 .tq .stars{display:inline-flex;gap:3px;color:#ffb43d;font-size:15px}
 .tq .who{color:var(--muted);font-size:13px;font-weight:700;margin-top:8px}
+/* reviews */
+.reviews{background:linear-gradient(180deg,var(--panel),var(--char));border-block:1px solid var(--line)}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(288px,1fr));gap:18px;margin-top:8px}
+.rev{background:var(--panel2);border:1px solid var(--line);border-radius:16px;padding:24px;transition:transform .3s,border-color .3s}
+.rev:hover{transform:translateY(-5px);border-color:rgba(255,171,82,.4)}
+.rev .stars{color:#ffb43d;font-size:15px;letter-spacing:2px;margin-bottom:12px;display:block}
+.rev p{font-size:14.5px;line-height:1.6;color:#ecdfd2}
+.rev .who{display:flex;align-items:center;gap:11px;margin-top:16px}
+.rev .av{width:40px;height:40px;border-radius:50%;background:radial-gradient(circle at 40% 30%,#ff9d42,#c40606);display:grid;place-items:center;font-weight:800;color:#fff;font-size:15px;flex-shrink:0;font-family:'Playfair Display',serif}
+.rev .who b{font-size:13.5px;display:block}
+.rev .who span{display:block;font-size:11.5px;color:var(--muted)}
 /* contact (mockup 3) */
 .contact .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:30px;align-items:start}
 .c-media{display:grid;gap:16px}
@@ -350,6 +365,7 @@ footer a{color:var(--ember2)}
 .shop-filters button.on{color:#17110d;background:linear-gradient(135deg,var(--ember2),var(--ember));border-color:transparent}
 .shop{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:18px}
 .shop-note{color:var(--muted);grid-column:1/-1;padding:20px 0}
+.shop-more{grid-column:1/-1;text-align:center;margin-top:16px}
 @keyframes cardIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 .pcard{animation:cardIn .5s cubic-bezier(.2,.7,.3,1) both}
 .pcard{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;cursor:pointer;transition:transform .3s,box-shadow .3s,border-color .3s;text-align:left}
@@ -412,7 +428,12 @@ footer a{color:var(--ember2)}
   .pcard .ph .tag{font-size:9px;padding:3px 7px}
   .shop-filters{gap:7px}
   .shop-filters button{font-size:12px;padding:8px 13px}
-  .nav-cta .cta:not(.wa){padding:10px 14px;font-size:14px}
+  .nav-cta{gap:8px}
+  .nav-cta .cta{white-space:nowrap;padding:11px 15px;font-size:14px;border-radius:12px}
+  .nav-cta .cta.wa{padding:11px 13px}
+  .nav-cta .cta.wa .ic{font-size:20px}
+  .brand .mark{width:44px;height:44px}
+  .brand .mark .ic{font-size:25px}
   .journey{padding:28px}
   .jsteps{grid-template-columns:1fr;gap:20px}
   .tcard{padding:24px;gap:18px}
@@ -474,7 +495,7 @@ footer a{color:var(--ember2)}
     <span class="wm"><b>Kildare <em>Stoves</em></b><span>Stove &amp; Fireplace Specialists</span></span>
   </a>
   <div class="nav-links">
-    <a class="lk" href="#stoves">Stoves</a><a class="lk" href="#fitting">Supply &amp; Fit</a><a class="lk" href="#size">Size Guide</a><a class="lk" href="#shop">Our Range</a><a class="lk" href="#showroom">Showroom</a>
+    <a class="lk" href="#stoves">Stoves</a><a class="lk" href="#fitting">Supply &amp; Fit</a><a class="lk" href="size-guide.html">Size Guide</a><a class="lk" href="#shop">Our Range</a><a class="lk" href="#showroom">Showroom</a>
   </div>
   <div class="nav-cta">
     <a class="cta wa" href="https://wa.me/353858754191" aria-label="WhatsApp"><svg class="ic"><use href="#i-wa"/></svg></a>
@@ -496,7 +517,7 @@ footer a{color:var(--ember2)}
     </div>
     <div class="btnrow g-reveal">
       <a class="btn fire" href="#showroom">Visit the showroom <svg class="ic"><use href="#i-arrow"/></svg></a>
-      <a class="btn ghost" href="#size">Find my stove size <svg class="ic"><use href="#i-arrow"/></svg></a>
+      <a class="btn ghost" href="size-guide.html">Find my stove size <svg class="ic"><use href="#i-arrow"/></svg></a>
     </div>
   </div>
   <div class="hfeat g-reveal">
@@ -509,8 +530,10 @@ footer a{color:var(--ember2)}
 </header>
 
 <div class="strip"><div class="strip-in">
-  <span><svg class="ic"><use href="#i-cert"/></svg> OFTEC Registered</span><span>Room Heater Stoves</span><span>Boiler Stoves</span><span>Pellet Stoves</span><span>Fireplaces</span><span>Mantelpieces</span><span>Hearths &amp; Stone</span>
-  <span><svg class="ic"><use href="#i-cert"/></svg> OFTEC Registered</span><span>Room Heater Stoves</span><span>Boiler Stoves</span><span>Pellet Stoves</span><span>Fireplaces</span><span>Mantelpieces</span><span>Hearths &amp; Stone</span>
+  <span><svg class="ic"><use href="#i-cert"/></svg> OFTEC Registered</span><span>Room Heater Stoves</span><span>Boiler Stoves</span><span>Pellet Stoves</span><span>Cassette Stoves</span><span>Fireplaces</span><span>Mantelpieces</span><span>Hearths &amp; Stone</span>
+  <span><svg class="ic"><use href="#i-cert"/></svg> OFTEC Registered</span><span>Room Heater Stoves</span><span>Boiler Stoves</span><span>Pellet Stoves</span><span>Cassette Stoves</span><span>Fireplaces</span><span>Mantelpieces</span><span>Hearths &amp; Stone</span>
+  <span><svg class="ic"><use href="#i-cert"/></svg> OFTEC Registered</span><span>Room Heater Stoves</span><span>Boiler Stoves</span><span>Pellet Stoves</span><span>Cassette Stoves</span><span>Fireplaces</span><span>Mantelpieces</span><span>Hearths &amp; Stone</span>
+  <span><svg class="ic"><use href="#i-cert"/></svg> OFTEC Registered</span><span>Room Heater Stoves</span><span>Boiler Stoves</span><span>Pellet Stoves</span><span>Cassette Stoves</span><span>Fireplaces</span><span>Mantelpieces</span><span>Hearths &amp; Stone</span>
 </div></div>
 
 <section id="stoves"><div class="wrap">
@@ -548,7 +571,7 @@ footer a{color:var(--ember2)}
     <div class="tcard quote g-reveal">
       <div class="tq" style="width:100%">
         <span class="stars"><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg></span>
-        <p style="margin-top:10px"><b style="color:var(--cream)">86% recommend us</b> across <b style="color:var(--cream)">27 reviews</b> on Facebook — real feedback from local homes we've supplied and fitted.</p>
+        <p style="margin-top:10px"><b style="color:var(--cream)">84% recommend us</b> across <b style="color:var(--cream)">26 reviews</b> on Facebook — real feedback from local homes we've supplied and fitted.</p>
         <div class="who"><a href="https://www.facebook.com/wesplumbingprofesional/" target="_blank" rel="noopener" style="color:var(--ember2)">Read our reviews on Facebook →</a></div>
       </div>
     </div>
@@ -561,34 +584,21 @@ footer a{color:var(--ember2)}
   <div class="shop" id="shopGrid"><p class="shop-note">Loading the range…</p></div>
 </div></section>
 
-<section id="size" style="padding-top:0"><div class="wrap">
-  <div class="sizer g-reveal"><div class="in">
-    <div>
-      <span class="kicker">Helpful tool</span>
-      <h2>What size stove do I need?</h2>
-      <p class="lead">A stove that's too big overheats the room; too small never warms it. Pop in your room size for a rough output to aim for — then we'll size it properly for you in store.</p>
-    </div>
-    <div class="calc">
-      <div class="row">
-        <div><label>Length (m)</label><input id="rl" type="number" value="5" min="1" step="0.5"></div>
-        <div><label>Width (m)</label><input id="rw" type="number" value="4" min="1" step="0.5"></div>
-        <div><label>Height (m)</label><input id="rh" type="number" value="2.4" min="1.8" step="0.1"></div>
-      </div>
-      <label>Insulation</label>
-      <select id="rins">
-        <option value="25">Well insulated (newer home)</option>
-        <option value="14" selected>Average</option>
-        <option value="10">Older / draughty</option>
-      </select>
-      <div class="out"><b id="kw">0 kW</b><span>rough output to aim for</span></div>
-      <p class="disc">A rough guide only (room volume ÷ insulation factor). Real sizing depends on your chimney, windows and layout — we'll work it out properly when you visit.</p>
-    </div>
-  </div></div>
+<section id="reviews" class="reviews"><div class="wrap">
+  <div class="sec-head g-reveal"><div><span class="kicker">What our customers say</span><h2>Recommended by local homes</h2></div><p><b style="color:var(--ember2)">84% recommend us</b> across 26 reviews on Facebook.</p></div>
+  <div class="rev-grid">
+    <div class="rev g-reveal"><span class="stars">★★★★★</span><p>“Excellent service! I'd recommend Kildare Stoves — they did a great job installing our pellet stove.”</p><div class="who"><span class="av">C</span><div><b>Ciara Fallon Moore</b><span>Pellet stove install</span></div></div></div>
+    <div class="rev g-reveal"><span class="stars">★★★★★</span><p>“Excellent service from beginning to end. William went above and beyond — amazing prices and the best service. I can't recommend these guys enough, and we love our new stove!”</p><div class="who"><span class="av">S</span><div><b>Sarah Quinn Balfe</b><span>New stove</span></div></div></div>
+    <div class="rev g-reveal"><span class="stars">★★★★★</span><p>“Kildare Stoves — can't say enough. A great job done installing our insert boiler stove. I would highly recommend.”</p><div class="who"><span class="av">D</span><div><b>David Kavanagh</b><span>Insert boiler stove</span></div></div></div>
+    <div class="rev g-reveal"><span class="stars">★★★★★</span><p>“What a great job you did for us, and so clean. Would highly recommend Kildare Stoves.”</p><div class="who"><span class="av">K</span><div><b>Kevin &amp; Anna</b><span>Stove &amp; brickwork</span></div></div></div>
+    <div class="rev g-reveal"><span class="stars">★★★★★</span><p>“Great service and very efficient — great job done, and would recommend them.”</p><div class="who"><span class="av">C</span><div><b>Chris Pender</b><span>Stove install</span></div></div></div>
+  </div>
+  <div style="text-align:center;margin-top:28px"><a class="btn ghost" href="https://www.facebook.com/wesplumbingprofesional/" target="_blank" rel="noopener">Read all our reviews on Facebook <svg class="ic"><use href="#i-arrow"/></svg></a></div>
 </div></section>
 
 <div class="ambiance"><div class="in g-reveal">
-  <h3>Come see the fire <em>lit</em> before you buy it.</h3>
-  <p>Our showroom fires are burning — feel the heat, judge the size, and get honest advice from people who fit them for a living.</p>
+  <h3>See it in person <em>before</em> you buy.</h3>
+  <p>Call into our Monasterevin showroom to see the models, sizes and finishes up close — and get honest advice from the people who fit them for a living.</p>
 </div></div>
 
 <section id="fitting" class="fit"><div class="wrap">
@@ -616,7 +626,7 @@ footer a{color:var(--ember2)}
     <details open><summary>Do you fit the stoves you sell?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">Yes. We're OFTEC-registered solid-fuel installers, so we supply, deliver and fit your stove, flue, hearth and surround — one team from the showroom floor to the finished fire.</div></details>
     <details><summary>What areas do you cover?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">We're based on the Monasterevin Road in Co. Kildare and cover the Midlands and much of the country — we regularly travel further afield for the right job. Tell us where you are and we'll let you know what suits.</div></details>
     <details><summary>What types of stove do you sell?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">Wood-burning and multi-fuel room heater stoves, boiler stoves, pellet stoves and electric stoves — plus inset fireplaces, flues, hearths and handmade mantelpieces.</div></details>
-    <details><summary>What size stove do I need?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">As a rough guide, divide your room's volume in cubic metres by about 14 to get the kW output to aim for. Try our <a href="#size" style="color:var(--ember2);font-weight:700">size guide</a> above, then we'll size it properly for your room, chimney and insulation.</div></details>
+    <details><summary>What size stove do I need?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">As a rough guide, divide your room's volume in cubic metres by about 14 to get the kW output to aim for. Try our <a href="size-guide.html" style="color:var(--ember2);font-weight:700">size guide</a>, then we'll size it properly for your room, chimney and insulation.</div></details>
     <details><summary>Can I see the stoves in person before I buy?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">Yes — our Monasterevin showroom has a wide range of stoves and fireplaces on display, so you can see the models, sizes and finishes in person and get honest advice on what suits your room. Call in during opening hours or book a time that suits you.</div></details>
   </div>
 </div></section>
@@ -684,7 +694,7 @@ footer a{color:var(--ember2)}
     <div class="flinks">
       <b>Visit</b>
       <a href="#showroom">Showroom</a>
-      <a href="#size">Size Guide</a>
+      <a href="size-guide.html">Size Guide</a>
       <a href="#fitting">About Us</a>
     </div>
     <div class="fsocial">
@@ -721,7 +731,7 @@ footer a{color:var(--ember2)}
       <p class="pm-desc" id="pmDesc"></p>
       <div class="pm-feat">
         <div><svg class="ic"><use href="#i-cert"/></svg> Supplied &amp; fitted by our OFTEC team</div>
-        <div><svg class="ic"><use href="#i-flame"/></svg> See it lit in the Monasterevin showroom</div>
+        <div><svg class="ic"><use href="#i-flame"/></svg> See it in person in the Monasterevin showroom</div>
         <div><svg class="ic"><use href="#i-wrench"/></svg> Free fitting quote for your room</div>
       </div>
       <a class="btn fire" id="pmEnquire" href="#showroom" style="width:100%;justify-content:center">Enquire about this <svg class="ic"><use href="#i-arrow"/></svg></a>
@@ -738,7 +748,7 @@ document.getElementById('yr').textContent=new Date().getFullYear();
   if(!grid) return;
   const desc={freestanding:'Freestanding wood-burning stove',insert:'Inset stove',cassette:'Cassette fire',pellet:'Pellet stove',electric:'Electric fire',boiler:'Boiler stove',surround:'Fireplace surround'};
   const lookMap={freestanding:'Room heater stove',insert:'Room heater stove',cassette:'Fireplace / insert',pellet:'Pellet stove',electric:'Electric stove',boiler:'Boiler stove',surround:'Mantelpiece / hearth'};
-  let all=[],active='All';
+  let all=[],active='All',expanded=false;
   const aiImg=p=>'./assets/products/'+p.id+'.webp';
   function card(p){
     const el=document.createElement('button');el.className='pcard';
@@ -754,8 +764,15 @@ document.getElementById('yr').textContent=new Date().getFullYear();
   function render(){
     grid.innerHTML='';
     const list=active==='All'?all:all.filter(p=>p.cat===active);
-    list.forEach((p,i)=>{const c=card(p);c.style.animationDelay=Math.min(i*0.028,0.6)+'s';grid.appendChild(c);});
-    if(!list.length)grid.innerHTML='<p class="shop-note">More coming to this range soon.</p>';
+    if(!list.length){grid.innerHTML='<p class="shop-note">More coming to this range soon.</p>';return;}
+    const limit=(active==='All'&&!expanded)?12:list.length;
+    list.slice(0,limit).forEach((p,i)=>{const c=card(p);c.style.animationDelay=Math.min(i*0.028,0.5)+'s';grid.appendChild(c);});
+    if(list.length>limit){
+      const more=document.createElement('div');more.className='shop-more';
+      more.innerHTML='<button class="btn ghost">Show all '+list.length+' stoves &amp; fires <svg class="ic"><use href="#i-arrow"/></svg></button>';
+      more.querySelector('button').onclick=function(){expanded=true;render();document.getElementById('shop').scrollIntoView({behavior:'smooth'});};
+      grid.appendChild(more);
+    }
   }
   function openModal(p,src){
     const pmi=document.getElementById('pmImg');
@@ -775,7 +792,7 @@ document.getElementById('yr').textContent=new Date().getFullYear();
   pm.querySelector('#pmX').onclick=()=>pm.classList.remove('on');
   pm.addEventListener('click',e=>{if(e.target===pm)pm.classList.remove('on');});
   addEventListener('keydown',e=>{if(e.key==='Escape')pm.classList.remove('on');});
-  function setFilter(cat){active=cat;[...filt.children].forEach(x=>x.classList.toggle('on',x.textContent===cat));render();}
+  function setFilter(cat){active=cat;expanded=false;[...filt.children].forEach(x=>x.classList.toggle('on',x.textContent===cat));render();}
   window.shopSetFilter=setFilter;
   fetch('./data/products.json').then(r=>r.json()).then(d=>{
     all=d.products;
@@ -792,14 +809,6 @@ document.getElementById('yr').textContent=new Date().getFullYear();
 })();
 
 /* kW stove-size calculator */
-function kw(){
-  const l=+rl.value||0,w=+rw.value||0,h=+rh.value||0,f=+rins.value;
-  const vol=l*w*h; let out=vol/f;
-  out=Math.max(0,Math.round(out*2)/2); // nearest 0.5
-  document.getElementById('kw').textContent=(out?out.toFixed(1):'0')+' kW';
-}
-['rl','rw','rh','rins'].forEach(id=>document.getElementById(id).addEventListener('input',kw));
-kw();
 
 /* live open-now status (visit card) */
 (function openNow(){

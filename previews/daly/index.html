@@ -3,276 +3,500 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daly Auto Sales — Quality Used Cars in Mullingar Since 1955</title>
-<meta name="description" content="Family-run car sales on Lynn Road, Mullingar since 1955. Every car serviced, VRT'd, NCT'd and warrantied.">
-<meta name="robots" content="noindex,nofollow"><!-- concept preview -->
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+<meta name="robots" content="noindex,nofollow"><!-- staging; make indexable when it goes on dalyautosales.com -->
+<title>Daly Auto Sales | Quality Used Cars in Mullingar Since 1955</title>
+<meta name="description" content="Family-run car sales on the Lynn Road, Mullingar since 1955. Hand-picked used cars — every one serviced, VRT'd, NCT'd and warrantied. Trade-ins welcome. Open 7 days.">
+<meta name="theme-color" content="#0e7a4f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230e7a4f'/%3E%3Ctext x='50' y='72' font-family='Georgia,serif' font-size='62' font-weight='bold' fill='white' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E">
+<!-- Open Graph / social share -->
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Daly Auto Sales — Quality Used Cars in Mullingar Since 1955">
+<meta property="og:description" content="Hand-picked used cars on the Lynn Road, Mullingar. Every car serviced, VRT'd, NCT'd & warrantied. Open 7 days.">
+<meta property="og:image" content="./img/cars/car3.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"AutoDealer",
+  "name":"Daly Auto Sales",
+  "description":"Family-run used car sales in Mullingar since 1955. Every car serviced, VRT'd, NCT'd and warrantied.",
+  "url":"https://dalyautosales.com",
+  "telephone":"+353455348967",
+  "foundingDate":"1955",
+  "priceRange":"€€",
+  "address":{"@type":"PostalAddress","streetAddress":"Lynn Road","addressLocality":"Mullingar","addressRegion":"Co. Westmeath","addressCountry":"IE"},
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"15:00"}
+  ],
+  "makesOffered":["Audi","BMW","Volkswagen","Toyota"]
+}
+</script>
 <style>
-:root{--bg:#fafbfc;--panel:#ffffff;--line:#e6eaef;--ink:#17222e;--muted:#5f6e7e;--navy:#17324a;--green:#0e7a4f;--green-2:#12925f;--gold:#b8903f}
+:root{--bg:#f7f8f6;--panel:#ffffff;--line:#e5e9e6;--ink:#16211c;--muted:#5e6d64;--navy:#15302a;--green:#0e7a4f;--green-d:#0b6642;--gold:#b8903f;--shadow:0 26px 60px -34px rgba(21,48,42,.4)}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font-family:'Manrope',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
-.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+img{max-width:100%;display:block}
 ::selection{background:var(--green);color:#fff}
-.ribbon{background:#10281c;color:#bfe5d2;font-size:12.5px;text-align:center;padding:8px 14px}
+a{color:inherit}
+#bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green),var(--gold));width:0%;z-index:70}
+.ribbon{background:var(--navy);color:#cfe6da;font-size:12.5px;text-align:center;padding:9px 14px;letter-spacing:.3px}
 .ribbon b{color:#fff}
-nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;gap:26px;height:68px}
-.logo{font-family:'Playfair Display',serif;font-size:22px}
-.logo span{color:var(--green)}
-.logo small{display:block;font-family:'Manrope';font-size:9px;letter-spacing:3px;color:var(--muted);text-transform:uppercase}
-nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600;transition:color .2s}
-nav a:hover{color:var(--green)}
-nav .cta{margin-left:auto;background:var(--green);color:#fff;padding:11px 22px;border-radius:11px;font-weight:800;transition:transform .15s,box-shadow .2s}
-nav .cta:hover{transform:translateY(-2px);box-shadow:0 10px 24px -10px rgba(14,122,79,.5)}
-#bar{position:fixed;top:0;left:0;height:2px;background:var(--green);width:0%;z-index:60}
+nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.9);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:24px;height:72px}
+.brand{display:flex;flex-direction:column;line-height:1;text-decoration:none}
+.brand b{font-family:'Playfair Display',serif;font-size:23px;color:var(--ink)}
+.brand b span{color:var(--green)}
+.brand small{font-size:9px;letter-spacing:3px;color:var(--muted);text-transform:uppercase;margin-top:3px}
+.nav-links{display:flex;gap:24px;margin-left:12px}
+nav a.lk{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600;transition:color .2s}
+nav a.lk:hover{color:var(--green)}
+.nav-cta{margin-left:auto;display:flex;gap:9px}
+.pill{display:inline-flex;align-items:center;gap:7px;padding:10px 17px;border-radius:11px;font-weight:800;font-size:14px;text-decoration:none;transition:transform .15s,box-shadow .2s}
+.pill.call{background:var(--green);color:#fff;box-shadow:0 10px 22px -10px rgba(14,122,79,.55)}
+.pill.wa{background:#25D366;color:#fff}
+.pill:hover{transform:translateY(-2px)}
 /* hero */
-.hero{position:relative;padding:78px 0 60px;background:linear-gradient(175deg,#eef4f0 0%,var(--bg) 65%)}
-.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
-.est{display:inline-flex;align-items:center;gap:9px;border:1px solid #cfe2d8;background:#fff;color:var(--green);font-size:12px;letter-spacing:2.5px;text-transform:uppercase;font-weight:800;padding:8px 16px;border-radius:999px;margin-bottom:22px}
-.est .dot{width:6px;height:6px;border-radius:50%;background:var(--green)}
-h1{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(34px,5.2vw,56px);line-height:1.1}
-h1 .l{display:block;overflow:hidden}
-h1 .l span{display:inline-block}
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#eef4f0,#f7f8f6 70%)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center;padding:70px 24px 58px}
+.est{display:inline-flex;align-items:center;gap:9px;border:1px solid #cfe2d8;background:#fff;color:var(--green);font-size:11.5px;letter-spacing:2px;text-transform:uppercase;font-weight:800;padding:8px 15px;border-radius:999px;margin-bottom:22px}
+.est .dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(14,122,79,.14)}
+h1{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(35px,5.3vw,58px);line-height:1.06;letter-spacing:-.5px}
+h1 .l{display:block;overflow:hidden}h1 .l span{display:inline-block}
 h1 em{font-style:italic;color:var(--green)}
-.sub{margin:18px 0 26px;font-size:18px;color:var(--muted);max-width:480px}
+.sub{margin:19px 0 26px;font-size:18px;color:var(--muted);max-width:500px}
+.sub b{color:var(--ink)}
 .btnrow{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:15px 30px;border-radius:12px;font-weight:800;text-decoration:none;font-size:15.5px;transition:transform .18s,box-shadow .2s}
-.btn.green{background:var(--green);color:#fff;box-shadow:0 12px 28px -12px rgba(14,122,79,.55)}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:15px 28px;border-radius:12px;font-weight:800;text-decoration:none;font-size:15.5px;transition:transform .18s,box-shadow .2s;border:0;cursor:pointer;font-family:inherit}
+.btn.green{background:var(--green);color:#fff;box-shadow:0 14px 30px -12px rgba(14,122,79,.55)}
 .btn.green:hover{transform:translateY(-3px)}
-.btn.line{border:2px solid var(--line);color:var(--ink);background:#fff}
+.btn.line{border:1.5px solid var(--line);color:var(--ink);background:#fff}
 .btn.line:hover{border-color:var(--green);color:var(--green);transform:translateY(-3px)}
-.hero-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:0 26px 60px -30px rgba(23,50,74,.25)}
-.hero-card b{font-family:'Playfair Display',serif;font-size:18px}
-.assure{list-style:none;margin-top:14px;display:grid;gap:11px}
-.assure li{display:flex;gap:11px;align-items:center;font-size:14.5px;color:var(--ink);font-weight:600}
-.assure i{font-style:normal;width:24px;height:24px;border-radius:50%;background:#e2f2ea;color:var(--green);display:inline-flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
-.hero-card .phones{margin-top:16px;padding-top:16px;border-top:1px solid var(--line);display:grid;gap:8px}
-.hero-card .phones a{display:flex;justify-content:space-between;text-decoration:none;color:var(--ink);font-weight:800;font-size:15px}
-.hero-card .phones a b{color:var(--green)}
-.stats{display:flex;margin-top:44px;border:1px solid var(--line);border-radius:16px;overflow:hidden;max-width:620px;background:#fff}
-.stat{flex:1;padding:18px 8px;text-align:center}
+.hero-photo{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/3;background:#dde5e0}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+.hero-tag{position:absolute;left:16px;bottom:16px;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);border-radius:12px;padding:11px 15px;font-size:13px;font-weight:700;box-shadow:0 10px 24px -12px rgba(0,0,0,.4)}
+.hero-tag b{color:var(--green)}
+.trust{background:var(--navy);color:#fff}
+.trust .wrap{display:flex;flex-wrap:wrap;gap:10px 30px;justify-content:center;padding:16px 24px;font-size:13.5px;font-weight:700;letter-spacing:.4px}
+.trust span{display:inline-flex;align-items:center;gap:8px;color:#dcece4}
+.trust b{color:#7fd8ab}
+.stats{display:flex;max-width:640px;margin-top:40px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+.stat{flex:1;padding:17px 8px;text-align:center}
 .stat+.stat{border-left:1px solid var(--line)}
-.stat b{font-family:'Playfair Display',serif;font-size:32px;color:var(--navy)}
-.stat span{display:block;font-size:10px;color:var(--muted);letter-spacing:1.8px;text-transform:uppercase;margin-top:3px}
-/* assurance strip */
-.strip{background:var(--navy);color:#fff;padding:16px 0;overflow:hidden;white-space:nowrap}
-.strip-in{display:inline-block;animation:marq 26s linear infinite}
-.strip span{font-size:13.5px;letter-spacing:3px;text-transform:uppercase;margin:0 30px;color:#c6d4e2}
-.strip b{color:#7fd8ab}
-@keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-/* stock */
-section{padding:78px 0}
+.stat b{font-family:'Playfair Display',serif;font-size:29px;color:var(--navy)}
+.stat span{display:block;font-size:9.5px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px}
+section{padding:76px 0}
 .kicker{font-size:11.5px;letter-spacing:4px;text-transform:uppercase;color:var(--green);font-weight:800;margin-bottom:10px;display:block}
-h2{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(28px,3.8vw,40px)}
-.sec-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:34px;flex-wrap:wrap}
-.sec-head p{color:var(--muted);max-width:400px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(295px,1fr));gap:20px}
-.car{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .3s cubic-bezier(.2,.7,.3,1),box-shadow .3s,border-color .3s}
-.car:hover{transform:translateY(-7px);box-shadow:0 28px 54px -26px rgba(23,50,74,.3);border-color:#cfe2d8}
-.car .ph{position:relative;aspect-ratio:16/10;overflow:hidden;background:#f0f2f5}
-.car img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.3,1)}
-.car:hover img{transform:scale(1.06)}
-.badge{position:absolute;top:13px;left:13px;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);border:1px solid #cfe2d8;color:var(--green);font-size:10.5px;font-weight:800;letter-spacing:1.2px;padding:5px 11px;border-radius:999px;text-transform:uppercase}
-.car .body{padding:18px 20px 20px}
-.car h3{font-size:17px;font-weight:800;line-height:1.35}
-.meta{display:flex;gap:12px;color:var(--muted);font-size:13px;margin:8px 0 14px}
-.car .row{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:14px}
-.assured-mini{font-size:11.5px;font-weight:800;color:var(--green)}
-.car a.enq{font-size:13.5px;font-weight:800;color:var(--navy);text-decoration:none;display:inline-flex;gap:6px;transition:gap .2s,color .2s}
-.car a.enq:hover{color:var(--green);gap:10px}
+h2{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(28px,3.9vw,42px);letter-spacing:-.4px}
+.sec-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:32px;flex-wrap:wrap}
+.sec-head p{color:var(--muted);max-width:420px}
+/* stock */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.filters button{border:1.5px solid var(--line);background:#fff;color:var(--muted);font-weight:700;font-size:13.5px;padding:9px 16px;border-radius:999px;cursor:pointer;font-family:inherit;transition:all .18s}
+.filters button.on,.filters button:hover{border-color:var(--green);color:var(--green);background:#f0f8f4}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.car{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .3s cubic-bezier(.2,.7,.3,1),box-shadow .3s,border-color .3s;display:flex;flex-direction:column}
+.car:hover{transform:translateY(-7px);box-shadow:var(--shadow);border-color:#cfe2d8}
+.car .ph{position:relative;aspect-ratio:3/2;overflow:hidden;background:#eef2ef;cursor:zoom-in}
+.car .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.3,1)}
+.car:hover .ph img{transform:scale(1.06)}
+.badge{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);border:1px solid #cfe2d8;color:var(--green);font-size:10.5px;font-weight:800;letter-spacing:.8px;padding:5px 11px;border-radius:999px;text-transform:uppercase}
+.zoomic{position:absolute;top:12px;right:12px;width:32px;height:32px;border-radius:9px;background:rgba(21,48,42,.55);color:#fff;display:grid;place-items:center;font-size:14px;opacity:0;transition:opacity .2s}
+.car:hover .zoomic{opacity:1}
+.car .body{padding:17px 19px 19px;display:flex;flex-direction:column;flex:1}
+.car h3{font-size:17.5px;font-weight:800;line-height:1.3}
+.spec{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 15px}
+.spec span{font-size:12px;font-weight:700;color:var(--muted);background:#f2f5f3;border-radius:7px;padding:5px 10px;display:inline-flex;gap:5px;align-items:center}
+.car .foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:14px}
+.assured{font-size:11px;font-weight:800;color:var(--green);letter-spacing:.3px}
+.car .enq{font-size:13.5px;font-weight:800;color:#fff;background:var(--green);border:0;border-radius:9px;padding:9px 15px;cursor:pointer;font-family:inherit;transition:background .2s,transform .15s}
+.car .enq:hover{background:var(--green-d);transform:translateY(-1px)}
+/* finance */
+.finance{background:linear-gradient(160deg,#0f2e26,#15302a);color:#fff;border-radius:26px;overflow:hidden}
+.finance .in{display:grid;grid-template-columns:1fr 1fr;gap:44px;padding:52px;align-items:center}
+.finance h2{color:#fff}
+.finance p.lead{color:#bcd6ca;margin:14px 0 0;max-width:400px}
+.calc{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:28px}
+.calc label{display:block;font-size:11.5px;letter-spacing:1.4px;text-transform:uppercase;color:#9fc4b4;font-weight:800;margin:14px 0 6px}
+.calc label:first-child{margin-top:0}
+.calc input,.calc select{width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:10px;color:#fff;padding:12px 13px;font-family:inherit;font-size:15px}
+.calc input:focus,.calc select:focus{outline:none;border-color:#7fd8ab}
+.calc .out{margin-top:20px;background:#fff;color:var(--navy);border-radius:12px;padding:18px 20px;text-align:center}
+.calc .out b{font-family:'Playfair Display',serif;font-size:34px;color:var(--green);display:block}
+.calc .out small{color:var(--muted);font-size:12px}
+.calc .disc{font-size:11px;color:#8fb2a4;margin-top:12px;line-height:1.5}
+/* car wash */
+.wash{background:#fff;border-block:1px solid var(--line)}
+.wash .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:48px;align-items:center}
+.wash .photo{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/3}
+.wash .photo img{width:100%;height:100%;object-fit:cover}
+.wash-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
+.wc{border:1px solid var(--line);border-radius:14px;padding:18px}
+.wc .ic{font-size:22px}
+.wc b{display:block;margin:8px 0 3px;font-size:15.5px}
+.wc p{font-size:13px;color:var(--muted)}
 /* heritage */
-.heritage{background:#fff;border-block:1px solid var(--line)}
-.heritage .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
-.heritage blockquote{font-family:'Playfair Display',serif;font-style:italic;font-size:24px;line-height:1.5;color:var(--navy);border-left:3px solid var(--green);padding-left:22px;margin:24px 0 16px}
+.heritage .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:center}
+.heritage blockquote{font-family:'Playfair Display',serif;font-style:italic;font-size:23px;line-height:1.5;color:var(--navy);border-left:3px solid var(--green);padding-left:22px;margin:22px 0 16px}
 .heritage p{color:var(--muted)}
-.year-card{background:linear-gradient(165deg,#f2f7f4,#fff);border:1px solid var(--line);border-radius:24px;padding:50px;text-align:center}
-.year-card b{font-family:'Playfair Display',serif;font-size:88px;line-height:1;color:var(--navy)}
-.year-card span{display:block;color:var(--muted);letter-spacing:4px;text-transform:uppercase;font-size:11.5px;margin-top:10px}
-.gens{display:flex;justify-content:center;gap:9px;margin-top:20px}
-.gens i{font-style:normal;border:1px solid #cfe2d8;color:var(--green);font-size:11px;font-weight:800;letter-spacing:1px;padding:5px 12px;border-radius:999px}
-/* enquiry */
-.enquiry .wrap{display:grid;grid-template-columns:1fr 1fr;gap:52px}
-.contact-list{display:grid;gap:16px;margin-top:24px}
-.contact-list>div{display:flex;gap:13px;align-items:start;color:var(--muted)}
-.contact-list b{color:var(--ink)}
-.contact-list a{color:var(--green);font-weight:800;text-decoration:none}
-form{background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px;box-shadow:0 24px 54px -30px rgba(23,50,74,.2)}
-form .f{margin-bottom:15px}
-label{display:block;font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);font-weight:800;margin-bottom:6px}
-input,select{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:11px;color:var(--ink);padding:14px;font-family:inherit;font-size:15px;transition:border-color .2s,box-shadow .2s}
-input:focus,select:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(14,122,79,.12)}
-form button{width:100%;background:var(--green);color:#fff;border:0;border-radius:12px;padding:16px;font-weight:800;font-size:16px;cursor:pointer;font-family:inherit;transition:transform .15s,box-shadow .2s}
-form button:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(14,122,79,.5)}
-footer{padding:32px 0 46px;color:var(--muted);font-size:13.5px;border-top:1px solid var(--line)}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-footer a{color:var(--green)}
+.year-card{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:1/1}
+.year-card img{width:100%;height:100%;object-fit:cover}
+.year-card .ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,48,42,.15),rgba(21,48,42,.82));display:flex;flex-direction:column;justify-content:flex-end;padding:34px;color:#fff}
+.year-card .ov b{font-family:'Playfair Display',serif;font-size:74px;line-height:1}
+.year-card .ov span{letter-spacing:3px;text-transform:uppercase;font-size:11px;color:#bfe5d2}
+.journey{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.journey i{font-style:normal;border:1px solid rgba(255,255,255,.3);color:#dff0e8;font-size:11.5px;font-weight:700;padding:5px 12px;border-radius:999px}
+/* contact */
+.contact{background:linear-gradient(180deg,#eef4f0,#f7f8f6)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.map{border-radius:18px;overflow:hidden;border:1px solid var(--line);height:230px;margin-top:20px}
+.map iframe{width:100%;height:100%;border:0}
+.info{display:grid;gap:14px;margin-top:20px}
+.info>div{display:flex;gap:12px;align-items:start;color:var(--muted);font-size:15px}
+.info b{color:var(--ink)}
+.info a{color:var(--green);font-weight:800;text-decoration:none}
+.hours{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:16px;background:#fff}
+.hours div{display:flex;justify-content:space-between;padding:11px 16px;font-size:14px}
+.hours div:nth-child(odd){background:#f4f7f5}
+.hours .open{color:var(--green);font-weight:800}
+form.enq{background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px;box-shadow:var(--shadow);height:fit-content}
+form.enq h3{font-family:'Playfair Display',serif;font-size:22px;margin-bottom:4px}
+form.enq .note{color:var(--muted);font-size:13.5px;margin-bottom:18px}
+.f{margin-bottom:15px}
+label.fl{display:block;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);font-weight:800;margin-bottom:6px}
+input,select,textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:11px;color:var(--ink);padding:14px;font-family:inherit;font-size:15px;transition:border-color .2s,box-shadow .2s}
+textarea{min-height:82px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(14,122,79,.12)}
+form.enq button{width:100%;background:var(--green);color:#fff;border:0;border-radius:12px;padding:16px;font-weight:800;font-size:16px;cursor:pointer;font-family:inherit;transition:background .2s,transform .15s}
+form.enq button:hover{background:var(--green-d);transform:translateY(-2px)}
+footer{background:var(--navy);color:#bcd6ca;padding:44px 0 40px;font-size:14px}
+footer .top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.12)}
+footer .brand b{color:#fff;font-size:20px}
+footer h4{color:#fff;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}
+footer a{color:#bcd6ca;text-decoration:none;display:block;margin-bottom:7px}
+footer a:hover{color:#7fd8ab}
+footer .bot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:22px;font-size:12.5px;color:#8fb2a4}
+footer .bot a{color:#9fc4b4;display:inline}
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(10,18,15,.9);z-index:90;display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+.lb.on{display:flex}
+.lb img{max-width:94vw;max-height:88vh;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.lb .x{position:absolute;top:20px;right:26px;color:#fff;font-size:34px;font-weight:300;cursor:pointer;line-height:1}
 .sticky-call{display:none}
-@media(max-width:860px){
-  .hero .wrap,.heritage .wrap,.enquiry .wrap{grid-template-columns:1fr}
-  nav a:not(.cta){display:none}
-  section{padding:56px 0}
-  .stat b{font-size:24px}
-  .sticky-call{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--green);color:#fff;font-weight:800;font-size:16px;padding:15px;justify-content:center;text-decoration:none;gap:8px}
-  footer{padding-bottom:96px}
+@media(max-width:900px){
+  .hero .wrap,.finance .in,.wash .wrap,.heritage .wrap,.contact .wrap{grid-template-columns:1fr}
+  .finance .in{padding:34px}
+  .nav-links{display:none}
+  .nav-cta .pill.call span.t{display:none}
+  section{padding:54px 0}
+  .stat b{font-size:23px}
+  .hero-photo{order:-1}
+  footer .top{grid-template-columns:1fr}
+  .sticky-call{display:grid;grid-template-columns:1fr 1fr;position:fixed;bottom:0;left:0;right:0;z-index:65}
+  .sticky-call a{padding:15px;text-align:center;font-weight:800;text-decoration:none;color:#fff;font-size:15px}
+  .sticky-call .c{background:var(--green)}
+  .sticky-call .w{background:#25D366}
+  footer{padding-bottom:80px}
 }
 </style>
 </head>
 <body>
 <div id="bar"></div>
-<div class="ribbon">✦ <b>Concept preview</b> — built for Daly Auto Sales by <b>Midlands Made</b> · your stock, your brand, live in days · €500 build + €75/mo stock kept updated</div>
+<div class="ribbon">✦ <b>Serving Mullingar since 1955</b> — every car serviced, VRT'd, NCT'd &amp; warrantied · open 7 days</div>
 
 <nav><div class="wrap">
-  <div class="logo">Daly <span>Auto Sales</span><small>Mullingar · Est. 1955</small></div>
-  <a href="#stock">Current Stock</a><a href="#wash">Car Wash</a><a href="#about">Our Story</a><a href="#contact">Contact</a>
-  <a class="cta" href="tel:+353892132290">📞 Call Brendan</a>
+  <a class="brand" href="#top"><b>Daly <span>Auto Sales</span></b><small>Mullingar · Est. 1955</small></a>
+  <div class="nav-links">
+    <a class="lk" href="#stock">Current Stock</a>
+    <a class="lk" href="#finance">Finance</a>
+    <a class="lk" href="#wash">Car Wash</a>
+    <a class="lk" href="#about">Our Story</a>
+    <a class="lk" href="#contact">Visit Us</a>
+  </div>
+  <div class="nav-cta">
+    <a class="pill wa" href="https://wa.me/353892132290" aria-label="WhatsApp">💬</a>
+    <a class="pill call" href="tel:+353455348967">📞 <span class="t">045 934 8967</span></a>
+  </div>
 </div></nav>
 
-<header class="hero"><div class="wrap">
+<header id="top" class="hero"><div class="wrap">
   <div>
-    <div class="est g-reveal"><span class="dot"></span> Premium used car sales · Lynn Road, Mullingar · open 7 days</div>
+    <div class="est g-reveal"><span class="dot"></span> Family-run · Lynn Road, Mullingar</div>
     <h1 id="headline">
-      <span class="l"><span>Honest cars, properly sorted —</span></span>
-      <span class="l"><span><em>for 71 years.</em></span></span>
+      <span class="l"><span>Honest cars, properly</span></span>
+      <span class="l"><span>sorted — <em>since 1955.</em></span></span>
     </h1>
-    <p class="sub g-reveal">Every car we sell leaves the forecourt <b>serviced, VRT'd, NCT'd and warrantied.</b> Hand-picked stock and straight talk — from the family that's served Lynn Road since 1955.</p>
+    <p class="sub g-reveal">Hand-picked used cars from three generations on the Lynn Road. Every car leaves us <b>serviced, VRT'd, NCT'd and warrantied</b> — so you drive away with nothing to worry about.</p>
     <div class="btnrow g-reveal">
-      <a class="btn green" href="#stock">Browse Current Stock</a>
-      <a class="btn line" href="#contact">Book a Viewing</a>
+      <a class="btn green" href="#stock">Browse the Forecourt</a>
+      <a class="btn line" href="#contact">Visit the Showroom</a>
     </div>
     <div class="stats g-reveal">
       <div class="stat"><b data-count="71">0</b><span>years on Lynn Road</span></div>
       <div class="stat"><b data-count="12">0</b><span>cars in stock</span></div>
       <div class="stat"><b>4</b><span>checks on every car</span></div>
-      <div class="stat"><b>№1</b><span>car wash in town</span></div>
+      <div class="stat"><b>7</b><span>days a week</span></div>
     </div>
   </div>
-  <div class="hero-card g-reveal">
-    <b>Every car sold comes:</b>
-    <ul class="assure">
-      <li><i>✓</i> Fully serviced</li>
-      <li><i>✓</i> VRT'd</li>
-      <li><i>✓</i> NCT'd</li>
-      <li><i>✓</i> Warrantied</li>
-    </ul>
-    <div class="phones">
-      <a href="https://wa.me/353892132290" style="background:#0e7a4f0f;border:1px solid #cfe2d8;border-radius:10px;padding:10px 12px"><span>💬 WhatsApp Brendan</span><b>(089) 213 2290</b></a>
-      <a href="tel:+353894822007"><span>Stephen</span><b>(089) 482 2007</b></a>
-      <a href="tel:+353449348967"><span>Office</span><b>(044) 934 8967</b></a>
-    </div>
-    <div style="margin-top:12px;font-size:13px;color:var(--muted);text-align:center">🕘 Open <b style="color:var(--ink)">9am–6pm, 7 days a week</b></div>
+  <div class="hero-photo g-reveal">
+    <img src="./img/cars/car3.jpg" alt="BMW 330 M Sport at Daly Auto Sales" fetchpriority="high">
+    <div class="hero-tag">🔑 Just in — <b>BMW 330 M Sport 2021</b></div>
   </div>
 </div></header>
 
-<div class="strip"><div class="strip-in">
-  <span>Serviced <b>✓</b></span><span>VRT'd <b>✓</b></span><span>NCT'd <b>✓</b></span><span>Warrantied <b>✓</b></span><span>Car wash <b>on site</b></span><span>Est. <b>1955</b></span><span>Trade-ins welcome</span><span>Lynn Road · Mullingar</span>
-  <span>Serviced <b>✓</b></span><span>VRT'd <b>✓</b></span><span>NCT'd <b>✓</b></span><span>Warrantied <b>✓</b></span><span>Car wash <b>on site</b></span><span>Est. <b>1955</b></span><span>Trade-ins welcome</span><span>Lynn Road · Mullingar</span>
+<div class="trust"><div class="wrap">
+  <span><b>✓</b> Fully serviced</span>
+  <span><b>✓</b> VRT'd</span>
+  <span><b>✓</b> NCT'd</span>
+  <span><b>✓</b> Warrantied</span>
+  <span><b>✓</b> Trade-ins welcome</span>
+  <span><b>✓</b> Finance arranged</span>
 </div></div>
 
 <section id="stock"><div class="wrap">
-  <div class="sec-head g-reveal"><div><span class="kicker">The forecourt</span><h2>Current Stock</h2></div><p>Updated as cars arrive — hand-picked stock moves fast. Ring Brendan before it's gone.</p></div>
+  <div class="sec-head g-reveal">
+    <div><span class="kicker">The forecourt</span><h2>Current Stock</h2></div>
+    <p>Hand-picked and ready to drive. Every one serviced, tested and warrantied — see something you like? Ring Brendan.</p>
+  </div>
+  <div class="filters g-reveal" id="filters">
+    <button class="on" data-f="all">All cars</button>
+    <button data-f="Audi">Audi</button>
+    <button data-f="BMW">BMW</button>
+    <button data-f="Volkswagen">Volkswagen</button>
+    <button data-f="Toyota">Toyota</button>
+  </div>
   <div class="grid" id="carGrid"></div>
 </div></section>
 
-<section id="wash" style="background:linear-gradient(165deg,#eef4f9,#fafbfc);border-top:1px solid var(--line)"><div class="wrap">
-  <div class="sec-head g-reveal"><div><span class="kicker" style="color:var(--navy)">The famous one</span><h2>The Lynn Road Car Wash</h2></div><p>The wash half of Mullingar already knows — same forecourt, same standards.</p></div>
-  <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr))">
-    <div class="car g-reveal" style="padding:22px"><div style="font-size:26px">🚿</div><h3 style="margin:10px 0 4px">Exterior wash</h3><p style="font-size:13.5px;color:var(--muted)">In and out while you wait.</p></div>
-    <div class="car g-reveal" style="padding:22px"><div style="font-size:26px">✨</div><h3 style="margin:10px 0 4px">Full valet</h3><p style="font-size:13.5px;color:var(--muted)">Inside and out, showroom finish.</p></div>
-    <div class="car g-reveal" style="padding:22px"><div style="font-size:26px">🚗</div><h3 style="margin:10px 0 4px">Every car we sell</h3><p style="font-size:13.5px;color:var(--muted)">Washed and valeted before viewing — of course.</p></div>
+<section style="padding-top:0"><div class="wrap">
+  <div class="finance g-reveal" id="finance"><div class="in">
+    <div>
+      <span class="kicker" style="color:#7fd8ab">Drive it sooner</span>
+      <h2>Finance made simple.</h2>
+      <p class="lead">Spread the cost of your next car. We'll help arrange finance to suit you — get a feel for the weekly figure below, then talk to us for a real quote.</p>
+    </div>
+    <div class="calc">
+      <label for="fp">Car price (€)</label>
+      <input id="fp" type="number" value="15000" min="1000" step="500">
+      <label for="fd">Deposit (€)</label>
+      <input id="fd" type="number" value="2000" min="0" step="500">
+      <label for="ft">Term</label>
+      <select id="ft">
+        <option value="36">3 years (36 months)</option>
+        <option value="48">4 years (48 months)</option>
+        <option value="60" selected>5 years (60 months)</option>
+      </select>
+      <div class="out">
+        <b id="wk">€0</b><small>per week approx. · <span id="mo">€0</span>/month</small>
+      </div>
+      <p class="disc">Illustrative only — based on a typical 9.9% APR and subject to lender approval. Not a quote or an offer of credit. Talk to us for your real figures.</p>
+    </div>
+  </div></div>
+</div></section>
+
+<section id="wash" class="wash"><div class="wrap">
+  <div class="g-reveal">
+    <span class="kicker">The famous one</span>
+    <h2>The Lynn Road Car Wash</h2>
+    <p style="color:var(--muted);margin-top:12px">Half of Mullingar already knows it. The same forecourt, the same standards — a proper hand finish, in and out while you wait.</p>
+    <div class="wash-cards">
+      <div class="wc"><div class="ic">🚿</div><b>Exterior Wash</b><p>Quick, thorough, back on the road in minutes.</p></div>
+      <div class="wc"><div class="ic">✨</div><b>Full Valet</b><p>Inside and out — showroom finish.</p></div>
+      <div class="wc"><div class="ic">🚗</div><b>Every Car We Sell</b><p>Washed &amp; valeted before you view it.</p></div>
+      <div class="wc"><div class="ic">🧼</div><b>Wash &amp; Wax</b><p>That extra bit of shine and protection.</p></div>
+    </div>
+    <a class="btn green" style="margin-top:22px" href="https://wa.me/353892132290">💬 WhatsApp to book a wash</a>
   </div>
-  <p class="g-reveal" style="margin-top:14px;font-size:12px;color:var(--muted)">Wash menu & prices set by Daly's — this preview shows the layout.</p>
+  <div class="photo g-reveal"><img src="./img/cars/car12.jpg" alt="The Daly Auto Sales forecourt on the Lynn Road, Mullingar" loading="lazy"></div>
 </div></section>
 
 <section id="about" class="heritage"><div class="wrap">
   <div class="g-reveal">
     <span class="kicker">Since 1955</span>
-    <h2>Seventy-one years on Lynn Road.</h2>
-    <blockquote>"We hand-pick every car to ensure quality and reliability."</blockquote>
-    <p>The Dalys have served Mullingar's motorists from this forecourt since 1955 — the petrol pumps first, then the car wash half the town queues for. Now that same standard goes into hand-picked cars: every one serviced, tested and warrantied before it leaves. New to selling cars — backed by 71 years of knowing them.</p>
+    <h2>Seventy-one years on the Lynn Road.</h2>
+    <blockquote>"We hand-pick every car to ensure quality and reliability — so you can drive with confidence."</blockquote>
+    <p>The Dalys have served Mullingar's motorists from this forecourt since 1955 — first the petrol pumps, then the car wash half the town still queues for, and now hand-picked used cars. New to selling cars, backed by three generations of knowing them. Every car we sell is serviced, tested and warrantied before it leaves the forecourt. That's why customers come back — and send their families.</p>
   </div>
-  <div class="year-card g-reveal"><b data-count="1955">1900</b><span>Serving Mullingar since</span>
-    <div class="gens"><i>⛽ Fuel</i><i>🚿 Car wash</i><i>🚗 Car sales</i></div>
+  <div class="year-card g-reveal">
+    <img src="./img/cars/car12.jpg" alt="Daly Auto Sales forecourt">
+    <div class="ov">
+      <b>1955</b><span>Serving Mullingar since</span>
+      <div class="journey"><i>⛽ Fuel</i><i>🚿 Car Wash</i><i>🚗 Car Sales</i></div>
+    </div>
   </div>
 </div></section>
 
-<section id="contact" class="enquiry"><div class="wrap">
+<section id="contact" class="contact"><div class="wrap">
   <div class="g-reveal">
-    <span class="kicker">Talk to us</span>
-    <h2>Enquire about a car</h2>
-    <p style="color:var(--muted);margin-top:12px">Ask about anything in stock, book a viewing, or get a trade-in valuation — same-day replies.</p>
-    <div class="contact-list">
-      <div>📍 <span><b>Lynn Road, Mullingar</b><br>Co. Westmeath</span></div>
-      <div>📞 <span><b>Brendan</b> <a href="tel:+353892132290">(089) 213 2290</a> · <b>Stephen</b> <a href="tel:+353894822007">(089) 482 2007</a><br><b>Office</b> <a href="tel:+353449348967">(044) 934 8967</a></span></div>
-      <div>🕘 <span><b>Open 7 days</b> · 9am–6pm — Sundays included</span></div>
-      <div>💬 <span><b>WhatsApp</b> <a href="https://wa.me/353892132290">(089) 213 2290</a> — send us the car you're after</span></div>
-      <div>🔄 <span><b>Trade-ins welcome</b> — fair valuations on the spot</span></div>
+    <span class="kicker">Come and see us</span>
+    <h2>Visit the forecourt</h2>
+    <p style="color:var(--muted);margin-top:12px">On the Lynn Road, Mullingar — open 7 days. Pop in for a look, a test drive, or a fair trade-in valuation.</p>
+    <div class="info">
+      <div>📍 <span><b>Daly Auto Sales</b><br>Lynn Road, Mullingar, Co. Westmeath</span></div>
+      <div>📞 <span><b>Brendan</b> <a href="tel:+353892132290">089 213 2290</a> · <b>Stephen</b> <a href="tel:+353894822007">089 482 2007</a><br><b>Office</b> <a href="tel:+353455348967">045 934 8967</a></span></div>
+      <div>💬 <span><b>WhatsApp</b> <a href="https://wa.me/353892132290">089 213 2290</a></span></div>
     </div>
+    <div class="hours">
+      <div><span>Monday – Friday</span><span class="open">9:00 – 18:00</span></div>
+      <div><span>Saturday</span><span>9:00 – 15:00</span></div>
+      <div><span>Sunday</span><span>By appointment</span></div>
+    </div>
+    <div class="map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Daly%20Auto%20Sales%20Lynn%20Road%20Mullingar&output=embed" title="Daly Auto Sales location"></iframe></div>
   </div>
-  <form class="g-reveal" onsubmit="event.preventDefault();this.innerHTML='<h3 style=\'font-family:Playfair Display,serif;font-size:25px\'>Thanks — we\'ll be in touch today. <span style=\'color:var(--green)\'>✓</span></h3>'">
-    <div class="f"><label>Your name</label><input required placeholder="Name"></div>
-    <div class="f"><label>Phone or email</label><input required placeholder="How do we reach you?"></div>
-    <div class="f"><label>Which car?</label><select><option>General enquiry</option><option>BMW 330e M Sport 2021</option><option>Audi A3 2020 1.4 TFSI</option><option>VW Tiguan 2016</option><option>Another car from stock</option><option>Trade-in valuation</option></select></div>
-    <button>Send Enquiry →</button>
+  <form class="enq" id="enqForm">
+    <h3>Enquire about a car</h3>
+    <p class="note">Ask about anything in stock, book a viewing, or get a trade-in valuation — we'll reply the same day.</p>
+    <input type="hidden" name="access_key" value="37a94c10-2fb6-448e-bd9a-8676709824d6">
+    <input type="hidden" name="subject" value="New enquiry from Daly Auto Sales website">
+    <input type="hidden" name="from_name" value="Daly Auto Sales website">
+    <input type="checkbox" name="botcheck" style="display:none">
+    <div class="f"><label class="fl">Your name</label><input name="name" required placeholder="Name"></div>
+    <div class="f"><label class="fl">Phone or email</label><input name="contact" required placeholder="How do we reach you?"></div>
+    <div class="f"><label class="fl">Which car / how can we help?</label>
+      <select name="car" id="carSelect"><option>General enquiry</option><option>Trade-in valuation</option><option>Car wash / valet</option></select>
+    </div>
+    <div class="f"><label class="fl">Message <span style="text-transform:none;font-weight:600;color:var(--muted)">(optional)</span></label><textarea name="message" placeholder="Anything you'd like us to know"></textarea></div>
+    <button type="submit" id="enqBtn">Send Enquiry →</button>
+    <p id="formMsg" style="margin-top:12px;font-weight:700;font-size:14px"></p>
   </form>
 </div></section>
 
 <footer><div class="wrap">
-  <div>© Daly Auto Sales · Lynn Road, Mullingar · since 1955</div>
-  <div>Concept preview by <a href="https://midlandsmade.ie">Midlands Made</a> — €500 build · €75/mo stock updates</div>
+  <div class="top">
+    <div class="brand">
+      <b>Daly Auto Sales</b>
+      <p style="margin-top:10px;max-width:320px">Family-run car sales, servicing and the well-known car wash on the Lynn Road, Mullingar — since 1955.</p>
+    </div>
+    <div>
+      <h4>Visit</h4>
+      <a href="https://www.google.com/maps/search/?api=1&query=Daly+Auto+Sales+Lynn+Road+Mullingar" target="_blank" rel="noopener">Lynn Road, Mullingar</a>
+      <a href="#stock">Current stock</a>
+      <a href="#wash">Car wash</a>
+    </div>
+    <div>
+      <h4>Talk to us</h4>
+      <a href="tel:+353892132290">Brendan — 089 213 2290</a>
+      <a href="tel:+353894822007">Stephen — 089 482 2007</a>
+      <a href="https://wa.me/353892132290">WhatsApp us</a>
+    </div>
+  </div>
+  <div class="bot">
+    <span>© <span id="yr">2026</span> Daly Auto Sales · Lynn Road, Mullingar · Est. 1955</span>
+    <span>Website by <a href="https://midlandsmade.ie" target="_blank" rel="noopener">Midlands Made</a></span>
+  </div>
 </div></footer>
-<a class="sticky-call" href="tel:+353892132290">📞 Call Brendan — (089) 213 2290</a>
+
+<a class="sticky-call">
+  <a class="c" href="tel:+353892132290">📞 Call Brendan</a>
+  <a class="w" href="https://wa.me/353892132290">💬 WhatsApp</a>
+</a>
+
+<div class="lb" id="lightbox"><span class="x">&times;</span><img id="lbImg" src="" alt=""></div>
 
 <script>
 const CARS=[
- {t:"BMW 330e G20 M Sport Auto",y:2021,km:null,img:"https://static.wixstatic.com/media/5fe9a0_162237b39bac4b1583e1c85ae35ea715~mv2.jpg",badge:"Flagship"},
- {t:"Audi A3 1.4 TFSI Sportback",y:2020,km:"42,000 km",img:"https://static.wixstatic.com/media/5fe9a0_75f0c17913d64be08c2a882a453810a5~mv2.jpg",badge:"Low kms"},
- {t:"Audi A3 1.4 TFSI Sportback",y:2019,km:null,img:"https://static.wixstatic.com/media/5fe9a0_e5904652ff3a4c7ba83de2adb68c69f7~mv2.jpg"},
- {t:"Toyota Vitz Safety Edition 3",y:2019,km:"51,000 km",img:"https://static.wixstatic.com/media/5fe9a0_5918386e95f44b359447049db62e88b7~mv2.jpg"},
- {t:"Audi A3 Sportback",y:2018,km:"34,000 km",img:"https://static.wixstatic.com/media/5fe9a0_c4d873f92f0347be926a48155bee6755~mv2.jpg",badge:"Low kms"},
- {t:"VW Tiguan 1.4 TSI BlueMotion",y:2016,km:"53,000 km",img:"https://static.wixstatic.com/media/5fe9a0_1c91fb4be03c41a7b2b700874d0a1b4f~mv2.jpg"},
- {t:"Audi A3 1.4 TFSI Sportback",y:2016,km:"46,000 km",img:"https://static.wixstatic.com/media/5fe9a0_8f4d8026e52e4fab99bf7cca1b3eca0f~mv2.jpg"},
- {t:"Audi A3 Saloon 1.4 TFSI",y:2016,km:"48,000 km",img:"https://static.wixstatic.com/media/5fe9a0_affa7c57592c4ab8abc28715537a344d~mv2.jpg"},
- {t:"Audi A3 Sportback",y:2016,km:"64,000 km",img:"https://static.wixstatic.com/media/5fe9a0_1214dcacd985428e9c2c9100581e33b9~mv2.jpg"},
- {t:"Audi A3 1.4 TFSI Sportback",y:2016,km:"65,000 km",img:"https://static.wixstatic.com/media/5fe9a0_a13c82cbbf0e45d987615db2f28f2165~mv2.jpg"},
- {t:"Audi A1 1.0 TFSI",y:2015,km:"95,000 km",img:"https://static.wixstatic.com/media/5fe9a0_0b107efc5a5c45c3a40b8610b30d7622~mv2.jpg"},
- {t:"VW Golf 1.2 TSI Comfortline",y:2014,km:"95,000 km",img:"https://static.wixstatic.com/media/5fe9a0_863fadc6f2304c06a0b184a663157093~mv2.jpg"},
+ {t:"BMW 330 M Sport",make:"BMW",year:2021,km:null,fuel:"Hybrid",body:"Saloon · Auto",img:"car3.jpg",badge:"Flagship"},
+ {t:"Audi A3 Sportback 1.4 TFSI",make:"Audi",year:2020,km:"42,000 km",fuel:"Petrol",body:"Sportback",img:"car8.jpg",badge:"Low kms"},
+ {t:"Audi A3 Sportback",make:"Audi",year:2018,km:"34,000 km",fuel:"Petrol",body:"Sportback",img:"car11.jpg",badge:"Low kms"},
+ {t:"Volkswagen Tiguan 1.4 TSI BlueMotion",make:"Volkswagen",year:2016,km:"53,000 km",fuel:"Petrol",body:"SUV",img:"car4.jpg"},
+ {t:"Audi A3 Sportback 1.4 TFSI",make:"Audi",year:2019,km:null,fuel:"Petrol",body:"Sportback",img:"car6.jpg"},
+ {t:"Audi A3 Sportback",make:"Audi",year:2016,km:"64,000 km",fuel:"Petrol",body:"Sportback",img:"car10.jpg"},
+ {t:"Audi A3 Saloon 1.4 TFSI",make:"Audi",year:2016,km:"48,000 km",fuel:"Petrol",body:"Saloon",img:"car13.jpg"},
+ {t:"Audi A3 Sportback 1.4 TFSI",make:"Audi",year:2016,km:"46,000 km",fuel:"Petrol",body:"Sportback",img:"car9.jpg"},
+ {t:"Audi A3 Sportback 1.4 TFSI",make:"Audi",year:2016,km:"65,000 km",fuel:"Petrol",body:"Sportback",img:"car2.jpg"},
+ {t:"Audi A1 1.0 TFSI",make:"Audi",year:2015,km:"95,000 km",fuel:"Petrol",body:"Hatchback",img:"car1.jpg"},
+ {t:"Toyota Vitz Safety Edition 3",make:"Toyota",year:2019,km:"51,000 km",fuel:"Petrol",body:"Hatchback",img:"car5.jpg"},
+ {t:"Volkswagen Golf 1.2 TSI Comfortline",make:"Volkswagen",year:2014,km:"95,000 km",fuel:"Petrol",body:"Hatchback",img:"car7.jpg"},
 ];
-document.getElementById("carGrid").innerHTML=CARS.map(c=>`
- <div class="car g-reveal">
-  <div class="ph">${c.badge?`<span class="badge">${c.badge}</span>`:""}<img loading="lazy" src="${c.img}" alt="${c.t} ${c.y}"></div>
-  <div class="body"><h3>${c.t}</h3>
-   <div class="meta"><span>${c.y}</span>${c.km?`<span>·</span><span>${c.km}</span>`:""}</div>
-   <div class="row"><span class="assured-mini">✓ Serviced · NCT'd · Warrantied</span><a class="enq" href="#contact">Enquire <span>→</span></a></div>
-  </div>
- </div>`).join("");
+const grid=document.getElementById('carGrid');
+const sel=document.getElementById('carSelect');
+function render(f){
+  grid.innerHTML=CARS.filter(c=>f==='all'||c.make===f).map(c=>`
+   <div class="car g-reveal">
+    <div class="ph" data-img="./img/cars/${c.img}" data-alt="${c.t} ${c.year}">
+      ${c.badge?`<span class="badge">${c.badge}</span>`:''}
+      <div class="zoomic">⛶</div>
+      <img loading="lazy" src="./img/cars/${c.img}" alt="${c.t} ${c.year}">
+    </div>
+    <div class="body">
+      <h3>${c.t}</h3>
+      <div class="spec">
+        <span>📅 ${c.year}</span>${c.km?`<span>🛣️ ${c.km}</span>`:''}<span>⛽ ${c.fuel}</span><span>🚘 ${c.body}</span>
+      </div>
+      <div class="foot">
+        <span class="assured">✓ Serviced · NCT'd · Warrantied</span>
+        <button class="enq" data-car="${c.t} ${c.year}">Enquire</button>
+      </div>
+    </div>
+   </div>`).join('');
+  bindCars();
+  if(window.ScrollTrigger)ScrollTrigger.refresh();
+}
+sel.insertAdjacentHTML('beforeend',CARS.map(c=>`<option>${c.t} ${c.year}</option>`).join(''));
+
+const lb=document.getElementById('lightbox'),lbImg=document.getElementById('lbImg');
+function bindCars(){
+  document.querySelectorAll('.car .ph').forEach(ph=>ph.onclick=()=>{lbImg.src=ph.dataset.img;lbImg.alt=ph.dataset.alt;lb.classList.add('on')});
+  document.querySelectorAll('.car .enq').forEach(b=>b.onclick=()=>{
+    const v=b.dataset.car;
+    if(![...sel.options].some(o=>o.value===v)){const o=document.createElement('option');o.text=v;o.value=v;sel.add(o);}
+    sel.value=v;
+    document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+    setTimeout(()=>document.querySelector('form.enq input[name=name]').focus(),600);
+  });
+}
+lb.onclick=()=>lb.classList.remove('on');
+document.getElementById('filters').addEventListener('click',e=>{
+  if(e.target.tagName!=='BUTTON')return;
+  document.querySelectorAll('#filters button').forEach(b=>b.classList.remove('on'));
+  e.target.classList.add('on'); render(e.target.dataset.f);
+});
+render('all');
+
+function calc(){
+  const p=+document.getElementById('fp').value||0, d=+document.getElementById('fd').value||0, n=+document.getElementById('ft').value;
+  const principal=Math.max(0,p-d), r=0.099/12;
+  const m = principal>0 ? principal*r/(1-Math.pow(1+r,-n)) : 0;
+  document.getElementById('mo').textContent='€'+Math.round(m).toLocaleString();
+  document.getElementById('wk').textContent='€'+Math.round(m*12/52).toLocaleString();
+}
+['fp','fd','ft'].forEach(id=>document.getElementById(id).addEventListener('input',calc));
+calc();
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+const form=document.getElementById('enqForm'),msg=document.getElementById('formMsg'),btn=document.getElementById('enqBtn');
+form.addEventListener('submit',async e=>{
+  e.preventDefault(); btn.textContent='Sending…'; btn.disabled=true; msg.textContent='';
+  try{
+    const r=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(form)))});
+    const j=await r.json();
+    if(j.success){form.reset();msg.style.color='var(--green)';msg.textContent='✓ Thanks — we\'ll be in touch today.';btn.textContent='Sent ✓';}
+    else{throw new Error(j.message||'failed')}
+  }catch(err){msg.style.color='#c0392b';msg.textContent='Sorry — something went wrong. Please ring us on 089 213 2290.';btn.textContent='Send Enquiry →';btn.disabled=false;}
+});
 
 addEventListener('scroll',()=>{const h=document.documentElement;document.getElementById('bar').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'},{passive:true});
-
 addEventListener('load',()=>{
-  if(!window.gsap)return; // page is fully usable without any animation layer
+  if(!window.gsap)return;
   gsap.registerPlugin(ScrollTrigger);
   gsap.from('#headline .l span',{yPercent:110,duration:1,ease:'power4.out',stagger:.13,delay:.1});
-  gsap.from('.hero .g-reveal',{opacity:0,y:24,duration:.85,ease:'power3.out',stagger:.11,delay:.45,clearProps:'all'});
-  gsap.utils.toArray('section .g-reveal, .heritage .g-reveal').forEach(el=>{
-    gsap.fromTo(el,{opacity:0,y:30},{opacity:1,y:0,duration:.8,ease:'power3.out',immediateRender:false,
-      scrollTrigger:{trigger:el,start:'top 86%'},clearProps:'transform'});
+  gsap.from('.hero .g-reveal',{opacity:0,y:24,duration:.85,ease:'power3.out',stagger:.1,delay:.42,clearProps:'all'});
+  gsap.utils.toArray('section .g-reveal, .heritage .g-reveal, .wash .g-reveal').forEach(el=>{
+    gsap.fromTo(el,{opacity:0,y:30},{opacity:1,y:0,duration:.8,ease:'power3.out',immediateRender:false,scrollTrigger:{trigger:el,start:'top 88%'},clearProps:'transform'});
   });
-  gsap.fromTo('#carGrid .car',{opacity:0,y:36},{opacity:1,y:0,duration:.65,ease:'power3.out',stagger:.06,immediateRender:false,
-    scrollTrigger:{trigger:'#carGrid',start:'top 82%'},clearProps:'transform'});
   gsap.utils.toArray('[data-count]').forEach(el=>{
-    const end=+el.dataset.count, start=end>100?1900:0;
-    const o={v:start};
-    gsap.to(o,{v:end,duration:1.5,ease:'power2.out',snap:{v:1},
-      scrollTrigger:{trigger:el,start:'top 88%'},onUpdate:()=>el.textContent=Math.round(o.v)});
+    const end=+el.dataset.count,o={v:0};
+    gsap.to(o,{v:end,duration:1.5,ease:'power2.out',snap:{v:1},scrollTrigger:{trigger:el,start:'top 90%'},onUpdate:()=>el.textContent=Math.round(o.v)});
   });
-  /* safety net for throttled rAF environments */
   setTimeout(()=>{
     document.querySelectorAll('[data-count]').forEach(el=>{if(el.textContent!==el.dataset.count)el.textContent=el.dataset.count});
     document.querySelectorAll('.g-reveal').forEach(el=>{if(+getComputedStyle(el).opacity<0.95){el.style.opacity='1';el.style.transform='none'}});
-  },3500);
+  },3800);
 });
 </script>
 </body>

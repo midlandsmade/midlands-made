@@ -92,7 +92,7 @@ nav a.lk:hover{color:var(--ember2)}
 .est{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(255,171,82,.35);background:rgba(255,122,26,.08);color:var(--ember2);font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:800;padding:8px 16px;border-radius:999px;margin-bottom:22px}
 .est .ic{font-size:14px}
 h1{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(34px,5.2vw,56px);line-height:1.08}
-h1 .l{display:block;overflow:hidden}h1 .l span{display:inline-block}
+h1 .l{display:block;overflow:visible;padding-bottom:.06em}h1 .l span{display:inline-block}
 h1 em{font-style:italic;color:var(--ember2)}
 .sub{margin:18px 0 26px;font-size:18px;color:var(--muted);max-width:490px}
 .sub b{color:var(--cream)}
@@ -279,11 +279,14 @@ footer a{color:var(--ember2)}
 .tq .who{color:var(--muted);font-size:13px;font-weight:700;margin-top:8px}
 /* reviews */
 .reviews{background:linear-gradient(180deg,var(--panel),var(--char));border-block:1px solid var(--line)}
-.rev-carousel{position:relative;margin-top:8px}
-.rev-viewport{overflow:hidden;padding:4px 2px}
-.rev-track{display:flex;gap:18px;transition:transform .55s cubic-bezier(.2,.7,.3,1);will-change:transform}
-.rev{background:var(--panel2);border:1px solid var(--line);border-radius:16px;padding:26px;transition:border-color .3s;flex:0 0 calc(33.333% - 12px);display:flex;flex-direction:column}
-.rev:hover{transform:translateY(-5px);border-color:rgba(255,171,82,.4)}
+.rev-carousel{position:relative;margin-top:16px}
+.rev-stage{position:relative;perspective:1600px;transition:height .5s cubic-bezier(.34,.6,.3,1);min-height:240px}
+.rev-stage .rev{position:absolute;top:0;left:50%;width:min(560px,calc(100vw - 60px));margin-left:calc(min(560px,calc(100vw - 60px)) / -2);transform-style:preserve-3d;transition:transform .6s cubic-bezier(.34,.6,.3,1),opacity .5s ease,filter .5s ease;will-change:transform;box-shadow:0 22px 50px rgba(0,0,0,.5)}
+.rev{background:var(--panel2);border:1px solid var(--line);border-radius:18px;padding:28px;display:flex;flex-direction:column}
+.rev-stage .rev.pos-front{transform:translateX(0) scale(1);opacity:1;z-index:30;border-color:rgba(255,171,82,.42)}
+.rev-stage .rev.pos-right{transform:translateX(42%) scale(.84) rotateY(-18deg);opacity:.4;z-index:20;filter:saturate(.7);pointer-events:none}
+.rev-stage .rev.pos-left{transform:translateX(-42%) scale(.84) rotateY(18deg);opacity:.4;z-index:20;filter:saturate(.7);pointer-events:none}
+.rev-stage .rev.pos-hidden{opacity:0;transform:scale(.78);pointer-events:none;z-index:10}
 .rev .stars{color:#ffb43d;font-size:16px;letter-spacing:3px;margin-bottom:14px;display:block}
 .rev p{font-size:15px;line-height:1.6;color:#ecdfd2;flex:1}
 .rev .who{display:flex;align-items:center;gap:12px;margin-top:18px}
@@ -409,7 +412,7 @@ html.js .g-reveal.in{animation:gReveal .65s cubic-bezier(.2,.7,.3,1) both}
 .pmodal .pm-x:hover{background:rgba(0,0,0,.6)}
 .sticky-call{display:none}
 @media(max-width:980px){
-  .rev{flex:0 0 calc(50% - 9px)}
+  .rev-stage .rev.pos-left,.rev-stage .rev.pos-right{opacity:0;transform:scale(.9);pointer-events:none}
   .pmodal .box{grid-template-columns:1fr}
   .pmodal .pm-img img{min-height:200px;max-height:280px}
   .hfeat{grid-template-columns:repeat(2,1fr)}
@@ -440,8 +443,8 @@ html.js .g-reveal.in{animation:gReveal .65s cubic-bezier(.2,.7,.3,1) both}
   .hero-meta{max-width:100%;gap:12px}
   .hero-meta .m{font-size:13px}
   .firecards{grid-template-columns:1fr 1fr;gap:12px}
-  .rev{flex:0 0 86%}
-  .rev-nav{display:none}
+  .rev{padding:22px}
+  .rev-nav.prev{left:-4px}.rev-nav.next{right:-4px}
   .shop{grid-template-columns:1fr 1fr;gap:12px}
   .pcard h3{font-size:13px;min-height:34px}
   .pcard .body{padding:12px 12px 14px}
@@ -476,7 +479,7 @@ html.js .g-reveal.in{animation:gReveal .65s cubic-bezier(.2,.7,.3,1) both}
 <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 10.9a15 15 0 0 0 6.5 6.5l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.4.55 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.3a1 1 0 0 1 1 1 11 11 0 0 0 .54 3.4 1 1 0 0 1-.24 1z" fill="currentColor"/></symbol>
 <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 1.9a8.1 8.1 0 0 1 0 16.2 8 8 0 0 1-4-1.1l-.3-.2-2.4.6.6-2.3-.2-.3A8.1 8.1 0 0 1 12 3.9zM8.9 7.5c-.15 0-.4 0-.6.3-.2.25-.8.8-.8 1.9s.82 2.2.93 2.35c.12.15 1.6 2.55 4 3.5 1.95.77 2.35.62 2.77.58.43-.04 1.36-.55 1.55-1.1.2-.53.2-1 .14-1.1-.05-.08-.2-.13-.43-.25s-1.36-.67-1.57-.75c-.2-.07-.36-.11-.5.12s-.58.75-.7.9c-.14.15-.26.17-.48.06-.23-.12-.97-.36-1.85-1.14-.68-.6-1.14-1.36-1.28-1.58-.13-.23-.01-.35.1-.46l.35-.4c.11-.14.15-.23.23-.38.07-.15.04-.29-.02-.4s-.5-1.25-.7-1.7c-.18-.44-.36-.38-.5-.39z" fill="currentColor"/></symbol>
 <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c.7 2.6-.6 4-1.8 5.3C9 9.6 8.1 11 8.1 12.6a3.9 3.9 0 0 0 7.8 0c0-1.6-.7-2.8-1.4-3.7-.3.6-.7 1-1.3 1.3.5-2.5-.6-4.6-1.2-5.5z" fill="currentColor"/></symbol>
-<symbol id="i-stovemark" viewBox="0 0 24 24"><path d="M14.4 3h2v3.3h-2z" fill="currentColor"/><rect x="4.5" y="6" width="15" height="13" rx="2.6" fill="currentColor"/><rect x="7.2" y="8.6" width="9.6" height="6.8" rx="1.4" fill="#221008"/><path d="M12 9.7c.5 1-.3 1.6-.5 2.3a1.1 1.1 0 0 0 2.1.4c.1-.7-.3-1.2-.5-1.7.7.3 1 .8 1 1.5a1.9 1.9 0 1 1-3.1-1.4c.5-.3.8-.7 1-1.1z" fill="#ff8a2a"/><path d="M7.4 19v1.8M16.6 19v1.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+<symbol id="i-stovemark" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M32 21V10"/><path d="M32 10h6.5"/><rect x="15" y="21" width="34" height="29" rx="6"/><rect x="21" y="28.5" width="22" height="15.5" rx="2.6"/><path d="M20.5 50l-3 6M43.5 50l3 6"/></g><path d="M32 31c1.3 2.4-.8 3.7-1.1 5.2a2.5 2.5 0 0 0 4.9.9c.3-1.7-.7-3-1.2-4 1.5.6 2.3 1.7 2.3 3.2a4.3 4.3 0 1 1-7.2-3.1c1.1-.8 1.8-1.6 2.3-2.2z" fill="#ff8a2a"/></symbol>
 <symbol id="i-stove" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4.5" width="14" height="13" rx="2"/><circle cx="12" cy="11" r="3.1"/><path d="M12 9.4c.7.5 1 1.2.8 1.9-.4-.1-.6-.4-.8-.8-.3.4-.7.8-.7 1.3.4.3 1 .3 1.4 0" stroke-width="1.1"/><path d="M7.5 17.5v2M16.5 17.5v2"/></symbol>
 <symbol id="i-boiler" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="5" width="12" height="12" rx="2"/><circle cx="10.5" cy="11" r="2.6"/><path d="M16.5 8h2a1.5 1.5 0 0 1 1.5 1.5v6"/><path d="M10.5 17.5v2M6.5 17.5v2"/></symbol>
 <symbol id="i-pellet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="7" width="14" height="10.5" rx="2"/><circle cx="12" cy="12.3" r="2.5"/><path d="M8 4.5h8M9.5 4.5l-1 2.5M14.5 4.5l1 2.5M12 4.5v2.5" stroke-width="1.3"/><path d="M7.5 17.5v2M16.5 17.5v2"/></symbol>
@@ -608,15 +611,15 @@ html.js .g-reveal.in{animation:gReveal .65s cubic-bezier(.2,.7,.3,1) both}
 <section id="reviews" class="reviews"><div class="wrap">
   <div class="sec-head g-reveal"><div><span class="kicker">What our customers say</span><h2>Recommended by local homes</h2></div><p><b style="color:var(--ember2)">84% recommend us</b> across 26 reviews on Facebook.</p></div>
   <div class="rev-carousel g-reveal">
-    <button class="rev-nav prev" id="revPrev" aria-label="Previous">&#8249;</button>
-    <div class="rev-viewport"><div class="rev-track" id="revTrack">
+    <button class="rev-nav prev" id="revPrev" aria-label="Previous review">&#8249;</button>
+    <div class="rev-stage" id="revStage">
       <div class="rev"><span class="stars">★★★★★</span><p>“Excellent service! I'd recommend Kildare Stoves — they did a great job installing our pellet stove.”</p><div class="who"><span class="av">C</span><div><b>Ciara Fallon Moore</b><span>Pellet stove install</span></div></div></div>
       <div class="rev"><span class="stars">★★★★★</span><p>“Excellent service from beginning to end. William went above and beyond — amazing prices and the best service. I can't recommend these guys enough, and we love our new stove!”</p><div class="who"><span class="av">S</span><div><b>Sarah Quinn Balfe</b><span>New stove</span></div></div></div>
       <div class="rev"><span class="stars">★★★★★</span><p>“Kildare Stoves — can't say enough. A great job done installing our insert boiler stove. I would highly recommend.”</p><div class="who"><span class="av">D</span><div><b>David Kavanagh</b><span>Insert boiler stove</span></div></div></div>
       <div class="rev"><span class="stars">★★★★★</span><p>“What a great job you did for us, and so clean. Would highly recommend Kildare Stoves.”</p><div class="who"><span class="av">K</span><div><b>Kevin &amp; Anna</b><span>Stove &amp; brickwork</span></div></div></div>
       <div class="rev"><span class="stars">★★★★★</span><p>“Great service and very efficient — great job done, and would recommend them.”</p><div class="who"><span class="av">C</span><div><b>Chris Pender</b><span>Stove install</span></div></div></div>
-    </div></div>
-    <button class="rev-nav next" id="revNext" aria-label="Next">&#8250;</button>
+    </div>
+    <button class="rev-nav next" id="revNext" aria-label="Next review">&#8250;</button>
   </div>
   <div class="rev-dots" id="revDots"></div>
   <div style="text-align:center;margin-top:22px"><a class="btn ghost" href="https://www.facebook.com/wesplumbingprofesional/" target="_blank" rel="noopener">Read all our reviews on Facebook <svg class="ic"><use href="#i-arrow"/></svg></a></div>
@@ -834,22 +837,31 @@ document.getElementById('yr').textContent=new Date().getFullYear();
   }));
 })();
 
-/* reviews carousel (transform-based) */
+/* reviews — coverflow carousel (front card in focus, neighbours angled behind) */
 (function reviews(){
-  const track=document.getElementById('revTrack');if(!track)return;
-  const vp=track.parentElement,cards=[...track.children],dots=document.getElementById('revDots');
-  let idx=0;
-  const step=()=>cards[0].offsetWidth+18;
-  const perView=()=>Math.max(1,Math.round(vp.clientWidth/step()));
-  const maxIdx=()=>Math.max(0,cards.length-perView());
-  function apply(){idx=Math.max(0,Math.min(idx,maxIdx()));track.style.transform='translateX('+(-idx*step())+'px)';[...dots.children].forEach((d,i)=>d.classList.toggle('on',i===idx));}
-  function buildDots(){dots.innerHTML='';for(let i=0;i<=maxIdx();i++){const b=document.createElement('button');b.setAttribute('aria-label','Go to review '+(i+1));b.onclick=()=>{idx=i;apply();};dots.appendChild(b);}}
-  document.getElementById('revPrev').onclick=()=>{idx--;apply();};
-  document.getElementById('revNext').onclick=()=>{idx++;apply();};
-  addEventListener('resize',()=>{buildDots();apply();});
-  buildDots();apply();
-  let timer=setInterval(()=>{idx=idx>=maxIdx()?0:idx+1;apply();},5000);
-  track.addEventListener('pointerenter',()=>clearInterval(timer));
+  const stage=document.getElementById('revStage');if(!stage)return;
+  const cards=[...stage.querySelectorAll('.rev')],dotsWrap=document.getElementById('revDots');
+  if(!cards.length)return;
+  let idx=0,timer=null;const AUTO=5500;
+  dotsWrap.innerHTML='';
+  const dots=cards.map((_,i)=>{const b=document.createElement('button');b.setAttribute('aria-label','Show review '+(i+1));b.onclick=()=>{go(i);restart();};dotsWrap.appendChild(b);return b;});
+  function sizeStage(){cards.forEach(c=>c.style.height='auto');let h=0;cards.forEach(c=>h=Math.max(h,c.offsetHeight));if(h){cards.forEach(c=>c.style.height=h+'px');stage.style.height=h+'px';}}
+  function render(){const n=cards.length;cards.forEach((c,i)=>{c.classList.remove('pos-front','pos-left','pos-right','pos-hidden');if(i===idx)c.classList.add('pos-front');else if(n>1&&i===(idx-1+n)%n)c.classList.add('pos-left');else if(n>2&&i===(idx+1)%n)c.classList.add('pos-right');else c.classList.add('pos-hidden');c.setAttribute('aria-hidden',i===idx?'false':'true');});dots.forEach((d,i)=>d.classList.toggle('on',i===idx));}
+  function go(i){const n=cards.length;idx=(i%n+n)%n;render();}
+  function start(){if(cards.length<2)return;stop();timer=setInterval(()=>go(idx+1),AUTO);}
+  function stop(){if(timer){clearInterval(timer);timer=null;}}
+  function restart(){stop();start();}
+  document.getElementById('revPrev').onclick=()=>{go(idx-1);restart();};
+  document.getElementById('revNext').onclick=()=>{go(idx+1);restart();};
+  let tx=null;
+  stage.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;stop();},{passive:true});
+  stage.addEventListener('touchend',e=>{if(tx===null)return;const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>40){dx<0?go(idx+1):go(idx-1);}tx=null;restart();},{passive:true});
+  const root=stage.parentElement;
+  root.addEventListener('mouseenter',stop);root.addEventListener('mouseleave',start);
+  addEventListener('resize',sizeStage);
+  render();sizeStage();setTimeout(sizeStage,90);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(sizeStage);
+  start();
 })();
 
 /* live open-now status (visit card) */

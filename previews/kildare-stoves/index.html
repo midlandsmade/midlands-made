@@ -225,13 +225,137 @@ footer a{color:var(--ember2)}
 .faq details[open] summary .q-ic{transform:rotate(45deg)}
 .faq details[open] summary{color:var(--ember2)}
 .faq .a{padding:0 22px 20px;color:var(--muted);font-size:14.8px;line-height:1.65}
+/* hero tagline + meta row + glass feature bar (mockup 1) */
+.tagline{font-family:'Playfair Display',serif;font-style:italic;font-weight:800;color:var(--ember2);font-size:clamp(24px,3.6vw,38px);line-height:1.1;margin-top:6px}
+.hero-meta{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin:24px 0 6px;padding-bottom:22px;border-bottom:1px solid var(--line);max-width:560px}
+.hero-meta .m{display:inline-flex;align-items:center;gap:9px;color:var(--muted);font-size:14.5px;font-weight:600}
+.hero-meta .m .ic{color:var(--ember2);font-size:17px}
+.hero-meta .sep{width:1px;height:20px;background:var(--line)}
+.hfeat{display:grid;grid-template-columns:repeat(4,1fr);margin-top:40px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:rgba(13,9,6,.5);backdrop-filter:blur(10px);max-width:900px}
+.hf{display:flex;align-items:center;gap:13px;padding:20px 18px}
+.hf+.hf{border-left:1px solid var(--line)}
+.hf .hf-ic{width:40px;height:40px;flex-shrink:0;border-radius:11px;display:grid;place-items:center;background:radial-gradient(circle at 40% 30%,rgba(255,122,26,.22),rgba(255,122,26,.05));border:1px solid rgba(255,171,82,.25);color:var(--ember2)}
+.hf .hf-ic .ic{font-size:20px}
+.hf b{display:block;font-size:14.5px;font-weight:800;line-height:1.2}
+.hf span{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+/* image collection cards (mockup 2) */
+.firecards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.fcard{position:relative;display:block;aspect-ratio:4/5;border-radius:16px;overflow:hidden;border:1px solid var(--line);text-decoration:none;isolation:isolate}
+.fcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.fcard:hover img{transform:scale(1.06)}
+.fcard::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,9,6,0) 38%,rgba(13,9,6,.85) 100%);z-index:1}
+.fcard .fc-lab{position:absolute;left:0;right:0;bottom:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:18px 18px 20px;color:#fff;font-family:'Playfair Display',serif;font-weight:800;font-size:19px}
+.fcard .fc-lab .ic{color:var(--ember2);font-size:20px;transition:transform .2s}
+.fcard:hover .fc-lab .ic{transform:translateX(5px)}
+/* installation journey — cream band (mockup 2) */
+.journey{background:var(--cream);color:#241a12;border-radius:24px;padding:44px;display:grid;grid-template-columns:.72fr 1.28fr;gap:40px;align-items:center}
+.journey .jk{font-size:11.5px;letter-spacing:3px;text-transform:uppercase;color:#b5541a;font-weight:800;display:block;margin-bottom:12px}
+.journey h2{color:#241a12;line-height:1.12}
+.jsteps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;border-left:1px solid rgba(36,26,18,.14);padding-left:34px}
+.jstep .js-ic{width:52px;height:52px;border-radius:50%;background:#e6d7c4;color:#8a4419;display:grid;place-items:center;margin-bottom:14px}
+.jstep .js-ic .ic{font-size:24px}
+.jstep b{display:block;font-size:15.5px;font-weight:800;color:#241a12;margin-bottom:5px}
+.jstep p{font-size:13.5px;color:#5c4f43;line-height:1.55}
+/* trust row (mockup 2) */
+.trust{display:grid;grid-template-columns:1fr 1.2fr;gap:20px;margin-top:20px}
+.tcard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:30px;display:flex;align-items:center;gap:24px}
+.tcard .oftec{width:96px;flex-shrink:0}
+.tcard .oftec img{width:100%}
+.tcard .bd b{font-family:'Playfair Display',serif;font-size:19px;display:block;margin-bottom:8px}
+.tcard .bd p{color:var(--muted);font-size:14px;line-height:1.55}
+.tcard .bd .el{display:inline-flex;align-items:center;gap:6px;color:var(--ember2);font-weight:800;font-size:13.5px;text-decoration:none;margin-top:12px}
+.tcard.quote{gap:22px}
+.tq-img{width:96px;height:96px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(255,171,82,.4)}
+.tq .qmark{color:var(--ember2);font-size:26px;opacity:.5}
+.tq p{font-family:'Playfair Display',serif;font-style:italic;font-size:17px;line-height:1.5;color:#ecdfd2;margin:2px 0 12px}
+.tq .stars{display:inline-flex;gap:3px;color:#ffb43d;font-size:15px}
+.tq .who{color:var(--muted);font-size:13px;font-weight:700;margin-top:8px}
+/* contact (mockup 3) */
+.contact .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:30px;align-items:start}
+.c-media{display:grid;gap:16px}
+.c-hero-img{border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/10}
+.c-hero-img img{width:100%;height:100%;object-fit:cover}
+.c-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.c-row .c-photo{border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.c-row .c-photo img{width:100%;height:100%;object-fit:cover;min-height:170px}
+.visit{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}
+.visit .vt{display:flex;gap:11px;align-items:start}
+.visit .vt .ic{color:var(--ember2);font-size:20px;flex-shrink:0;margin-top:2px}
+.visit .vt b{font-family:'Playfair Display',serif;font-size:17px;line-height:1.2}
+.visit .addr{color:var(--muted);font-size:13.5px;margin:12px 0;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);line-height:1.5}
+.visit .vopen{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:800;color:var(--ember2)}
+.visit .vopen .dot{width:8px;height:8px;border-radius:50%;background:#5ff0a0;box-shadow:0 0 8px #5ff0a0}
+.visit .vopen.shut .dot{background:var(--ember2);box-shadow:0 0 8px var(--ember2)}
+/* cream booking form */
+.book{background:var(--cream);border:1px solid rgba(0,0,0,.06);border-radius:22px;padding:34px;color:#241a12}
+.book .bh{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;border-bottom:1px solid rgba(36,26,18,.12);padding-bottom:20px;margin-bottom:22px}
+.book h3{font-family:'Playfair Display',serif;font-size:27px;color:#241a12;line-height:1.1}
+.book h3 em{font-style:italic;color:var(--ember)}
+.book .bk{font-size:11.5px;letter-spacing:2px;text-transform:uppercase;color:#b5541a;font-weight:800;margin-top:8px;display:block}
+.book .bbadge{text-align:center;color:#8a4419;flex-shrink:0}
+.book .bbadge .bi{width:44px;height:44px;border-radius:12px;background:#e6d7c4;display:grid;place-items:center;margin:0 auto 6px}
+.book .bbadge .bi .ic{font-size:22px}
+.book .bbadge span{font-size:11px;font-weight:700;color:#5c4f43}
+.book label{color:#5c4f43}
+.book .f{position:relative;margin-bottom:14px}
+.book .f .fi{position:absolute;left:13px;top:38px;color:#9c8a76;font-size:16px;pointer-events:none}
+.book input,.book select{background:#fff;border:1px solid rgba(36,26,18,.16);color:#241a12;padding:13px 13px 13px 38px}
+.book input::placeholder{color:#a99}
+.book input:focus,.book select:focus{border-color:var(--ember);box-shadow:0 0 0 3px rgba(255,122,26,.14)}
+.book button{background:linear-gradient(135deg,var(--red),var(--ember));margin-top:4px}
+.book .oror{display:flex;align-items:center;gap:14px;color:#9c8a76;font-size:12px;font-weight:700;margin:18px 0}
+.book .oror::before,.book .oror::after{content:"";flex:1;height:1px;background:rgba(36,26,18,.14)}
+.book .altrow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.book .alt{display:flex;align-items:center;justify-content:center;gap:9px;padding:13px;border-radius:11px;font-weight:800;font-size:14.5px;text-decoration:none;border:1px solid rgba(36,26,18,.18);color:#241a12;background:#fff;transition:border-color .2s,transform .15s}
+.book .alt:hover{transform:translateY(-2px)}
+.book .alt .ic{font-size:17px}
+.book .alt.call .ic{color:var(--ember)}
+.book .alt.wa{color:#128C4B;border-color:rgba(18,140,75,.35)}.book .alt.wa .ic{color:var(--green)}
+.book .bhours{display:flex;align-items:center;gap:13px;margin-top:20px;padding-top:18px;border-top:1px solid rgba(36,26,18,.12)}
+.book .bhours .bi{width:40px;height:40px;border-radius:11px;background:#e6d7c4;color:#8a4419;display:grid;place-items:center;flex-shrink:0}
+.book .bhours table{font-size:13.5px;color:#241a12;border-collapse:collapse}
+.book .bhours td{padding:1px 0}.book .bhours td:first-child{font-weight:800;padding-right:20px}
+.book .bmsg{margin-top:12px;font-weight:700;font-size:14px}
+/* footer (mockup 3) */
+.site-foot{background:#140f0b;border-top:1px solid var(--line);padding:44px 0 0}
+.site-foot .cols{display:grid;grid-template-columns:1.4fr 1.3fr 1fr 1fr auto;gap:30px;align-items:start}
+.foot-brand .fb-top{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.foot-brand .fb-top .mark{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:radial-gradient(circle at 38% 28%,#ff9d42,#c40606)}
+.foot-brand .fb-top .mark .ic{font-size:24px;color:#fff}
+.foot-brand .fbw b{font-family:'Playfair Display',serif;font-size:20px}
+.foot-brand .fbw b em{font-style:italic;color:var(--ember2)}
+.foot-brand .fbw span{display:block;font-size:9px;letter-spacing:2.4px;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.fcontact{display:grid;gap:11px}
+.fcontact div{display:flex;gap:11px;align-items:center;color:var(--muted);font-size:13.5px}
+.fcontact .ic{color:var(--ember2);font-size:16px;flex-shrink:0}
+.fcontact a{color:var(--muted);text-decoration:none}
+.fcontact a:hover{color:var(--ember2)}
+.flinks b{display:block;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);margin-bottom:13px;opacity:.7}
+.flinks a{display:block;color:var(--cream);text-decoration:none;font-size:14px;margin-bottom:10px;font-weight:600}
+.flinks a:hover{color:var(--ember2)}
+.fsocial{display:flex;gap:10px}
+.fsocial a{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--cream);transition:border-color .2s,color .2s}
+.fsocial a:hover{border-color:var(--ember2);color:var(--ember2)}
+.foot-base{border-top:1px solid var(--line);margin-top:36px;padding:18px 0}
+.foot-base .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:12.5px}
+.foot-base a{color:var(--ember2);text-decoration:none}
 .sticky-call{display:none}
+@media(max-width:980px){
+  .hfeat{grid-template-columns:repeat(2,1fr)}
+  .hf:nth-child(2){border-left:0}
+  .hf:nth-child(3),.hf:nth-child(4){border-top:1px solid var(--line)}
+  .journey{grid-template-columns:1fr;gap:26px;padding:34px}
+  .jsteps{border-left:0;padding-left:0}
+  .trust{grid-template-columns:1fr}
+  .contact .wrap{grid-template-columns:1fr}
+  .site-foot .cols{grid-template-columns:1fr 1fr;gap:26px}
+  .fsocial{grid-column:1/-1}
+}
 @media(max-width:860px){
-  .hero .wrap,.sizer .in,.fit .wrap,.show .wrap{grid-template-columns:1fr}
+  .hero .wrap,.sizer .in,.fit .wrap{grid-template-columns:1fr}
   .sizer .in{padding:32px}
   nav a.lk{display:none}
   section{padding:54px 0}
-  .stat b{font-size:23px}
   .lb .nav{width:40px;height:40px}
   .ribbon{font-size:11.5px;padding:7px 12px}
   .rb-more{display:none}
@@ -239,10 +363,18 @@ footer a{color:var(--ember2)}
   .brand .wm b{font-size:18px}
   .btnrow{flex-direction:column}
   .btnrow .btn{width:100%;justify-content:center}
+  .firecards{grid-template-columns:1fr 1fr;gap:12px}
+  .journey{padding:28px}
+  .jsteps{grid-template-columns:1fr;gap:20px}
+  .tcard{padding:24px;gap:18px}
+  .tcard.quote{flex-direction:column;text-align:center}
+  .book{padding:26px}
+  .book .altrow{grid-template-columns:1fr}
+  .site-foot .cols{grid-template-columns:1fr;gap:24px}
   .sticky-call{display:flex;justify-content:center;position:fixed;bottom:calc(14px + env(safe-area-inset-bottom));left:16px;right:16px;z-index:60}
   .sticky-call a{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;max-width:420px;padding:16px 22px;font-weight:800;text-decoration:none;color:#fff;font-size:16px;letter-spacing:.3px;border-radius:999px;background:linear-gradient(135deg,var(--red),var(--ember));border:1px solid rgba(255,255,255,.18);box-shadow:0 10px 28px rgba(0,0,0,.5),0 4px 14px rgba(255,110,26,.35)}
   .sticky-call .ic{font-size:18px}
-  footer{padding-bottom:110px}
+  .site-foot{padding-bottom:96px}
 }
 </style>
 </head>
@@ -272,6 +404,16 @@ footer a{color:var(--ember2)}
 <symbol id="i-ruler" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="8" rx="1.5" transform="rotate(0)"/><path d="M7 8v3M11 8v4M15 8v3M19 8v4"/></symbol>
 <symbol id="i-zoom" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.5-4.5M10.5 8v5M8 10.5h5"/></symbol>
 <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.2 5.2L4 17v3h3l5.5-5.5a4 4 0 0 0 5.2-5.2l-2.4 2.4-2.1-.5-.5-2.1z"/></symbol>
+<symbol id="i-hardhat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16a8 8 0 0 1 16 0"/><path d="M10 8.5V6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2.5"/><path d="M3 16h18v2H3z"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9h17M8 3v4M16 3v4"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9 6.8 19.6l1-5.8-4.3-4.1 5.9-.9z" fill="currentColor"/></symbol>
+<symbol id="i-quote" viewBox="0 0 24 24"><path d="M9.5 6C6.5 7 5 9.5 5 13v5h5v-6H7.6c.1-1.8.8-3 2.4-3.6zm9 0C15.5 7 14 9.5 14 13v5h5v-6h-2.4c.1-1.8.8-3 2.4-3.6z" fill="currentColor"/></symbol>
+<symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 9h2.5V6H14c-2 0-3.5 1.5-3.5 3.5V11H8.5v3h2v6H14v-6h2.5l.5-3H14V9.8c0-.5.4-.8.9-.8z" fill="currentColor"/></symbol>
+<symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.4"/><circle cx="16.6" cy="7.4" r="1" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></symbol>
+<symbol id="i-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></symbol>
+<symbol id="i-google" viewBox="0 0 24 24"><path d="M21 12.2c0-.7-.06-1.2-.18-1.8H12v3.3h5.1c-.1.9-.66 2.2-1.9 3.1l-.02.1 2.76 2.1.2.02C19.9 17.4 21 15 21 12.2z" fill="currentColor"/><path d="M12 21c2.5 0 4.6-.8 6.1-2.2l-2.9-2.2c-.8.5-1.8.9-3.2.9-2.4 0-4.5-1.6-5.2-3.8l-.1.01-2.9 2.2-.04.1C5.3 19 8.4 21 12 21z" fill="currentColor" opacity=".8"/><path d="M6.8 13.7c-.2-.5-.3-1.1-.3-1.7s.1-1.2.3-1.7v-2.3l-3-.02C.3 9.2 0 10.6 0 12s.3 2.8.8 4z" fill="currentColor" opacity=".55"/><path d="M12 6.5c1.7 0 2.8.7 3.5 1.3l2.5-2.5C16.6 3.9 14.5 3 12 3 8.4 3 5.3 5 3.8 8l3 2.3C7.5 8.1 9.6 6.5 12 6.5z" fill="currentColor" opacity=".9"/></symbol>
 </defs></svg>
 
 <div id="bar"></div>
@@ -291,29 +433,28 @@ footer a{color:var(--ember2)}
 
 <header class="hero"><div class="wrap">
   <div class="hero-copy">
-    <div class="est g-reveal"><svg class="ic"><use href="#i-cert"/></svg> OFTEC-registered · Monasterevin Road, Co. Kildare</div>
     <h1 id="headline">
-      <span class="l"><span>Real warmth, done right —</span></span>
-      <span class="l"><span><em>supplied &amp; fitted.</em></span></span>
+      <span class="l"><span>Real warmth,</span></span>
+      <span class="l"><span>done right.</span></span>
     </h1>
-    <p class="sub g-reveal">Stoves, fireplaces, flues and handmade mantelpieces — <b>we supply and we fit.</b> Qualified solid-fuel installers with a full showroom on the Monasterevin Road. Come see the fire before you buy it.</p>
-    <div class="btnrow g-reveal">
-      <a class="btn fire" href="#showroom">Visit the Showroom</a>
-      <a class="btn ghost" href="#size">What size do I need?</a>
+    <div class="tagline g-reveal">Supplied. Fitted. Certified.</div>
+    <div class="hero-meta g-reveal">
+      <span class="m"><svg class="ic"><use href="#i-cert"/></svg> OFTEC registered</span>
+      <span class="sep"></span>
+      <span class="m"><svg class="ic"><use href="#i-pin"/></svg> Monasterevin, Co. Kildare</span>
     </div>
-    <div class="chips g-reveal">
-      <span class="chip"><svg class="ic"><use href="#i-check"/></svg> OFTEC registered</span>
-      <span class="chip"><svg class="ic"><use href="#i-check"/></svg> Supply + fit</span>
-      <span class="chip"><svg class="ic"><use href="#i-check"/></svg> Free showroom advice</span>
+    <div class="btnrow g-reveal">
+      <a class="btn fire" href="#showroom">Visit the showroom <svg class="ic"><use href="#i-arrow"/></svg></a>
+      <a class="btn ghost" href="#size">Find my stove size <svg class="ic"><use href="#i-arrow"/></svg></a>
     </div>
   </div>
+  <div class="hfeat g-reveal">
+    <div class="hf"><span class="hf-ic"><svg class="ic"><use href="#i-fireplace"/></svg></span><div><b>Stoves &amp; fireplaces</b><span>8 ranges</span></div></div>
+    <div class="hf"><span class="hf-ic"><svg class="ic"><use href="#i-cert"/></svg></span><div><b>Trusted brands</b><span>Quality you can rely on</span></div></div>
+    <div class="hf"><span class="hf-ic"><svg class="ic"><use href="#i-wrench"/></svg></span><div><b>Supply &amp; fit</b><span>Done to standard</span></div></div>
+    <div class="hf"><span class="hf-ic"><svg class="ic"><use href="#i-cal"/></svg></span><div><b>Open 6 days</b><span>We're here to help</span></div></div>
+  </div>
 </div>
-<div class="wrap"><div class="stats g-reveal">
-  <div class="stat"><b data-count="8">0</b><span>stove &amp; fire ranges</span></div>
-  <div class="stat"><b data-count="4">0</b><span>trusted brands</span></div>
-  <div class="stat"><b>Fit</b><span>supplied &amp; installed</span></div>
-  <div class="stat"><b data-count="6">0</b><span>days open weekly</span></div>
-</div></div>
 </header>
 
 <div class="strip"><div class="strip-in">
@@ -322,16 +463,44 @@ footer a{color:var(--ember2)}
 </div></div>
 
 <section id="stoves"><div class="wrap">
-  <div class="sec-head g-reveal"><div><span class="kicker">The showroom</span><h2>What we stock</h2></div><p>Everything for the fire — see it lit and feel the heat before you decide. Prices on request or in store.</p></div>
-  <div class="cats">
-    <a class="cat g-reveal" href="#contact"><span class="cat-ic"><svg class="ic"><use href="#i-stove"/></svg></span><span class="tx"><b>Room Heater Stoves</b><p>Freestanding wood &amp; multifuel</p></span><svg class="ic arr"><use href="#i-arrow"/></svg></a>
-    <a class="cat g-reveal" href="#contact"><span class="cat-ic"><svg class="ic"><use href="#i-boiler"/></svg></span><span class="tx"><b>Boiler Stoves</b><p>Heat your water &amp; radiators</p></span><svg class="ic arr"><use href="#i-arrow"/></svg></a>
-    <a class="cat g-reveal" href="#contact"><span class="cat-ic"><svg class="ic"><use href="#i-pellet"/></svg></span><span class="tx"><b>Pellet Stoves</b><p>Automatic, low-effort heat</p></span><svg class="ic arr"><use href="#i-arrow"/></svg></a>
-    <a class="cat g-reveal" href="#contact"><span class="cat-ic"><svg class="ic"><use href="#i-electric"/></svg></span><span class="tx"><b>Electric Stoves</b><p>Flame effect, no chimney</p></span><svg class="ic arr"><use href="#i-arrow"/></svg></a>
-    <a class="cat g-reveal" href="#contact"><span class="cat-ic"><svg class="ic"><use href="#i-fireplace"/></svg></span><span class="tx"><b>Fireplaces &amp; Inserts</b><p>Built-in &amp; cassette fires</p></span><svg class="ic arr"><use href="#i-arrow"/></svg></a>
-    <a class="cat g-reveal" href="#contact"><span class="cat-ic"><svg class="ic"><use href="#i-mantel"/></svg></span><span class="tx"><b>Mantelpieces &amp; Corbels</b><p>Handmade centrepieces</p></span><svg class="ic arr"><use href="#i-arrow"/></svg></a>
-    <a class="cat g-reveal" href="#contact"><span class="cat-ic"><svg class="ic"><use href="#i-hearth"/></svg></span><span class="tx"><b>Hearths &amp; Stone</b><p>Slabs, cladding &amp; surrounds</p></span><svg class="ic arr"><use href="#i-arrow"/></svg></a>
-    <a class="cat g-reveal" href="#contact"><span class="cat-ic"><svg class="ic"><use href="#i-flue"/></svg></span><span class="tx"><b>Flues &amp; Accessories</b><p>Liners, pipe &amp; fittings</p></span><svg class="ic arr"><use href="#i-arrow"/></svg></a>
+  <div class="g-reveal"><span class="kicker">Explore our collection</span><h2>Find the <em style="font-style:italic;color:var(--ember2)">right</em> fire for your home</h2></div>
+  <div class="firecards" style="margin-top:28px">
+    <a class="fcard g-reveal" href="#contact"><img src="./img/ambiance.jpg" alt="Room heater stoves" loading="lazy"><span class="fc-lab">Room heater stoves <svg class="ic"><use href="#i-arrow"/></svg></span></a>
+    <a class="fcard g-reveal" href="#contact"><img src="./img/boiler.jpg" alt="Boiler stoves" loading="lazy"><span class="fc-lab">Boiler stoves <svg class="ic"><use href="#i-arrow"/></svg></span></a>
+    <a class="fcard g-reveal" href="#contact"><img src="./img/ambiance-fireplace.webp" alt="Fireplaces" loading="lazy"><span class="fc-lab">Fireplaces <svg class="ic"><use href="#i-arrow"/></svg></span></a>
+    <a class="fcard g-reveal" href="#contact"><img src="./img/ambiance-mantel.webp" alt="Handmade mantelpieces" loading="lazy"><span class="fc-lab">Handmade mantelpieces <svg class="ic"><use href="#i-arrow"/></svg></span></a>
+  </div>
+
+  <div class="journey g-reveal" style="margin-top:26px">
+    <div>
+      <span class="jk">Our simple installation journey</span>
+      <h2>From showroom<br>to first fire</h2>
+    </div>
+    <div class="jsteps">
+      <div class="jstep"><span class="js-ic"><svg class="ic"><use href="#i-ruler"/></svg></span><b>1. Visit &amp; measure</b><p>We'll measure up and advise on the best options for your home.</p></div>
+      <div class="jstep"><span class="js-ic"><svg class="ic"><use href="#i-stove"/></svg></span><b>2. Choose your stove</b><p>Explore our range and find the right fire for your space and style.</p></div>
+      <div class="jstep"><span class="js-ic"><svg class="ic"><use href="#i-hardhat"/></svg></span><b>3. Delivery &amp; certified fitting</b><p>We'll deliver, install and certify — so you can relax and enjoy.</p></div>
+    </div>
+  </div>
+
+  <div class="trust">
+    <div class="tcard g-reveal">
+      <span class="oftec"><img src="./img/oftec.png" alt="OFTEC registered"></span>
+      <div class="bd">
+        <b>OFTEC registered installers</b>
+        <p>All our installations are carried out by OFTEC registered engineers for your safety and peace of mind.</p>
+        <a class="el" href="#stoves">See all stoves <svg class="ic"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+    <div class="tcard quote g-reveal">
+      <img class="tq-img" src="./img/ambiance-mantel.webp" alt="">
+      <div class="tq">
+        <svg class="ic qmark"><use href="#i-quote"/></svg>
+        <p>From the first visit to the final installation, the team were fantastic. Our stove looks brilliant and heats the whole house.</p>
+        <span class="stars"><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg></span>
+        <div class="who">Aisling &amp; Mark, Kildare</div>
+      </div>
+    </div>
   </div>
 </div></section>
 
@@ -405,45 +574,83 @@ footer a{color:var(--ember2)}
   </div>
 </div></section>
 
-<section id="showroom" class="show"><div class="wrap">
-  <div class="g-reveal">
-    <span class="kicker">Come in</span>
-    <h2>The showroom</h2>
-    <div class="show-photo" style="margin-top:18px"><img src="./img/showroom-interior.webp" alt="Inside the Kildare Stoves showroom" loading="lazy"></div>
-    <div class="info">
-      <div><span class="li-ic"><svg class="ic"><use href="#i-pin"/></svg></span><span><b>Kildare Stoves</b><br>Whitesland West Business Park, Monasterevin Road,<br>Co. Kildare, R51 XK64</span></div>
-      <div><span class="li-ic"><svg class="ic"><use href="#i-phone"/></svg></span><span><b>Showroom</b> <a href="tel:+353455531563">045 531563</a> · <b>Mobile</b> <a href="tel:+353858754191">085 875 4191</a></span></div>
-      <div><span class="li-ic"><svg class="ic"><use href="#i-wa"/></svg></span><span><b>WhatsApp</b> <a href="https://wa.me/353858754191">085 875 4191</a></span></div>
-      <div><span class="li-ic"><svg class="ic"><use href="#i-mail"/></svg></span><span><a href="mailto:kildarestoves@gmail.com">kildarestoves@gmail.com</a></span></div>
+<section id="showroom" class="contact"><div class="wrap">
+  <div class="c-media g-reveal">
+    <div class="c-hero-img"><img src="./img/showroom-interior.webp" alt="Inside the Kildare Stoves showroom" loading="lazy"></div>
+    <div class="c-row">
+      <div class="c-photo"><img src="./img/fireplace.jpeg" alt="Advice by the fire in our showroom" loading="lazy"></div>
+      <div class="visit">
+        <div class="vt"><svg class="ic"><use href="#i-pin"/></svg><b>Visit our<br>Monasterevin showroom</b></div>
+        <div class="addr">Whitesland West Business Park,<br>Co. Kildare</div>
+        <span class="vopen" id="vopen"><span class="dot"></span><span id="vopentxt">Open today</span></span>
+        <div style="margin-top:14px"><a class="el" style="display:inline-flex;align-items:center;gap:6px;color:var(--ember2);font-weight:800;font-size:13.5px;text-decoration:none" href="https://www.google.com/maps/search/?api=1&query=Kildare+Stoves+Monasterevin+Road+R51+XK64" target="_blank" rel="noopener">Get directions <svg class="ic"><use href="#i-arrow"/></svg></a></div>
+      </div>
     </div>
-    <div class="hours-head"><svg class="ic" style="color:var(--ember2);font-size:18px"><use href="#i-clock"/></svg><b>Opening hours</b><span class="openpill" id="openpill"><span class="dot"></span><span id="opentxt">—</span></span></div>
-    <div class="hours" id="hours">
-      <div data-day="1-5"><span>Mon – Fri</span><span>9:00 – 18:00</span></div>
-      <div data-day="6"><span>Saturday</span><span>9:00 – 15:00</span></div>
-      <div data-day="0"><span>Sunday</span><span>Closed</span></div>
-    </div>
-    <div class="map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Kildare%20Stoves%20Monasterevin%20Road%20R51%20XK64&output=embed" title="Kildare Stoves location"></iframe></div>
   </div>
-  <form id="enqForm">
-    <h3>Ask about a stove</h3>
-    <p class="note">Tell us what you're after — a stove, a fireplace, or a full supply-and-fit. We'll come back to you the same day.</p>
+
+  <form id="enqForm" class="book g-reveal">
+    <div class="bh">
+      <div><h3>Come see the fire <em>lit</em></h3><span class="bk">Plan your visit</span></div>
+      <div class="bbadge"><span class="bi"><svg class="ic"><use href="#i-fireplace"/></svg></span><span>Ask about<br>a stove</span></div>
+    </div>
     <input type="hidden" name="access_key" value="37a94c10-2fb6-448e-bd9a-8676709824d6">
     <input type="hidden" name="subject" value="New enquiry from Kildare Stoves website">
     <input type="hidden" name="from_name" value="Kildare Stoves website">
     <input type="checkbox" name="botcheck" style="display:none">
-    <div class="f"><label>Your name</label><input name="name" required placeholder="Name"></div>
-    <div class="f"><label>Phone or email</label><input name="contact" required placeholder="How do we reach you?"></div>
-    <div class="f"><label>What are you after?</label><select name="looking_for"><option>General enquiry</option><option>Room heater stove</option><option>Boiler stove</option><option>Pellet stove</option><option>Electric stove</option><option>Fireplace / insert</option><option>Mantelpiece / hearth</option><option>Supply &amp; fit quote</option></select></div>
-    <div class="f"><label>Message <span style="text-transform:none;font-weight:600">(optional)</span></label><textarea name="message" placeholder="Anything you'd like us to know — room size, existing fireplace, etc."></textarea></div>
-    <button type="submit" id="enqBtn">Send Enquiry <svg class="ic"><use href="#i-arrow"/></svg></button>
-    <p id="formMsg" style="margin-top:12px;font-weight:700;font-size:14px"></p>
+    <div class="f"><label>Name</label><svg class="ic fi"><use href="#i-user"/></svg><input name="name" required placeholder="Your name"></div>
+    <div class="f"><label>Phone or email</label><svg class="ic fi"><use href="#i-phone"/></svg><input name="contact" required placeholder="How do we reach you?"></div>
+    <div class="f"><label>What are you looking for?</label><svg class="ic fi"><use href="#i-grid"/></svg><select name="looking_for"><option>General enquiry</option><option>Room heater stove</option><option>Boiler stove</option><option>Pellet stove</option><option>Electric stove</option><option>Fireplace / insert</option><option>Mantelpiece / hearth</option><option>Supply &amp; fit quote</option></select></div>
+    <button type="submit" id="enqBtn">Send enquiry <svg class="ic"><use href="#i-flame"/></svg></button>
+    <p id="formMsg" class="bmsg"></p>
+    <div class="oror">or</div>
+    <div class="altrow">
+      <a class="alt call" href="tel:+353455531563"><svg class="ic"><use href="#i-phone"/></svg> Call 045 531563</a>
+      <a class="alt wa" href="https://wa.me/353858754191"><svg class="ic"><use href="#i-wa"/></svg> WhatsApp us</a>
+    </div>
+    <div class="bhours">
+      <span class="bi"><svg class="ic"><use href="#i-clock"/></svg></span>
+      <table><tr><td>Mon–Fri</td><td>9:00–18:00</td></tr><tr><td>Saturday</td><td>9:00–15:00</td></tr></table>
+    </div>
   </form>
 </div></section>
 
-<footer><div class="wrap">
-  <div>© <span id="yr">2026</span> Kildare Stoves · Whitesland West Business Park, Monasterevin Road, Co. Kildare · R51 XK64</div>
-  <div>Website by <a href="https://midlandsmade.ie" target="_blank" rel="noopener">Midlands Made</a></div>
-</div></footer>
+<footer class="site-foot">
+  <div class="wrap cols">
+    <div class="foot-brand">
+      <div class="fb-top">
+        <span class="mark"><svg class="ic"><use href="#i-flame"/></svg></span>
+        <span class="fbw"><b>Kildare <em>Stoves</em></b><span>Stove &amp; Fireplace Specialists</span></span>
+      </div>
+    </div>
+    <div class="fcontact">
+      <div><svg class="ic"><use href="#i-pin"/></svg><span>Whitesland West Business Park, Co. Kildare</span></div>
+      <div><svg class="ic"><use href="#i-phone"/></svg><a href="tel:+353455531563">045 531563</a></div>
+      <div><svg class="ic"><use href="#i-wa"/></svg><a href="https://wa.me/353858754191">085 875 4191</a></div>
+      <div><svg class="ic"><use href="#i-mail"/></svg><a href="mailto:kildarestoves@gmail.com">kildarestoves@gmail.com</a></div>
+    </div>
+    <div class="flinks">
+      <b>Explore</b>
+      <a href="#stoves">Stoves</a>
+      <a href="#stoves">Fireplaces</a>
+      <a href="#fitting">Supply &amp; Fit</a>
+    </div>
+    <div class="flinks">
+      <b>Visit</b>
+      <a href="#showroom">Showroom</a>
+      <a href="#size">Size Guide</a>
+      <a href="#fitting">About Us</a>
+    </div>
+    <div class="fsocial">
+      <a href="#" aria-label="Facebook"><svg class="ic"><use href="#i-fb"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg class="ic"><use href="#i-ig"/></svg></a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Kildare+Stoves+Monasterevin+Road+R51+XK64" target="_blank" rel="noopener" aria-label="Google"><svg class="ic"><use href="#i-google"/></svg></a>
+    </div>
+  </div>
+  <div class="foot-base"><div class="wrap">
+    <div>© <span id="yr">2026</span> Kildare Stoves · Monasterevin Road, Co. Kildare · R51 XK64</div>
+    <div>Website by <a href="https://midlandsmade.ie" target="_blank" rel="noopener">Midlands Made</a></div>
+  </div></div>
+</footer>
 
 <div class="sticky-call">
   <a class="c" href="tel:+353455531563"><svg class="ic"><use href="#i-phone"/></svg> Call the showroom</a>
@@ -469,19 +676,14 @@ function kw(){
 ['rl','rw','rh','rins'].forEach(id=>document.getElementById(id).addEventListener('input',kw));
 kw();
 
-/* live open-now status */
+/* live open-now status (visit card) */
 (function openNow(){
   const d=new Date(),day=d.getDay(),mins=d.getHours()*60+d.getMinutes();
-  let open=false;
-  if(day>=1&&day<=5)open=mins>=540&&mins<1080;      // Mon-Fri 9-18
-  else if(day===6)open=mins>=540&&mins<900;          // Sat 9-15
-  const pill=document.getElementById('openpill'),txt=document.getElementById('opentxt');
-  pill.classList.add(open?'open':'shut'); txt.textContent=open?'Open now':'Closed now';
-  // highlight today's row
-  document.querySelectorAll('#hours div').forEach(r=>{
-    const rng=r.dataset.day;
-    if((rng==='1-5'&&day>=1&&day<=5)||(rng==='6'&&day===6)||(rng==='0'&&day===0))r.classList.add('today');
-  });
+  let open=false,todayHrs='Closed today';
+  if(day>=1&&day<=5){open=mins>=540&&mins<1080;todayHrs='9:00–18:00';}
+  else if(day===6){open=mins>=540&&mins<900;todayHrs='9:00–15:00';}
+  const vo=document.getElementById('vopen'),vt=document.getElementById('vopentxt');
+  if(vo&&vt){vo.classList.toggle('shut',!open);vt.textContent=open?('Open today '+todayHrs):(day===0?'Closed Sundays':'Closed now · '+todayHrs);}
 })();
 
 /* lightbox with keyboard nav */

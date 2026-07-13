@@ -11,9 +11,9 @@ $SRC  = "D:\Midlands_Web\previews"
 $STAGE = Join-Path $env:TEMP ("mm_pv_" + (Get-Random))
 New-Item -ItemType Directory -Path $STAGE -Force | Out-Null
 
-# copy every preview file except helper/_ files and .png screenshots
+# copy every preview file except helper/_ files (screenshots are named _preview*.png)
 Get-ChildItem $SRC -Recurse -File |
-  Where-Object { $_.Name -notlike "_*" -and $_.Extension -ne ".png" } |
+  Where-Object { $_.Name -notlike "_*" } |
   ForEach-Object {
     $rel  = $_.FullName.Substring($SRC.Length).TrimStart('\')
     $dest = Join-Path $STAGE $rel

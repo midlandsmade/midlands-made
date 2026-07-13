@@ -8,8 +8,6 @@
 <meta name="description" content="Stove & fireplace showroom on the Monasterevin Road, Co. Kildare. OFTEC-registered installers — we supply & fit wood, multi-fuel, pellet & electric stoves, fireplaces, flues, hearths & handmade mantelpieces across Kildare, Laois & the Midlands.">
 <meta name="keywords" content="stoves Kildare, fireplaces Kildare, wood burning stoves, multi-fuel stoves, pellet stoves, stove installers Kildare, OFTEC, Monasterevin, hearths, mantelpieces">
 <link rel="canonical" href="https://kildarestoves.ie/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="./img/hero-room.webp">
 <meta name="theme-color" content="#ff7a1a">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%2317110d'/%3E%3Cpath d='M12 5c.6 2.4-.6 3.7-1.7 4.9C9.1 11.2 8.4 12.5 8.4 14a3.6 3.6 0 0 0 7.2 0c0-1.5-.6-2.6-1.3-3.5-.3.6-.6 1-1.1 1.2.4-2.2-.5-4-1.2-4.9z' fill='%23ff8a2a'/%3E%3C/svg%3E">
@@ -18,7 +16,10 @@
 <meta property="og:description" content="OFTEC-registered installers — we supply and fit stoves, fireplaces, flues, hearths & handmade mantelpieces. Showroom on the Monasterevin Road.">
 <meta property="og:image" content="./img/hero-room.webp">
 <meta name="twitter:card" content="summary_large_image">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+<link rel="preload" as="font" type="font/woff2" href="./assets/fonts/playfairdisplay-800-normal-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="./assets/fonts/manrope-400-normal-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="./assets/fonts/manrope-600-normal-latin.woff2" crossorigin>
+<link rel="stylesheet" href="./assets/fonts/fonts.css">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {
@@ -301,13 +302,11 @@ footer a{color:var(--ember2)}
 .rev-dots button.on{background:var(--ember2);width:22px;border-radius:5px}
 /* contact (mockup 3) */
 .contact .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:30px;align-items:start}
-.c-media{display:grid;gap:16px}
-.c-hero-img{border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/10}
-.c-hero-img img{width:100%;height:100%;object-fit:cover}
-.c-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.c-row .c-photo{border-radius:16px;overflow:hidden;border:1px solid var(--line)}
-.c-row .c-photo img{width:100%;height:100%;object-fit:cover;min-height:170px}
-@media(max-width:860px){.c-row{grid-template-columns:1fr}.c-row .c-photo img{min-height:250px;object-position:50% 26%}}
+.c-media{display:grid;gap:16px;align-content:start}
+.c-hero-img{border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/11}
+.c-hero-img img{width:100%;height:100%;object-fit:cover;object-position:50% 34%}
+.c-cap{margin-top:-6px;color:var(--muted);font-size:13px;text-align:center}
+.c-cap b{color:var(--cream);font-weight:800}
 .visit{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}
 .visit .vt{display:flex;gap:11px;align-items:start}
 .visit .vt .ic{color:var(--ember2);font-size:20px;flex-shrink:0;margin-top:2px}
@@ -329,8 +328,7 @@ footer a{color:var(--ember2)}
 .book .bbadge span{font-size:11px;font-weight:700;color:#5c4f43}
 .book label{color:#5c4f43}
 .book .f{position:relative;margin-bottom:14px}
-.book .f .fi{position:absolute;left:13px;top:38px;color:#9c8a76;font-size:16px;pointer-events:none}
-.book input,.book select{background:#fff;border:1px solid rgba(36,26,18,.16);color:#241a12;padding:13px 13px 13px 38px}
+.book input,.book select{background:#fff;border:1px solid rgba(36,26,18,.16);color:#241a12;padding:13px 14px}
 .book input::placeholder{color:#a99}
 .book input:focus,.book select:focus{border-color:var(--ember);box-shadow:0 0 0 3px rgba(255,122,26,.14)}
 .book button{background:linear-gradient(135deg,var(--red),var(--ember));margin-top:4px}
@@ -649,44 +647,31 @@ html.js .g-reveal.in{animation:gReveal .65s cubic-bezier(.2,.7,.3,1) both}
   </div>
 </div></section>
 
-<section id="faq"><div class="wrap">
-  <div class="sec-head g-reveal" style="margin-bottom:26px"><div><span class="kicker">Good to know</span><h2>Stove &amp; fireplace FAQs</h2></div></div>
-  <div class="faq g-reveal">
-    <details open><summary>Do you fit the stoves you sell?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">Yes. We're OFTEC-registered solid-fuel installers, so we supply, deliver and fit your stove, flue, hearth and surround — one team from the showroom floor to the finished fire.</div></details>
-    <details><summary>What areas do you cover?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">We're based on the Monasterevin Road in Co. Kildare and cover the Midlands and much of the country — we regularly travel further afield for the right job. Tell us where you are and we'll let you know what suits.</div></details>
-    <details><summary>What types of stove do you sell?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">Wood-burning and multi-fuel room heater stoves, boiler stoves, pellet stoves and electric stoves — plus inset fireplaces, flues, hearths and handmade mantelpieces.</div></details>
-    <details><summary>What size stove do I need?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">As a rough guide, divide your room's volume in cubic metres by about 14 to get the kW output to aim for. Try our <a href="size-guide.html" style="color:var(--ember2);font-weight:700">size guide</a>, then we'll size it properly for your room, chimney and insulation.</div></details>
-    <details><summary>Can I see the stoves in person before I buy?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">Yes — our Monasterevin showroom has a wide range of stoves and fireplaces on display, so you can see the models, sizes and finishes in person and get honest advice on what suits your room. Call in during opening hours or book a time that suits you.</div></details>
-  </div>
-</div></section>
-
 <section id="showroom" class="contact"><div class="wrap">
   <div class="c-media g-reveal">
-    <div class="c-hero-img"><img src="./img/showroom-interior.webp" alt="Inside the Kildare Stoves showroom" loading="lazy"></div>
-    <div class="c-row">
-      <div class="c-photo"><img src="./img/consultation.webp" alt="Getting honest advice from the Kildare Stoves team"></div>
-      <div class="visit">
-        <div class="vt"><svg class="ic"><use href="#i-pin"/></svg><b>Visit our<br>Monasterevin showroom</b></div>
-        <div class="addr">Whitesland West Business Park,<br>Co. Kildare</div>
-        <span class="vopen" id="vopen"><span class="dot"></span><span id="vopentxt">Open today</span></span>
-        <div style="margin-top:14px"><a class="el" style="display:inline-flex;align-items:center;gap:6px;color:var(--ember2);font-weight:800;font-size:13.5px;text-decoration:none" href="https://www.google.com/maps/search/?api=1&query=Kildare+Stoves+Monasterevin+Road+R51+XK64" target="_blank" rel="noopener">Get directions <svg class="ic"><use href="#i-arrow"/></svg></a></div>
-      </div>
+    <div class="c-hero-img"><img src="./img/consultation.webp" alt="The Kildare Stoves team talking a customer through their options" loading="lazy"></div>
+    <p class="c-cap">Sit down with us and <b>we'll plan the right stove for your room</b> — no pressure, just honest advice.</p>
+    <div class="visit">
+      <div class="vt"><svg class="ic"><use href="#i-pin"/></svg><b>Visit our<br>Monasterevin showroom</b></div>
+      <div class="addr">Whitesland West Business Park,<br>Co. Kildare</div>
+      <span class="vopen" id="vopen"><span class="dot"></span><span id="vopentxt">Open today</span></span>
+      <div style="margin-top:14px"><a class="el" style="display:inline-flex;align-items:center;gap:6px;color:var(--ember2);font-weight:800;font-size:13.5px;text-decoration:none" href="https://www.google.com/maps/search/?api=1&query=Kildare+Stoves+Monasterevin+Road+R51+XK64" target="_blank" rel="noopener">Get directions <svg class="ic"><use href="#i-arrow"/></svg></a></div>
     </div>
   </div>
 
   <form id="enqForm" class="book g-reveal">
     <div class="bh">
       <div><h3>Tell us what you're <em>planning</em></h3><span class="bk">A local team, start to finish</span></div>
-      <div class="bbadge"><span class="bi"><svg class="ic"><use href="#i-fireplace"/></svg></span><span>Ask about<br>a stove</span></div>
+      <div class="bbadge"><span class="bi"><svg class="ic"><use href="#i-stovemark"/></svg></span><span>Ask about<br>a stove</span></div>
     </div>
     <input type="hidden" name="access_key" value="37a94c10-2fb6-448e-bd9a-8676709824d6">
     <input type="hidden" name="subject" value="New enquiry from Kildare Stoves website">
     <input type="hidden" name="from_name" value="Kildare Stoves website">
     <input type="checkbox" name="botcheck" style="display:none">
-    <div class="f"><label>Name</label><svg class="ic fi"><use href="#i-user"/></svg><input name="name" required placeholder="Your name"></div>
-    <div class="f"><label>Phone or email</label><svg class="ic fi"><use href="#i-phone"/></svg><input name="contact" required placeholder="How do we reach you?"></div>
-    <div class="f"><label>What are you looking for?</label><svg class="ic fi"><use href="#i-grid"/></svg><select name="looking_for"><option>General enquiry</option><option>Room heater stove</option><option>Boiler stove</option><option>Pellet stove</option><option>Electric stove</option><option>Fireplace / insert</option><option>Mantelpiece / hearth</option><option>Supply &amp; fit quote</option></select></div>
-    <button type="submit" id="enqBtn">Send enquiry <svg class="ic"><use href="#i-flame"/></svg></button>
+    <div class="f"><label>Name</label><input name="name" required placeholder="Your name"></div>
+    <div class="f"><label>Phone or email</label><input name="contact" required placeholder="How do we reach you?"></div>
+    <div class="f"><label>What are you looking for?</label><select name="looking_for"><option>General enquiry</option><option>Room heater stove</option><option>Boiler stove</option><option>Pellet stove</option><option>Electric stove</option><option>Fireplace / insert</option><option>Mantelpiece / hearth</option><option>Supply &amp; fit quote</option></select></div>
+    <button type="submit" id="enqBtn">Send enquiry</button>
     <p id="formMsg" class="bmsg"></p>
     <div class="oror">or</div>
     <div class="altrow">
@@ -698,6 +683,17 @@ html.js .g-reveal.in{animation:gReveal .65s cubic-bezier(.2,.7,.3,1) both}
       <table><tr><td>Mon–Fri</td><td>9:00–18:00</td></tr><tr><td>Saturday</td><td>9:00–15:00</td></tr></table>
     </div>
   </form>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <div class="sec-head g-reveal" style="margin-bottom:26px"><div><span class="kicker">Good to know</span><h2>Stove &amp; fireplace FAQs</h2></div></div>
+  <div class="faq g-reveal">
+    <details open><summary>Do you fit the stoves you sell?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">Yes. We're OFTEC-registered solid-fuel installers, so we supply, deliver and fit your stove, flue, hearth and surround — one team from the showroom floor to the finished fire.</div></details>
+    <details><summary>What areas do you cover?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">We're based on the Monasterevin Road in Co. Kildare and cover the Midlands and much of the country — we regularly travel further afield for the right job. Tell us where you are and we'll let you know what suits.</div></details>
+    <details><summary>What types of stove do you sell?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">Wood-burning and multi-fuel room heater stoves, boiler stoves, pellet stoves and electric stoves — plus inset fireplaces, flues, hearths and handmade mantelpieces.</div></details>
+    <details><summary>What size stove do I need?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">As a rough guide, divide your room's volume in cubic metres by about 14 to get the kW output to aim for. Try our <a href="size-guide.html" style="color:var(--ember2);font-weight:700">size guide</a>, then we'll size it properly for your room, chimney and insulation.</div></details>
+    <details><summary>Can I see the stoves in person before I buy?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">Yes — our Monasterevin showroom has a wide range of stoves and fireplaces on display, so you can see the models, sizes and finishes in person and get honest advice on what suits your room. Call in during opening hours or book a time that suits you.</div></details>
+  </div>
 </div></section>
 
 <footer class="site-foot">

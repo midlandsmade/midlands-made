@@ -4,8 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow"><!-- staging; make indexable when it goes on kildarestoves.ie -->
-<title>Kildare Stoves | Stoves, Fireplaces &amp; Fitting — Monasterevin Road, Co. Kildare</title>
-<meta name="description" content="Stove & fireplace showroom on the Monasterevin Road, Co. Kildare. OFTEC-registered solid-fuel installers — we supply and fit stoves, flues, hearths and handmade mantelpieces.">
+<title>Stoves &amp; Fireplaces Kildare | Supplied &amp; Fitted — Kildare Stoves</title>
+<meta name="description" content="Stove & fireplace showroom on the Monasterevin Road, Co. Kildare. OFTEC-registered installers — we supply & fit wood, multi-fuel, pellet & electric stoves, fireplaces, flues, hearths & handmade mantelpieces across Kildare, Laois & the Midlands.">
+<meta name="keywords" content="stoves Kildare, fireplaces Kildare, wood burning stoves, multi-fuel stoves, pellet stoves, stove installers Kildare, OFTEC, Monasterevin, hearths, mantelpieces">
+<link rel="canonical" href="https://kildarestoves.ie/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="./img/hero-room.webp">
 <meta name="theme-color" content="#ff7a1a">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%2317110d'/%3E%3Cpath d='M12 5c.6 2.4-.6 3.7-1.7 4.9C9.1 11.2 8.4 12.5 8.4 14a3.6 3.6 0 0 0 7.2 0c0-1.5-.6-2.6-1.3-3.5-.3.6-.6 1-1.1 1.2.4-2.2-.5-4-1.2-4.9z' fill='%23ff8a2a'/%3E%3C/svg%3E">
 <meta property="og:type" content="business.business">
@@ -22,9 +27,24 @@
   "description":"Stove and fireplace showroom and OFTEC-registered solid-fuel installers in Co. Kildare. We supply and fit stoves, fireplaces, flues, hearths and handmade mantelpieces.",
   "url":"https://kildarestoves.ie","telephone":"+353455531563","email":"kildarestoves@gmail.com","image":"./img/hero-room.webp","priceRange":"€€",
   "address":{"@type":"PostalAddress","streetAddress":"Whitesland West Business Park, Monasterevin Road","addressLocality":"Co. Kildare","postalCode":"R51 XK64","addressCountry":"IE"},
+  "areaServed":[{"@type":"AdministrativeArea","name":"Kildare"},{"@type":"AdministrativeArea","name":"Laois"},{"@type":"AdministrativeArea","name":"Offaly"},{"@type":"AdministrativeArea","name":"Midlands, Ireland"}],
+  "hasMap":"https://www.google.com/maps/search/?api=1&query=Kildare+Stoves+Monasterevin+Road+R51+XK64",
+  "knowsAbout":["wood burning stoves","multi-fuel stoves","boiler stoves","pellet stoves","electric stoves","fireplaces","flue installation","hearths","handmade mantelpieces","solid fuel appliance installation"],
   "openingHoursSpecification":[
     {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},
     {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"15:00"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Do you fit the stoves you sell?","acceptedAnswer":{"@type":"Answer","text":"Yes. We're OFTEC-registered solid-fuel installers, so we supply, deliver and fit your stove, flue, hearth and surround — one team from the showroom floor to the finished fire."}},
+    {"@type":"Question","name":"What areas do you cover?","acceptedAnswer":{"@type":"Answer","text":"Our showroom is on the Monasterevin Road in Co. Kildare, and we supply and fit stoves across Kildare, Laois, Offaly and the surrounding Midlands."}},
+    {"@type":"Question","name":"What types of stove do you sell?","acceptedAnswer":{"@type":"Answer","text":"Wood-burning and multi-fuel room heater stoves, boiler stoves, pellet stoves and electric stoves, plus inset fireplaces, flues, hearths and handmade mantelpieces."}},
+    {"@type":"Question","name":"What size stove do I need?","acceptedAnswer":{"@type":"Answer","text":"As a rough guide, divide your room's volume in cubic metres by about 14 to get the kW output to aim for. Use our size guide, then we'll size it properly for your room, chimney and insulation."}},
+    {"@type":"Question","name":"Can I see the stoves working before I buy?","acceptedAnswer":{"@type":"Answer","text":"Yes — our showroom fires are lit so you can feel the heat and judge the size in person. Call in during opening hours or book a time that suits you."}}
   ]
 }
 </script>
@@ -196,6 +216,15 @@ footer a{color:var(--ember2)}
 .lb .nav{top:50%;transform:translateY(-50%);width:48px;height:48px;font-size:22px;background:rgba(255,255,255,.08);border-radius:50%}
 .lb .prev{left:24px}.lb .next{right:24px}
 .lb .x:hover,.lb .nav:hover{opacity:.7}
+.faq{max-width:840px;margin:0 auto}
+.faq details{border:1px solid var(--line);border-radius:14px;margin-bottom:12px;background:var(--panel);overflow:hidden;transition:border-color .2s}
+.faq details[open]{border-color:rgba(255,171,82,.35)}
+.faq summary{list-style:none;cursor:pointer;padding:18px 22px;font-weight:800;font-size:15.5px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .q-ic{color:var(--ember2);font-size:18px;transition:transform .25s;flex-shrink:0}
+.faq details[open] summary .q-ic{transform:rotate(45deg)}
+.faq details[open] summary{color:var(--ember2)}
+.faq .a{padding:0 22px 20px;color:var(--muted);font-size:14.8px;line-height:1.65}
 .sticky-call{display:none}
 @media(max-width:860px){
   .hero .wrap,.sizer .in,.fit .wrap,.show .wrap{grid-template-columns:1fr}
@@ -238,6 +267,7 @@ footer a{color:var(--ember2)}
 <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
 <symbol id="i-ruler" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="8" rx="1.5" transform="rotate(0)"/><path d="M7 8v3M11 8v4M15 8v3M19 8v4"/></symbol>
 <symbol id="i-zoom" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.5-4.5M10.5 8v5M8 10.5h5"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
 </defs></svg>
 
 <div id="bar"></div>
@@ -357,6 +387,17 @@ footer a{color:var(--ember2)}
     <b>Supplied, delivered &amp; fitted</b>
     <p style="color:var(--muted);margin-top:8px">One team from the showroom floor to the finished fire — you're not left chasing a separate fitter.</p>
     <a class="btn fire" style="margin-top:20px" href="#contact">Book a fitting chat</a>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <div class="sec-head g-reveal" style="margin-bottom:26px"><div><span class="kicker">Good to know</span><h2>Stove &amp; fireplace FAQs</h2></div></div>
+  <div class="faq g-reveal">
+    <details open><summary>Do you fit the stoves you sell?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">Yes. We're OFTEC-registered solid-fuel installers, so we supply, deliver and fit your stove, flue, hearth and surround — one team from the showroom floor to the finished fire.</div></details>
+    <details><summary>What areas do you cover?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">Our showroom is on the Monasterevin Road in Co. Kildare, and we supply and fit stoves across Kildare, Laois, Offaly and the surrounding Midlands.</div></details>
+    <details><summary>What types of stove do you sell?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">Wood-burning and multi-fuel room heater stoves, boiler stoves, pellet stoves and electric stoves — plus inset fireplaces, flues, hearths and handmade mantelpieces.</div></details>
+    <details><summary>What size stove do I need?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">As a rough guide, divide your room's volume in cubic metres by about 14 to get the kW output to aim for. Try our <a href="#size" style="color:var(--ember2);font-weight:700">size guide</a> above, then we'll size it properly for your room, chimney and insulation.</div></details>
+    <details><summary>Can I see the stoves working before I buy?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">Yes — our showroom fires are lit so you can feel the heat and judge the size in person. Call in during opening hours or book a time that suits you.</div></details>
   </div>
 </div></section>
 

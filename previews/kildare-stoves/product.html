@@ -34,7 +34,13 @@ nav .wrap{display:flex;align-items:center;gap:20px;height:70px}
 .crumb a:hover{color:var(--ember2)}
 .crumb span{color:var(--ember2)}
 .detail{display:grid;grid-template-columns:1fr 1fr;gap:44px;padding:26px 0 60px;align-items:start}
-.pimg{border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#0e0a07;aspect-ratio:1/1;display:grid;place-items:center;position:sticky;top:90px}
+.pmedia{position:sticky;top:90px}
+.pimg{border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#0e0a07;aspect-ratio:1/1;display:grid;place-items:center}
+.pthumbs{display:flex;gap:10px;margin-top:12px}
+.pthumbs button{width:76px;height:76px;border-radius:11px;overflow:hidden;border:2px solid var(--line);cursor:pointer;background:#0e0a07;padding:0;transition:border-color .2s}
+.pthumbs button.on{border-color:var(--ember2)}
+.pthumbs button:hover{border-color:var(--ember2)}
+.pthumbs img{width:100%;height:100%;object-fit:cover}
 .pimg img{width:100%;height:100%;object-fit:cover}
 .pimg .ph-empty{color:#3a2c22;font-size:90px}
 .pcat{font-size:11.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ember2);font-weight:800}
@@ -71,14 +77,14 @@ footer a{color:var(--ember2)}
 #msg{margin-top:10px;font-weight:700;font-size:14px}
 @media(max-width:860px){
   .detail{grid-template-columns:1fr;gap:24px}
-  .pimg{position:static}
+  .pmedia{position:static}
 }
 </style>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c.7 2.6-.6 4-1.8 5.3C9 9.6 8.1 11 8.1 12.6a3.9 3.9 0 0 0 7.8 0c0-1.6-.7-2.8-1.4-3.7-.3.6-.7 1-1.3 1.3.5-2.5-.6-4.6-1.2-5.5z" fill="currentColor"/></symbol>
-<symbol id="i-stovemark" viewBox="0 0 64 64"><defs><linearGradient id="ksBody" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc072"/><stop offset="1" stop-color="#c07322"/></linearGradient><linearGradient id="ksFlame" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ff4d12"/><stop offset=".55" stop-color="#ff9020"/><stop offset="1" stop-color="#ffe07a"/></linearGradient></defs><path d="M31 22V12a3 3 0 0 1 3-3h5" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 24a6 6 0 0 1 6-6h20a6 6 0 0 1 6 6v26H16z" fill="url(#ksBody)"/><rect x="13" y="21.5" width="38" height="4.5" rx="2.2" fill="url(#ksBody)"/><path d="M21 50l-3 6M43 50l3 6" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/><rect x="21" y="29" width="22" height="17" rx="3" fill="#160c05"/><path d="M32 31.5c1.8 3-.8 4.8-1.3 6.8a3.4 3.4 0 0 0 6.6 1c.4-2.1-.9-3.7-1.5-5 1.9.7 2.9 2.2 2.9 4.1a5.6 5.6 0 1 1-9.3-4.1c1.5-1 2.4-2 2.6-2.8z" fill="url(#ksFlame)"/></symbol>
+<symbol id="i-stovemark" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M32 21V10"/><path d="M32 10h6.5"/><rect x="15" y="21" width="34" height="29" rx="6"/><rect x="21" y="28.5" width="22" height="15.5" rx="2.6"/><path d="M20.5 50l-3 6M43.5 50l3 6"/></g><path d="M32 31c1.3 2.4-.8 3.7-1.1 5.2a2.5 2.5 0 0 0 4.9.9c.3-1.7-.7-3-1.2-4 1.5.6 2.3 1.7 2.3 3.2a4.3 4.3 0 1 1-7.2-3.1c1.1-.8 1.8-1.6 2.3-2.2z" fill="#ff8a2a"/></symbol>
 <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 10.9a15 15 0 0 0 6.5 6.5l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.4.55 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.3a1 1 0 0 1 1 1 11 11 0 0 0 .54 3.4 1 1 0 0 1-.24 1z" fill="currentColor"/></symbol>
 <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 1.9a8.1 8.1 0 0 1 0 16.2 8 8 0 0 1-4-1.1l-.3-.2-2.4.6.6-2.3-.2-.3A8.1 8.1 0 0 1 12 3.9z" fill="currentColor"/></symbol>
 <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h13M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -102,7 +108,10 @@ footer a{color:var(--ember2)}
 <div class="wrap"><div class="crumb"><a href="index.html">Home</a> / <a href="index.html#shop" id="crumbCat">Shop</a> / <span id="crumbName">…</span></div></div>
 
 <main class="wrap"><div class="detail">
-  <div class="pimg" id="pimg"><span class="ph-empty"><svg class="ic"><use href="#i-flame"/></svg></span></div>
+  <div class="pmedia">
+    <div class="pimg" id="pimg"><span class="ph-empty"><svg class="ic"><use href="#i-flame"/></svg></span></div>
+    <div class="pthumbs" id="pthumbs"></div>
+  </div>
   <div class="pinfo">
     <div class="pcat" id="pcat"></div>
     <h1 id="pname">Loading…</h1>
@@ -168,12 +177,17 @@ fetch('./data/products.json').then(r=>r.json()).then(d=>{
   document.getElementById('plead').textContent=(styleDesc[p.style]||'A quality stove')+' from the Kildare Stoves range — '+p.name+'. Call into our Monasterevin showroom to see it lit, or send an enquiry and we’ll come back the same day with a fitting quote for your room.';
   document.getElementById('crumbName').textContent=p.name;
   const cc=document.getElementById('crumbCat');cc.textContent=p.cat;cc.href='index.html#shop';
-  // image
-  const box=document.getElementById('pimg');
-  const im=new Image();im.alt=p.name;
-  im.onload=()=>{box.innerHTML='';box.appendChild(im);};
-  im.onerror=()=>{};
-  im.src=aiImg(p);
+  // image + thumbnail gallery (AI vibe shot is the main; real product photo added if we have it)
+  const box=document.getElementById('pimg'),thumbs=document.getElementById('pthumbs');
+  const ai=aiImg(p),real='./assets/real/'+p.id+'.webp';
+  function setMain(src){box.innerHTML='';const m=new Image();m.alt=p.name;m.src=src;box.appendChild(m);[].forEach.call(thumbs.children,function(b){b.classList.toggle('on',b.dataset.src===src);});}
+  (function(){var t=new Image();t.onload=function(){setMain(ai);};t.src=ai;})();
+  var cands=[ai,real],loaded=[],pending=cands.length;
+  cands.forEach(function(src){var t=new Image();t.onload=function(){loaded.push(src);fin();};t.onerror=fin;t.src=src;});
+  function fin(){if(--pending>0)return;var ord=cands.filter(function(s){return loaded.indexOf(s)>=0;});
+    if(ord.length<2){thumbs.style.display='none';return;}
+    ord.forEach(function(src){var b=document.createElement('button');b.dataset.src=src;if(src===ai)b.className='on';var i=new Image();i.alt='';i.src=src;b.appendChild(i);b.onclick=function(){setMain(src);};thumbs.appendChild(b);});
+  }
   // WhatsApp + enquiry
   document.getElementById('waBtn').href='https://wa.me/353858754191?text='+encodeURIComponent('Hi, I’m interested in the '+p.name+' — could you tell me more?');
   document.getElementById('fProduct').value=p.name;

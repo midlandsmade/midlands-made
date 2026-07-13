@@ -1,0 +1,13 @@
+# Midlands Made — concept previews site
+# Deploy: drag this whole "previews" folder onto https://app.netlify.com/drop
+# Each preview then lives at  https://<your-site>.netlify.app/<slug>/
+# e.g. /daly/  /nolan-motors/  /evan-longford/  /dunleavy-heating/  /brendan-norris/
+
+[build]
+  publish = "."
+
+# Keep previews out of Google — they're private concept links, not public pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"

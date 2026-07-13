@@ -41,10 +41,10 @@
   "@context":"https://schema.org","@type":"FAQPage",
   "mainEntity":[
     {"@type":"Question","name":"Do you fit the stoves you sell?","acceptedAnswer":{"@type":"Answer","text":"Yes. We're OFTEC-registered solid-fuel installers, so we supply, deliver and fit your stove, flue, hearth and surround — one team from the showroom floor to the finished fire."}},
-    {"@type":"Question","name":"What areas do you cover?","acceptedAnswer":{"@type":"Answer","text":"Our showroom is on the Monasterevin Road in Co. Kildare, and we supply and fit stoves across Kildare, Laois, Offaly and the surrounding Midlands."}},
+    {"@type":"Question","name":"What areas do you cover?","acceptedAnswer":{"@type":"Answer","text":"We're based on the Monasterevin Road in Co. Kildare and cover the Midlands and much of the country — we regularly travel further afield for the right job. Tell us where you are and we'll let you know."}},
     {"@type":"Question","name":"What types of stove do you sell?","acceptedAnswer":{"@type":"Answer","text":"Wood-burning and multi-fuel room heater stoves, boiler stoves, pellet stoves and electric stoves, plus inset fireplaces, flues, hearths and handmade mantelpieces."}},
     {"@type":"Question","name":"What size stove do I need?","acceptedAnswer":{"@type":"Answer","text":"As a rough guide, divide your room's volume in cubic metres by about 14 to get the kW output to aim for. Use our size guide, then we'll size it properly for your room, chimney and insulation."}},
-    {"@type":"Question","name":"Can I see the stoves working before I buy?","acceptedAnswer":{"@type":"Answer","text":"Yes — our showroom fires are lit so you can feel the heat and judge the size in person. Call in during opening hours or book a time that suits you."}}
+    {"@type":"Question","name":"Can I see the stoves in person before I buy?","acceptedAnswer":{"@type":"Answer","text":"Yes — our Monasterevin showroom has a wide range of stoves and fireplaces on display, so you can see the models, sizes and finishes in person and get honest advice. Call in during opening hours or book a time that suits you."}}
   ]
 }
 </script>
@@ -65,7 +65,8 @@ a{color:inherit}
 @keyframes flick{0%,100%{opacity:1;transform:scale(1)}45%{opacity:.75;transform:scale(.94)}70%{opacity:.95;transform:scale(1.03)}}
 #bar{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--red),var(--ember));width:0%;z-index:60}
 nav{position:sticky;top:0;z-index:50;background:rgba(23,17,13,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;gap:26px;height:70px}
+nav .wrap{display:flex;align-items:center;gap:26px;height:70px;position:relative}
+.nav-links{position:absolute;left:50%;transform:translateX(-50%);display:flex;gap:28px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
 .brand .mark{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;background:radial-gradient(circle at 38% 28%,#ff9d42,#c40606);box-shadow:0 6px 18px -6px rgba(255,122,26,.65)}
 .brand .mark .ic{font-size:22px;color:#fff}
@@ -79,9 +80,10 @@ nav a.lk:hover{color:var(--ember2)}
 .cta{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,var(--red),var(--ember));color:#fff;padding:11px 18px;border-radius:11px;font-weight:800;text-decoration:none;box-shadow:0 10px 26px -12px rgba(255,122,26,.6);transition:transform .15s}
 .cta:hover{transform:translateY(-2px)}
 .cta .ic{font-size:16px}
-.cta.wa{background:var(--green);box-shadow:none}
+.cta.wa{background:var(--green);box-shadow:none;padding:11px 15px}
+.cta.wa .ic{font-size:22px}
 .hero{position:relative;overflow:hidden;padding:104px 0 78px;
-  background:linear-gradient(90deg,rgba(13,9,6,.95) 0%,rgba(13,9,6,.82) 44%,rgba(13,9,6,.40) 100%),linear-gradient(180deg,rgba(13,9,6,.15),rgba(23,17,13,.92)),url('./img/hero-room.webp') center/cover no-repeat}
+  background:linear-gradient(90deg,rgba(13,9,6,.95) 0%,rgba(13,9,6,.80) 42%,rgba(13,9,6,.30) 100%),linear-gradient(180deg,rgba(13,9,6,.12),rgba(23,17,13,.9)),url('./img/hero-codex.webp') center/cover no-repeat}
 .hero .wrap{position:relative;z-index:2}
 .hero-copy{max-width:600px}
 .est{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(255,171,82,.35);background:rgba(255,122,26,.08);color:var(--ember2);font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:800;padding:8px 16px;border-radius:999px;margin-bottom:22px}
@@ -240,12 +242,14 @@ footer a{color:var(--ember2)}
 .hf span{display:block;font-size:12px;color:var(--muted);margin-top:2px}
 /* image collection cards (mockup 2) */
 .firecards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.fcard{position:relative;display:block;aspect-ratio:1/1;border-radius:16px;overflow:hidden;border:1px solid var(--line);text-decoration:none;isolation:isolate;cursor:pointer}
+.fcard{position:relative;display:block;aspect-ratio:4/5;border-radius:16px;overflow:hidden;border:1px solid var(--line);text-decoration:none;isolation:isolate;cursor:pointer}
 .fcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
 .fcard:hover img{transform:scale(1.06)}
 .fcard::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,9,6,0) 38%,rgba(13,9,6,.85) 100%);z-index:1}
-.fcard .fc-lab{position:absolute;left:0;right:0;bottom:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:18px 18px 20px;color:#fff;font-family:'Playfair Display',serif;font-weight:800;font-size:19px}
-.fcard .fc-lab .ic{color:var(--ember2);font-size:20px;transition:transform .2s}
+.fcard .fc-lab{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:20px 18px 20px;color:#fff}
+.fcard .fc-lab .fk{display:block;font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--ember2);font-weight:800;margin-bottom:5px}
+.fcard .fc-lab .ft{display:flex;align-items:center;justify-content:space-between;gap:10px;font-family:'Playfair Display',serif;font-weight:800;font-size:19px;line-height:1.12}
+.fcard .fc-lab .ic{color:var(--ember2);font-size:20px;transition:transform .2s;flex-shrink:0}
 .fcard:hover .fc-lab .ic{transform:translateX(5px)}
 /* installation journey — cream band (mockup 2) */
 .journey{background:var(--cream);color:#241a12;border-radius:24px;padding:44px;display:grid;grid-template-columns:.72fr 1.28fr;gap:40px;align-items:center}
@@ -333,9 +337,9 @@ footer a{color:var(--ember2)}
 .flinks b{display:block;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);margin-bottom:13px;opacity:.7}
 .flinks a{display:block;color:var(--cream);text-decoration:none;font-size:14px;margin-bottom:10px;font-weight:600}
 .flinks a:hover{color:var(--ember2)}
-.fsocial{display:flex;gap:10px}
-.fsocial a{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--cream);transition:border-color .2s,color .2s}
-.fsocial a:hover{border-color:var(--ember2);color:var(--ember2)}
+.fsocial{display:flex;gap:12px}
+.fsocial a{width:48px;height:48px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--cream);font-size:23px;transition:border-color .2s,color .2s,transform .2s}
+.fsocial a:hover{border-color:var(--ember2);color:var(--ember2);transform:translateY(-3px)}
 .foot-base{border-top:1px solid var(--line);margin-top:36px;padding:18px 0}
 .foot-base .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:12.5px}
 .foot-base a{color:var(--ember2);text-decoration:none}
@@ -449,7 +453,7 @@ footer a{color:var(--ember2)}
 <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.4"/><circle cx="16.6" cy="7.4" r="1" fill="currentColor" stroke="none"/></symbol>
 <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></symbol>
 <symbol id="i-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></symbol>
-<symbol id="i-google" viewBox="0 0 24 24"><path d="M21 12.2c0-.7-.06-1.2-.18-1.8H12v3.3h5.1c-.1.9-.66 2.2-1.9 3.1l-.02.1 2.76 2.1.2.02C19.9 17.4 21 15 21 12.2z" fill="currentColor"/><path d="M12 21c2.5 0 4.6-.8 6.1-2.2l-2.9-2.2c-.8.5-1.8.9-3.2.9-2.4 0-4.5-1.6-5.2-3.8l-.1.01-2.9 2.2-.04.1C5.3 19 8.4 21 12 21z" fill="currentColor" opacity=".8"/><path d="M6.8 13.7c-.2-.5-.3-1.1-.3-1.7s.1-1.2.3-1.7v-2.3l-3-.02C.3 9.2 0 10.6 0 12s.3 2.8.8 4z" fill="currentColor" opacity=".55"/><path d="M12 6.5c1.7 0 2.8.7 3.5 1.3l2.5-2.5C16.6 3.9 14.5 3 12 3 8.4 3 5.3 5 3.8 8l3 2.3C7.5 8.1 9.6 6.5 12 6.5z" fill="currentColor" opacity=".9"/></symbol>
+<symbol id="i-gmaps" viewBox="0 0 24 24"><path d="M12 2c-3.9 0-7 3.1-7 7 0 4.9 6.2 12.4 6.5 12.7a.7.7 0 0 0 1 0C12.8 21.4 19 13.9 19 9c0-3.9-3.1-7-7-7z" fill="#EA4335"/><circle cx="12" cy="9" r="2.5" fill="#fff"/></symbol>
 </defs></svg>
 
 <div id="bar"></div>
@@ -460,7 +464,9 @@ footer a{color:var(--ember2)}
     <span class="mark"><svg class="ic"><use href="#i-flame"/></svg></span>
     <span class="wm"><b>Kildare <em>Stoves</em></b><span>Stove &amp; Fireplace Specialists</span></span>
   </a>
-  <a class="lk" href="#stoves">Stoves</a><a class="lk" href="#size">Size Guide</a><a class="lk" href="#fitting">Supply &amp; Fit</a><a class="lk" href="#showroom">Showroom</a>
+  <div class="nav-links">
+    <a class="lk" href="#stoves">Stoves</a><a class="lk" href="#fitting">Supply &amp; Fit</a><a class="lk" href="#size">Size Guide</a><a class="lk" href="#shop">Our Range</a><a class="lk" href="#showroom">Showroom</a>
+  </div>
   <div class="nav-cta">
     <a class="cta wa" href="https://wa.me/353858754191" aria-label="WhatsApp"><svg class="ic"><use href="#i-wa"/></svg></a>
     <a class="cta" href="tel:+353455531563"><svg class="ic"><use href="#i-phone"/></svg> 045 531563</a>
@@ -501,12 +507,12 @@ footer a{color:var(--ember2)}
 <section id="stoves"><div class="wrap">
   <div class="g-reveal"><span class="kicker">Explore our collection</span><h2>Find the <em style="font-style:italic;color:var(--ember2)">right</em> fire for your home</h2></div>
   <div class="firecards" style="margin-top:28px">
-    <a class="fcard g-reveal" data-cat="Room Heater Stoves" href="#shop"><img src="./assets/categories/roomheater.webp" alt="Room heater stoves"><span class="fc-lab">Room heater stoves <svg class="ic"><use href="#i-arrow"/></svg></span></a>
-    <a class="fcard g-reveal" data-cat="Insert Stoves" href="#shop"><img src="./assets/categories/insert.webp" alt="Insert stoves"><span class="fc-lab">Insert stoves <svg class="ic"><use href="#i-arrow"/></svg></span></a>
-    <a class="fcard g-reveal" data-cat="Cassette Stoves" href="#shop"><img src="./assets/categories/cassette.webp" alt="Cassette stoves"><span class="fc-lab">Cassette stoves <svg class="ic"><use href="#i-arrow"/></svg></span></a>
-    <a class="fcard g-reveal" data-cat="Pellet Stoves" href="#shop"><img src="./assets/categories/pellet.webp" alt="Pellet stoves"><span class="fc-lab">Pellet stoves <svg class="ic"><use href="#i-arrow"/></svg></span></a>
-    <a class="fcard g-reveal" data-cat="Electric Fires" href="#shop"><img src="./assets/categories/electric.webp" alt="Electric fires"><span class="fc-lab">Electric fires <svg class="ic"><use href="#i-arrow"/></svg></span></a>
-    <a class="fcard g-reveal" data-cat="Fireplace Surrounds" href="#shop"><img src="./assets/categories/surround.webp" alt="Fireplace surrounds"><span class="fc-lab">Fireplace surrounds <svg class="ic"><use href="#i-arrow"/></svg></span></a>
+    <a class="fcard g-reveal" data-cat="Room Heater Stoves" href="#shop"><img src="./assets/categories/roomheater.webp" alt="Room heater stoves"><span class="fc-lab"><span class="fk">Clean, efficient warmth</span><span class="ft">Room heater stoves <svg class="ic"><use href="#i-arrow"/></svg></span></span></a>
+    <a class="fcard g-reveal" data-cat="Insert Stoves" href="#shop"><img src="./assets/categories/insert.webp" alt="Insert stoves"><span class="fc-lab"><span class="fk">Built into your wall</span><span class="ft">Insert stoves <svg class="ic"><use href="#i-arrow"/></svg></span></span></a>
+    <a class="fcard g-reveal" data-cat="Cassette Stoves" href="#shop"><img src="./assets/categories/cassette.webp" alt="Cassette stoves"><span class="fc-lab"><span class="fk">Modern focal points</span><span class="ft">Cassette stoves <svg class="ic"><use href="#i-arrow"/></svg></span></span></a>
+    <a class="fcard g-reveal" data-cat="Pellet Stoves" href="#shop"><img src="./assets/categories/pellet.webp" alt="Pellet stoves"><span class="fc-lab"><span class="fk">Automatic, low-effort</span><span class="ft">Pellet stoves <svg class="ic"><use href="#i-arrow"/></svg></span></span></a>
+    <a class="fcard g-reveal" data-cat="Electric Fires" href="#shop"><img src="./assets/categories/electric.webp" alt="Electric fires"><span class="fc-lab"><span class="fk">No chimney needed</span><span class="ft">Electric fires <svg class="ic"><use href="#i-arrow"/></svg></span></span></a>
+    <a class="fcard g-reveal" data-cat="Fireplace Surrounds" href="#shop"><img src="./assets/categories/surround.webp" alt="Fireplace surrounds"><span class="fc-lab"><span class="fk">Marble &amp; granite</span><span class="ft">Fireplace surrounds <svg class="ic"><use href="#i-arrow"/></svg></span></span></a>
   </div>
 
   <div class="journey g-reveal" style="margin-top:26px">
@@ -531,12 +537,10 @@ footer a{color:var(--ember2)}
       </div>
     </div>
     <div class="tcard quote g-reveal">
-      <img class="tq-img" src="./img/ambiance-mantel.webp" alt="">
-      <div class="tq">
-        <svg class="ic qmark"><use href="#i-quote"/></svg>
-        <p>From the first visit to the final installation, the team were fantastic. Our stove looks brilliant and heats the whole house.</p>
+      <div class="tq" style="width:100%">
         <span class="stars"><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg></span>
-        <div class="who">Aisling &amp; Mark, Kildare</div>
+        <p style="margin-top:10px"><b style="color:var(--cream)">86% recommend us</b> across <b style="color:var(--cream)">27 reviews</b> on Facebook — real feedback from local homes we've supplied and fitted.</p>
+        <div class="who"><a href="https://www.facebook.com/wesplumbingprofesional/" target="_blank" rel="noopener" style="color:var(--ember2)">Read our reviews on Facebook →</a></div>
       </div>
     </div>
   </div>
@@ -601,10 +605,10 @@ footer a{color:var(--ember2)}
   <div class="sec-head g-reveal" style="margin-bottom:26px"><div><span class="kicker">Good to know</span><h2>Stove &amp; fireplace FAQs</h2></div></div>
   <div class="faq g-reveal">
     <details open><summary>Do you fit the stoves you sell?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">Yes. We're OFTEC-registered solid-fuel installers, so we supply, deliver and fit your stove, flue, hearth and surround — one team from the showroom floor to the finished fire.</div></details>
-    <details><summary>What areas do you cover?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">Our showroom is on the Monasterevin Road in Co. Kildare, and we supply and fit stoves across Kildare, Laois, Offaly and the surrounding Midlands.</div></details>
+    <details><summary>What areas do you cover?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">We're based on the Monasterevin Road in Co. Kildare and cover the Midlands and much of the country — we regularly travel further afield for the right job. Tell us where you are and we'll let you know what suits.</div></details>
     <details><summary>What types of stove do you sell?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">Wood-burning and multi-fuel room heater stoves, boiler stoves, pellet stoves and electric stoves — plus inset fireplaces, flues, hearths and handmade mantelpieces.</div></details>
     <details><summary>What size stove do I need?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">As a rough guide, divide your room's volume in cubic metres by about 14 to get the kW output to aim for. Try our <a href="#size" style="color:var(--ember2);font-weight:700">size guide</a> above, then we'll size it properly for your room, chimney and insulation.</div></details>
-    <details><summary>Can I see the stoves working before I buy?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">Yes — our showroom fires are lit so you can feel the heat and judge the size in person. Call in during opening hours or book a time that suits you.</div></details>
+    <details><summary>Can I see the stoves in person before I buy?<svg class="ic q-ic"><use href="#i-plus"/></svg></summary><div class="a">Yes — our Monasterevin showroom has a wide range of stoves and fireplaces on display, so you can see the models, sizes and finishes in person and get honest advice on what suits your room. Call in during opening hours or book a time that suits you.</div></details>
   </div>
 </div></section>
 
@@ -612,7 +616,7 @@ footer a{color:var(--ember2)}
   <div class="c-media g-reveal">
     <div class="c-hero-img"><img src="./img/showroom-interior.webp" alt="Inside the Kildare Stoves showroom" loading="lazy"></div>
     <div class="c-row">
-      <div class="c-photo"><img src="./img/fireplace.jpeg" alt="Advice by the fire in our showroom" loading="lazy"></div>
+      <div class="c-photo"><img src="./img/consultation.webp" alt="Getting honest advice from the Kildare Stoves team"></div>
       <div class="visit">
         <div class="vt"><svg class="ic"><use href="#i-pin"/></svg><b>Visit our<br>Monasterevin showroom</b></div>
         <div class="addr">Whitesland West Business Park,<br>Co. Kildare</div>
@@ -624,7 +628,7 @@ footer a{color:var(--ember2)}
 
   <form id="enqForm" class="book g-reveal">
     <div class="bh">
-      <div><h3>Come see the fire <em>lit</em></h3><span class="bk">Plan your visit</span></div>
+      <div><h3>Tell us what you're <em>planning</em></h3><span class="bk">A local team, start to finish</span></div>
       <div class="bbadge"><span class="bi"><svg class="ic"><use href="#i-fireplace"/></svg></span><span>Ask about<br>a stove</span></div>
     </div>
     <input type="hidden" name="access_key" value="37a94c10-2fb6-448e-bd9a-8676709824d6">
@@ -675,9 +679,9 @@ footer a{color:var(--ember2)}
       <a href="#fitting">About Us</a>
     </div>
     <div class="fsocial">
-      <a href="#" aria-label="Facebook"><svg class="ic"><use href="#i-fb"/></svg></a>
-      <a href="#" aria-label="Instagram"><svg class="ic"><use href="#i-ig"/></svg></a>
-      <a href="https://www.google.com/maps/search/?api=1&query=Kildare+Stoves+Monasterevin+Road+R51+XK64" target="_blank" rel="noopener" aria-label="Google"><svg class="ic"><use href="#i-google"/></svg></a>
+      <a href="https://www.facebook.com/wesplumbingprofesional/" target="_blank" rel="noopener" aria-label="Facebook"><svg class="ic"><use href="#i-fb"/></svg></a>
+      <a href="https://www.instagram.com/kildarestoves" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic"><use href="#i-ig"/></svg></a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Kildare+Stoves+Monasterevin+Road+R51+XK64" target="_blank" rel="noopener" aria-label="Find us on Google Maps"><svg class="ic"><use href="#i-gmaps"/></svg></a>
     </div>
   </div>
   <div class="foot-base"><div class="wrap">

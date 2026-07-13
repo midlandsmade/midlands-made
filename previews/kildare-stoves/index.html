@@ -280,15 +280,23 @@ footer a{color:var(--ember2)}
 .tq .who{color:var(--muted);font-size:13px;font-weight:700;margin-top:8px}
 /* reviews */
 .reviews{background:linear-gradient(180deg,var(--panel),var(--char));border-block:1px solid var(--line)}
-.rev-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(288px,1fr));gap:18px;margin-top:8px}
-.rev{background:var(--panel2);border:1px solid var(--line);border-radius:16px;padding:24px;transition:transform .3s,border-color .3s}
+.rev-carousel{position:relative;margin-top:8px}
+.rev-viewport{overflow:hidden;padding:4px 2px}
+.rev-track{display:flex;gap:18px;transition:transform .55s cubic-bezier(.2,.7,.3,1);will-change:transform}
+.rev{background:var(--panel2);border:1px solid var(--line);border-radius:16px;padding:26px;transition:border-color .3s;flex:0 0 calc(33.333% - 12px);display:flex;flex-direction:column}
 .rev:hover{transform:translateY(-5px);border-color:rgba(255,171,82,.4)}
-.rev .stars{color:#ffb43d;font-size:15px;letter-spacing:2px;margin-bottom:12px;display:block}
-.rev p{font-size:14.5px;line-height:1.6;color:#ecdfd2}
-.rev .who{display:flex;align-items:center;gap:11px;margin-top:16px}
-.rev .av{width:40px;height:40px;border-radius:50%;background:radial-gradient(circle at 40% 30%,#ff9d42,#c40606);display:grid;place-items:center;font-weight:800;color:#fff;font-size:15px;flex-shrink:0;font-family:'Playfair Display',serif}
-.rev .who b{font-size:13.5px;display:block}
-.rev .who span{display:block;font-size:11.5px;color:var(--muted)}
+.rev .stars{color:#ffb43d;font-size:16px;letter-spacing:3px;margin-bottom:14px;display:block}
+.rev p{font-size:15px;line-height:1.6;color:#ecdfd2;flex:1}
+.rev .who{display:flex;align-items:center;gap:12px;margin-top:18px}
+.rev .av{width:48px;height:48px;border-radius:50%;background:radial-gradient(circle at 40% 30%,#ff9d42,#c40606);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:21px;line-height:1;flex-shrink:0;font-family:'Playfair Display',serif}
+.rev .who b{font-size:14px;display:block}
+.rev .who div span{display:block;font-size:12px;color:var(--muted)}
+.rev-nav{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:rgba(23,17,13,.9);color:var(--cream);font-size:24px;line-height:1;display:grid;place-items:center;cursor:pointer;z-index:3;transition:all .2s;backdrop-filter:blur(4px)}
+.rev-nav:hover{border-color:var(--ember2);color:var(--ember2)}
+.rev-nav.prev{left:-10px}.rev-nav.next{right:-10px}
+.rev-dots{display:flex;gap:8px;justify-content:center;margin-top:22px}
+.rev-dots button{width:8px;height:8px;border-radius:50%;border:0;background:rgba(255,255,255,.2);cursor:pointer;padding:0;transition:all .2s}
+.rev-dots button.on{background:var(--ember2);width:22px;border-radius:5px}
 /* contact (mockup 3) */
 .contact .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:30px;align-items:start}
 .c-media{display:grid;gap:16px}
@@ -398,6 +406,7 @@ footer a{color:var(--ember2)}
 .pmodal .pm-x:hover{background:rgba(0,0,0,.6)}
 .sticky-call{display:none}
 @media(max-width:980px){
+  .rev{flex:0 0 calc(50% - 9px)}
   .pmodal .box{grid-template-columns:1fr}
   .pmodal .pm-img img{min-height:200px;max-height:280px}
   .hfeat{grid-template-columns:repeat(2,1fr)}
@@ -428,6 +437,8 @@ footer a{color:var(--ember2)}
   .hero-meta{max-width:100%;gap:12px}
   .hero-meta .m{font-size:13px}
   .firecards{grid-template-columns:1fr 1fr;gap:12px}
+  .rev{flex:0 0 86%}
+  .rev-nav{display:none}
   .shop{grid-template-columns:1fr 1fr;gap:12px}
   .pcard h3{font-size:13px;min-height:34px}
   .pcard .body{padding:12px 12px 14px}
@@ -592,14 +603,19 @@ footer a{color:var(--ember2)}
 
 <section id="reviews" class="reviews"><div class="wrap">
   <div class="sec-head g-reveal"><div><span class="kicker">What our customers say</span><h2>Recommended by local homes</h2></div><p><b style="color:var(--ember2)">84% recommend us</b> across 26 reviews on Facebook.</p></div>
-  <div class="rev-grid">
-    <div class="rev g-reveal"><span class="stars">★★★★★</span><p>“Excellent service! I'd recommend Kildare Stoves — they did a great job installing our pellet stove.”</p><div class="who"><span class="av">C</span><div><b>Ciara Fallon Moore</b><span>Pellet stove install</span></div></div></div>
-    <div class="rev g-reveal"><span class="stars">★★★★★</span><p>“Excellent service from beginning to end. William went above and beyond — amazing prices and the best service. I can't recommend these guys enough, and we love our new stove!”</p><div class="who"><span class="av">S</span><div><b>Sarah Quinn Balfe</b><span>New stove</span></div></div></div>
-    <div class="rev g-reveal"><span class="stars">★★★★★</span><p>“Kildare Stoves — can't say enough. A great job done installing our insert boiler stove. I would highly recommend.”</p><div class="who"><span class="av">D</span><div><b>David Kavanagh</b><span>Insert boiler stove</span></div></div></div>
-    <div class="rev g-reveal"><span class="stars">★★★★★</span><p>“What a great job you did for us, and so clean. Would highly recommend Kildare Stoves.”</p><div class="who"><span class="av">K</span><div><b>Kevin &amp; Anna</b><span>Stove &amp; brickwork</span></div></div></div>
-    <div class="rev g-reveal"><span class="stars">★★★★★</span><p>“Great service and very efficient — great job done, and would recommend them.”</p><div class="who"><span class="av">C</span><div><b>Chris Pender</b><span>Stove install</span></div></div></div>
+  <div class="rev-carousel g-reveal">
+    <button class="rev-nav prev" id="revPrev" aria-label="Previous">&#8249;</button>
+    <div class="rev-viewport"><div class="rev-track" id="revTrack">
+      <div class="rev"><span class="stars">★★★★★</span><p>“Excellent service! I'd recommend Kildare Stoves — they did a great job installing our pellet stove.”</p><div class="who"><span class="av">C</span><div><b>Ciara Fallon Moore</b><span>Pellet stove install</span></div></div></div>
+      <div class="rev"><span class="stars">★★★★★</span><p>“Excellent service from beginning to end. William went above and beyond — amazing prices and the best service. I can't recommend these guys enough, and we love our new stove!”</p><div class="who"><span class="av">S</span><div><b>Sarah Quinn Balfe</b><span>New stove</span></div></div></div>
+      <div class="rev"><span class="stars">★★★★★</span><p>“Kildare Stoves — can't say enough. A great job done installing our insert boiler stove. I would highly recommend.”</p><div class="who"><span class="av">D</span><div><b>David Kavanagh</b><span>Insert boiler stove</span></div></div></div>
+      <div class="rev"><span class="stars">★★★★★</span><p>“What a great job you did for us, and so clean. Would highly recommend Kildare Stoves.”</p><div class="who"><span class="av">K</span><div><b>Kevin &amp; Anna</b><span>Stove &amp; brickwork</span></div></div></div>
+      <div class="rev"><span class="stars">★★★★★</span><p>“Great service and very efficient — great job done, and would recommend them.”</p><div class="who"><span class="av">C</span><div><b>Chris Pender</b><span>Stove install</span></div></div></div>
+    </div></div>
+    <button class="rev-nav next" id="revNext" aria-label="Next">&#8250;</button>
   </div>
-  <div style="text-align:center;margin-top:28px"><a class="btn ghost" href="https://www.facebook.com/wesplumbingprofesional/" target="_blank" rel="noopener">Read all our reviews on Facebook <svg class="ic"><use href="#i-arrow"/></svg></a></div>
+  <div class="rev-dots" id="revDots"></div>
+  <div style="text-align:center;margin-top:22px"><a class="btn ghost" href="https://www.facebook.com/wesplumbingprofesional/" target="_blank" rel="noopener">Read all our reviews on Facebook <svg class="ic"><use href="#i-arrow"/></svg></a></div>
 </div></section>
 
 <div class="ambiance"><div class="in g-reveal">
@@ -814,7 +830,23 @@ document.getElementById('yr').textContent=new Date().getFullYear();
   }));
 })();
 
-/* kW stove-size calculator */
+/* reviews carousel (transform-based) */
+(function reviews(){
+  const track=document.getElementById('revTrack');if(!track)return;
+  const vp=track.parentElement,cards=[...track.children],dots=document.getElementById('revDots');
+  let idx=0;
+  const step=()=>cards[0].offsetWidth+18;
+  const perView=()=>Math.max(1,Math.round(vp.clientWidth/step()));
+  const maxIdx=()=>Math.max(0,cards.length-perView());
+  function apply(){idx=Math.max(0,Math.min(idx,maxIdx()));track.style.transform='translateX('+(-idx*step())+'px)';[...dots.children].forEach((d,i)=>d.classList.toggle('on',i===idx));}
+  function buildDots(){dots.innerHTML='';for(let i=0;i<=maxIdx();i++){const b=document.createElement('button');b.setAttribute('aria-label','Go to review '+(i+1));b.onclick=()=>{idx=i;apply();};dots.appendChild(b);}}
+  document.getElementById('revPrev').onclick=()=>{idx--;apply();};
+  document.getElementById('revNext').onclick=()=>{idx++;apply();};
+  addEventListener('resize',()=>{buildDots();apply();});
+  buildDots();apply();
+  let timer=setInterval(()=>{idx=idx>=maxIdx()?0:idx+1;apply();},5000);
+  track.addEventListener('pointerenter',()=>clearInterval(timer));
+})();
 
 /* live open-now status (visit card) */
 (function openNow(){

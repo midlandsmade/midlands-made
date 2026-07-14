@@ -533,7 +533,7 @@
   });
 
   // live-site links (fill these in once the two sites are deployed)
-  const LIVE={ mullingar:'', tradingbuddy:'https://www.tradingbuddyapp.com' };
+  const LIVE={ mullingar:'https://mullingarlatindance.ie', tradingbuddy:'https://www.tradingbuddyapp.com' };
   document.querySelectorAll('[data-live]').forEach(el=>{
     const url=LIVE[el.dataset.live];
     if(url){el.href=url;el.target='_blank';el.rel='noopener';}

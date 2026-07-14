@@ -1,0 +1,473 @@
+{
+ "henley-severn-5kw": [
+  {
+   "name": "attribute_buying-oprions",
+   "label": "Buying Options",
+   "values": [
+    "Stove Only",
+    "Logbox Only",
+    "Stove and Logbox"
+   ]
+  }
+ ],
+ "henley-burnbright-6-7kw": [
+  {
+   "name": "attribute_buying-options",
+   "label": "Buying Options",
+   "values": [
+    "Stove Only",
+    "Logbox Only",
+    "Stove and Logbox"
+   ]
+  }
+ ],
+ "henley-muckross-4-6kw": [
+  {
+   "name": "attribute_colour",
+   "label": "Colour",
+   "values": [
+    "Matt Black",
+    "Enamel Black",
+    "Enamel Cream"
+   ]
+  }
+ ],
+ "henley-arklow-4-6kw": [
+  {
+   "name": "attribute_colour",
+   "label": "Colour",
+   "values": [
+    "Matt Black",
+    "Enamel Black"
+   ]
+  }
+ ],
+ "artel-petite-6": [
+  {
+   "name": "attribute_colour",
+   "label": "Colour",
+   "values": [
+    "White",
+    "Bordeaux",
+    "Grey",
+    "Black"
+   ]
+  }
+ ],
+ "artel-mini-5": [
+  {
+   "name": "attribute_colour",
+   "label": "Colour",
+   "values": [
+    "White",
+    "Bordeaux",
+    "Rust",
+    "Black"
+   ]
+  }
+ ],
+ "henley-elm-4kw": [
+  {
+   "name": "attribute_colour",
+   "label": "Colour",
+   "values": [
+    "Black",
+    "Red"
+   ]
+  }
+ ],
+ "artel-easy-s-7kw": [
+  {
+   "name": "attribute_colour",
+   "label": "Colour",
+   "values": [
+    "White",
+    "Red",
+    "Black"
+   ]
+  }
+ ],
+ "artel-easy-m-9kw": [
+  {
+   "name": "attribute_colour",
+   "label": "Colour",
+   "values": [
+    "White",
+    "Red",
+    "Black"
+   ]
+  }
+ ],
+ "subtile-6-slimline": [
+  {
+   "name": "attribute_colour",
+   "label": "Colour",
+   "values": [
+    "White",
+    "Red",
+    "Black"
+   ]
+  }
+ ],
+ "emy-7-5kw": [
+  {
+   "name": "attribute_colour",
+   "label": "Colour",
+   "values": [
+    "Black",
+    "White",
+    "Red"
+   ]
+  }
+ ],
+ "henley-elm-8kw": [
+  {
+   "name": "attribute_colour",
+   "label": "Colour",
+   "values": [
+    "Black",
+    "Red"
+   ]
+  }
+ ],
+ "artel-cayenne-7": [
+  {
+   "name": "attribute_colour",
+   "label": "Colour",
+   "values": [
+    "White",
+    "Bordeaux",
+    "Black"
+   ]
+  }
+ ],
+ "rita-8kw": [
+  {
+   "name": "attribute_colour",
+   "label": "Colour",
+   "values": [
+    "Black",
+    "White",
+    "Red"
+   ]
+  }
+ ],
+ "emma-fireplace": [
+  {
+   "name": "attribute_surround-size",
+   "label": "Surround Size",
+   "values": [
+    "48\"",
+    "54\""
+   ]
+  },
+  {
+   "name": "attribute_finish",
+   "label": "Finish",
+   "values": [
+    "Ivory Pearl",
+    "Alpine White"
+   ]
+  },
+  {
+   "name": "attribute_add-hearth",
+   "label": "Add Hearth",
+   "values": [
+    "No thanks",
+    "54\"",
+    "60\""
+   ]
+  },
+  {
+   "name": "attribute_add-back-panel",
+   "label": "Add Back Panel",
+   "values": [
+    "No thanks",
+    "Add Back Panel"
+   ]
+  }
+ ],
+ "kildare-fireplace": [
+  {
+   "name": "attribute_finish",
+   "label": "Finish",
+   "values": [
+    "Ivory Pearl",
+    "Alpine White",
+    "Honed Grey"
+   ]
+  },
+  {
+   "name": "attribute_add-hearth",
+   "label": "Add Hearth",
+   "values": [
+    "No thanks",
+    "54\"",
+    "60\""
+   ]
+  },
+  {
+   "name": "attribute_add-back-panel",
+   "label": "Add Back Panel",
+   "values": [
+    "No thanks",
+    "Add Back Panel"
+   ]
+  }
+ ],
+ "plain-tudor": [
+  {
+   "name": "attribute_add-hearth",
+   "label": "Add Hearth",
+   "values": [
+    "No thanks",
+    "54\"",
+    "60\""
+   ]
+  },
+  {
+   "name": "attribute_add-back-panel",
+   "label": "Add Back Panel",
+   "values": [
+    "No thanks",
+    "Add Back Panel"
+   ]
+  }
+ ],
+ "tara-surround": [
+  {
+   "name": "attribute_finish",
+   "label": "Finish",
+   "values": [
+    "Ivory Pearl",
+    "Alpine White"
+   ]
+  },
+  {
+   "name": "attribute_add-hearth",
+   "label": "Add Hearth",
+   "values": [
+    "No thanks",
+    "54\""
+   ]
+  },
+  {
+   "name": "attribute_add-back-panel",
+   "label": "Add Back Panel",
+   "values": [
+    "No thanks",
+    "Add Back Panel"
+   ]
+  }
+ ],
+ "renoir-fireplace": [
+  {
+   "name": "attribute_finish",
+   "label": "Finish",
+   "values": [
+    "Alpine White",
+    "Ivory Pearl"
+   ]
+  },
+  {
+   "name": "attribute_add-hearth",
+   "label": "Add Hearth",
+   "values": [
+    "No thanks",
+    "54\"",
+    "60\""
+   ]
+  },
+  {
+   "name": "attribute_add-back-panel",
+   "label": "Add Back Panel",
+   "values": [
+    "No thanks",
+    "Add back panel"
+   ]
+  }
+ ],
+ "incised-victorian": [
+  {
+   "name": "attribute_pa_size",
+   "label": "Size",
+   "values": [
+    "Surround Only",
+    "Surround+hearth",
+    "Surround+Hearth+Panel"
+   ]
+  }
+ ],
+ "abbey-surround": [
+  {
+   "name": "attribute_finish",
+   "label": "Finish",
+   "values": [
+    "Alpine White",
+    "Honed Grey"
+   ]
+  },
+  {
+   "name": "attribute_add-hearth",
+   "label": "Add Hearth",
+   "values": [
+    "No Hearth",
+    "54\"",
+    "60\""
+   ]
+  },
+  {
+   "name": "attribute_add-back-panel",
+   "label": "Add Back Panel",
+   "values": [
+    "No back panel",
+    "Add back panel"
+   ]
+  }
+ ],
+ "roma-fireplace": [
+  {
+   "name": "attribute_add-hearth",
+   "label": "Add Hearth",
+   "values": [
+    "No hearth",
+    "54\"",
+    "60\""
+   ]
+  },
+  {
+   "name": "attribute_add-back-panel",
+   "label": "Add Back Panel",
+   "values": [
+    "No back panel",
+    "Add back panel"
+   ]
+  }
+ ],
+ "astoria-surround": [
+  {
+   "name": "attribute_finish",
+   "label": "Finish",
+   "values": [
+    "Alpine White",
+    "Ivory Pearl",
+    "Honed Grey"
+   ]
+  },
+  {
+   "name": "attribute_add-hearth",
+   "label": "Add Hearth",
+   "values": [
+    "No hearth",
+    "54\"",
+    "60\""
+   ]
+  },
+  {
+   "name": "attribute_add-back-panel",
+   "label": "Add Back Panel",
+   "values": [
+    "No back panel",
+    "Add back panel"
+   ]
+  }
+ ],
+ "dublin-corbel": [
+  {
+   "name": "attribute_size",
+   "label": "Size",
+   "values": [
+    "54\"",
+    "60\""
+   ]
+  },
+  {
+   "name": "attribute_finish",
+   "label": "Finish",
+   "values": [
+    "Ivory Pearl",
+    "Alpine White"
+   ]
+  },
+  {
+   "name": "attribute_add-hearth",
+   "label": "Add Hearth",
+   "values": [
+    "No thanks",
+    "54\"",
+    "60\""
+   ]
+  },
+  {
+   "name": "attribute_add-back-panel",
+   "label": "Add Back Panel",
+   "values": [
+    "No thanks",
+    "Add Back Panel"
+   ]
+  }
+ ],
+ "florence-fireplace": [
+  {
+   "name": "attribute_pa_size",
+   "label": "Size",
+   "values": [
+    "Surround Only 54\"",
+    "Surround only 60\"",
+    "Surround+Hearth 54\"",
+    "Surround+Hearth 60\"",
+    "Surround+Hearth+Panel 54\"",
+    "Surround+Hearth+panel 60\""
+   ]
+  }
+ ],
+ "darwin-surround": [
+  {
+   "name": "attribute_size",
+   "label": "Size",
+   "values": [
+    "54\"",
+    "60\""
+   ]
+  },
+  {
+   "name": "attribute_finish",
+   "label": "Finish",
+   "values": [
+    "Alpine White",
+    "Ivory Pearl"
+   ]
+  },
+  {
+   "name": "attribute_add-hearth",
+   "label": "Add Hearth",
+   "values": [
+    "No hearth",
+    "54\"",
+    "60\""
+   ]
+  },
+  {
+   "name": "attribute_add-back-panel",
+   "label": "Add Back Panel",
+   "values": [
+    "No back panel",
+    "Add back panel"
+   ]
+  }
+ ],
+ "valley-fireplace": [
+  {
+   "name": "attribute_pa_size",
+   "label": "Size",
+   "values": [
+    "Surround Only 54\"",
+    "Surround only 60\"",
+    "Surround+Hearth 54\"",
+    "Surround+Hearth 60\"",
+    "Surround+Hearth+Panel 54\"",
+    "Surround+Hearth+panel 60\""
+   ]
+  }
+ ]
+}

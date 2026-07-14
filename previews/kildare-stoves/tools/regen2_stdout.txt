@@ -1,0 +1,91 @@
+07:50:18 === pool run: 53 products need images; 19 known job ids to salvage ===
+07:50:18   pre-seeded 18 salvaged jobs; 35 to create
+07:50:20   saved henley-burnbright-6-7kw  (1/53)
+07:50:21   saved aspen-5kw  (2/53)
+07:50:22   saved fokus-4kw  (3/53)
+07:50:24   saved palestro-eco-7-6kw  (4/53)
+07:50:26   saved palestro-patyna-7-6kw  (5/53)
+07:50:27   saved merido-5-5kw  (6/53)
+07:50:29   saved arco-7kw  (7/53)
+07:50:30   saved kratki-antek-10kw  (8/53)
+07:50:32   saved hamco-oslo-eco-5kw  (9/53)
+07:50:34   saved henley-apollo-5kw  (10/53)
+07:50:35   saved heat-design-hd5-v2  (11/53)
+07:50:37   saved henley-muckross-4-6kw  (12/53)
+07:50:39   saved henley-arklow-4-6kw  (13/53)
+07:50:40   saved torn-lux-14kw  (14/53)
+07:50:42   saved nordflam-corno-13kw  (15/53)
+07:50:43   saved eco-c400-5kw  (16/53)
+07:50:45   saved atlantic-wave-5  (17/53)
+07:50:46   saved henley-athens-400-5kw  (18/53)
+07:50:54   created adria-7kw -> 879d0614-90ae-4d6e-b54b-e21ec068b485
+07:50:57   created erino-7kw -> f86d2646-1574-46fb-bd68-ed4aafa31273
+07:51:00   created nordflam-primo-7kw -> a09dc793-72a0-4d5b-a486-d38507d1b9eb
+07:51:03   created poplar-6kw -> 3f3abebd-ab2d-4b8d-9ab4-5ec183d9b8da
+07:51:06   created henley-ascot-5kw -> 8f748cfc-3f38-4c55-9c34-d78ae32f283c
+07:51:10   created henley-clearwood-5kw -> 55269025-9940-4910-a2ae-9afcdea91d0d
+07:51:29   saved adria-7kw  (19/53)
+07:51:38   created henley-thames-5kw -> 5b197454-2e8f-44be-b2df-74667a20f1e0
+07:51:41   saved erino-7kw  (20/53)
+07:51:43   saved nordflam-primo-7kw  (21/53)
+07:51:44   saved poplar-6kw  (22/53)
+07:51:46   saved henley-ascot-5kw  (23/53)
+07:51:47   saved henley-clearwood-5kw  (24/53)
+07:51:55   created henley-dunloe-5kw -> 40bc2c47-0a3d-46d4-9b6c-00b23c246702
+07:51:58   created atlantic-bay5-5kw -> 64f796a7-e1cd-46ed-a1a3-9c787df978b7
+07:52:01   created nordflam-etna-13kw -> 31bb6454-3faa-456d-bb52-ac5d55a90862
+07:52:04   created kratki-antek-10kw-deco -> a0ecde06-032a-4690-a714-69274e27b360
+07:52:07   created lb-700-piroliza-14kw -> aee40e0f-d03b-46df-9942-0e09574cf286
+07:52:17   saved henley-thames-5kw  (25/53)
+07:52:26   created henley-apollo-7kw -> 7c23e1ca-a571-4bc2-9805-12113885f1db
+07:52:29   saved henley-dunloe-5kw  (26/53)
+07:52:39   created henley-eco-c550-7kw -> d0c53002-cbc7-4a8d-b839-0f6f24148597
+07:53:06   saved kratki-antek-10kw-deco  (27/53)
+07:53:07   saved lb-700-piroliza-14kw  (28/53)
+07:53:16   created hamco-helsinki-5kw -> c7a3bb13-932f-4ff2-9566-645eab46fa58
+07:53:18   created vitae-5-landscape -> 475aadd7-b988-47fd-8ba2-39dab814e2c4
+07:53:22   saved henley-apollo-7kw  (29/53)
+07:53:30   created hamco-copenhagen-5kw -> a46cea67-1686-4371-9ae7-d16e30e6e4cd
+07:53:34   saved henley-eco-c550-7kw  (30/53)
+07:53:43   created henley-athens-500-6-2kw -> 11e32e0c-9b18-4bb6-9fae-25d28e27c24b
+07:53:55   saved hamco-helsinki-5kw  (31/53)
+07:53:57   saved vitae-5-landscape  (32/53)
+07:54:05   created hamco-helsinki-8kw -> 15a8abdf-d2a9-4f38-8446-068b1886e8fb
+07:54:08   created kratki-zibi-11kw -> 95268fd1-5d18-47bc-8b04-2203288fe166
+07:54:11   saved hamco-copenhagen-5kw  (33/53)
+07:54:21   created vitae-8-landscape -> 32260fcb-34ba-4e9d-9285-876009462c7c
+07:54:25   saved henley-athens-500-6-2kw  (34/53)
+07:54:33   created kratki-blanka-8kw -> fec1d5cb-b0f1-4464-95a6-6e288fccab3c
+07:54:45   saved kratki-zibi-11kw  (35/53)
+07:54:54   created kratki-arke-70-8kw -> 6aa507bb-f23a-41b3-9ca1-6e70e8f175b0
+07:54:57   saved hamco-helsinki-8kw  (36/53)
+07:55:05   created artel-petite-6 -> f874de58-81b7-45a5-974a-d91ead19192b
+07:55:17   saved vitae-8-landscape  (37/53)
+07:55:18   saved kratki-blanka-8kw  (38/53)
+07:55:27   created artel-mini-5 -> 0d29f485-cd36-453f-881c-79a06247935a
+07:55:30   created artel-nina-7kw -> 38f60cbe-c384-4037-8549-2c77dedf316c
+07:55:33   saved kratki-arke-70-8kw  (39/53)
+07:55:41   created henley-elm-4kw -> c00a0c03-183f-4e56-bae6-1b9dc7cf112a
+07:55:44   saved nordflam-etna-13kw  (40/53)
+07:55:54   created artel-easy-s-7kw -> e5d16580-4b9e-482f-96ee-089191711c83
+07:55:57   saved atlantic-bay5-5kw  (41/53)
+07:56:06   created artel-easy-m-9kw -> 2185803a-ad5f-40c9-886e-b31e83162198
+07:56:17   saved artel-petite-6  (42/53)
+07:56:18   saved artel-mini-5  (43/53)
+07:56:28   created subtile-6-slimline -> e4a9a53f-3e2d-4f14-9d33-bd3dac7815fb
+07:56:30   created emy-7-5kw -> 1b9e91b3-da43-4810-afdd-662f4a37d4bb
+07:56:33   saved artel-nina-7kw  (44/53)
+07:56:34   saved henley-elm-4kw  (45/53)
+07:56:44   created henley-elm-8kw -> c610bd0e-823e-4b00-919e-17493181dbb8
+07:56:47   created artel-cayenne-7 -> 99d279b8-dff8-4271-8c15-0a41b7de69e5
+07:56:50   saved artel-easy-s-7kw  (46/53)
+07:57:00   created rita-8kw -> bd0d3822-0562-415c-8f4a-768bf0863638
+07:57:03   saved artel-easy-m-9kw  (47/53)
+07:57:13   created iconic-500 -> 94e8c40d-d2fc-4f5f-8d67-a2bae94da591
+07:57:31   saved emy-7-5kw  (48/53)
+07:57:33   saved henley-elm-8kw  (49/53)
+07:57:34   saved artel-cayenne-7  (50/53)
+07:57:43   saved subtile-6-slimline  (51/53)
+07:57:51   saved rita-8kw  (52/53)
+07:58:05   saved iconic-500  (53/53)
+07:58:11 === DONE: 53 saved, 0 failed: [] ===

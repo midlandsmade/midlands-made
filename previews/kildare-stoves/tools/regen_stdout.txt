@@ -1,0 +1,33 @@
+07:47:34 === creating 54 jobs ===
+07:47:35   created henley-severn-5kw -> cdcd9081-0c6c-436b-8125-db268f80271e
+07:47:38   created henley-burnbright-6-7kw -> e9167e56-17fd-4efc-b791-d93d2ed66f0b
+07:47:41   created aspen-5kw -> 60daf9a8-5d0f-413f-a6bc-153993d6e1a5
+07:47:44   created fokus-4kw -> 23fe08e6-22af-4c59-8362-a2d497b0e2dd
+07:47:47   created palestro-eco-7-6kw -> 68e176e9-6003-4979-b7e4-a2ad8a1662d9
+07:47:50   created palestro-patyna-7-6kw -> 26f7e477-7b21-434e-87c2-a96e5703dd2b
+07:47:53   created merido-5-5kw -> fd3db30d-c7f5-47ea-a208-bc9f08c28cc5
+07:47:55   created arco-7kw -> 33b08af4-26fc-4314-a8ee-ed8f7b7ac8ca
+07:47:58   CREATE FAIL adria-7kw: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":8,"error_type":"rate_limit_reached","job_set_type":"soul_cinemati
+07:48:00   CREATE FAIL erino-7kw: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":8,"error_type":"rate_limit_reached","job_set_type":"soul_cinemati
+07:48:03   CREATE FAIL nordflam-primo-7kw: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":8,"error_type":"rate_limit_reached","job_set_type":"soul_cinemati
+07:48:05   CREATE FAIL poplar-6kw: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":8,"error_type":"rate_limit_reached","job_set_type":"soul_cinemati
+07:48:08   CREATE FAIL henley-ascot-5kw: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":8,"error_type":"rate_limit_reached","job_set_type":"soul_cinemati
+07:48:11   CREATE FAIL henley-clearwood-5kw: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":8,"error_type":"rate_limit_reached","job_set_type":"soul_cinemati
+07:48:13   CREATE FAIL henley-thames-5kw: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":8,"error_type":"rate_limit_reached","job_set_type":"soul_cinemati
+07:48:16   CREATE FAIL henley-dunloe-5kw: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":8,"error_type":"rate_limit_reached","job_set_type":"soul_cinemati
+07:48:19   created kratki-antek-10kw -> 44798649-c31a-4416-be38-c12e411bd22e
+07:48:23   created hamco-oslo-eco-5kw -> 50abd334-1df3-40c5-9ed3-1816765aeb0d
+07:48:26   created henley-apollo-5kw -> e89c0921-49a3-4caf-af6e-95194eff22af
+07:48:28   created heat-design-hd5-v2 -> 70cbadc8-1059-46a7-9986-7a757595761b
+07:48:31   created henley-muckross-4-6kw -> 3769f0c9-e129-4a73-858e-8508ae28b6e9
+07:48:34   created henley-arklow-4-6kw -> ceacdb80-a8a0-473f-8ff4-2ea741ff963d
+07:48:37   created torn-lux-14kw -> 8af289f2-cd3f-483b-b34e-c4903c5b1d0d
+07:48:40   CREATE FAIL atlantic-bay5-5kw: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":8,"error_type":"rate_limit_reached","job_set_type":"soul_cinemati
+07:48:42   created nordflam-corno-13kw -> b2290e0a-b62f-4427-857a-91fc52ff877b
+07:48:45   CREATE FAIL nordflam-etna-13kw: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":8,"error_type":"rate_limit_reached","job_set_type":"soul_cinemati
+07:48:47   CREATE FAIL kratki-antek-10kw-deco: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":8,"error_type":"rate_limit_reached","job_set_type":"soul_cinemati
+07:48:50   CREATE FAIL lb-700-piroliza-14kw: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":8,"error_type":"rate_limit_reached","job_set_type":"soul_cinemati
+07:48:52   CREATE FAIL henley-apollo-7kw: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":8,"error_type":"rate_limit_reached","job_set_type":"soul_cinemati
+07:48:55   created eco-c400-5kw -> ac2ab07c-c82d-4b1b-9a35-36347926ca73
+07:48:58   created atlantic-wave-5 -> 4980c6c9-1452-4842-8213-a7a88f7c95ad
+07:49:01   created henley-athens-400-5kw -> 9615f094-3ca4-4781-81eb-0fba3bcb0b4d

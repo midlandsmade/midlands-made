@@ -1,0 +1,158 @@
+07:47:34 === creating 54 jobs ===
+07:47:35   created henley-severn-5kw -> cdcd9081-0c6c-436b-8125-db268f80271e
+07:47:38   created henley-burnbright-6-7kw -> e9167e56-17fd-4efc-b791-d93d2ed66f0b
+07:47:41   created aspen-5kw -> 60daf9a8-5d0f-413f-a6bc-153993d6e1a5
+07:47:44   created fokus-4kw -> 23fe08e6-22af-4c59-8362-a2d497b0e2dd
+07:47:47   created palestro-eco-7-6kw -> 68e176e9-6003-4979-b7e4-a2ad8a1662d9
+07:47:50   created palestro-patyna-7-6kw -> 26f7e477-7b21-434e-87c2-a96e5703dd2b
+07:47:53   created merido-5-5kw -> fd3db30d-c7f5-47ea-a208-bc9f08c28cc5
+07:47:55   created arco-7kw -> 33b08af4-26fc-4314-a8ee-ed8f7b7ac8ca
+07:47:58   CREATE FAIL adria-7kw: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":8,"error_type":"rate_limit_reached","job_set_type":"soul_cinemati
+07:48:00   CREATE FAIL erino-7kw: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":8,"error_type":"rate_limit_reached","job_set_type":"soul_cinemati
+07:48:03   CREATE FAIL nordflam-primo-7kw: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":8,"error_type":"rate_limit_reached","job_set_type":"soul_cinemati
+07:48:05   CREATE FAIL poplar-6kw: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":8,"error_type":"rate_limit_reached","job_set_type":"soul_cinemati
+07:48:08   CREATE FAIL henley-ascot-5kw: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":8,"error_type":"rate_limit_reached","job_set_type":"soul_cinemati
+07:48:11   CREATE FAIL henley-clearwood-5kw: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":8,"error_type":"rate_limit_reached","job_set_type":"soul_cinemati
+07:48:13   CREATE FAIL henley-thames-5kw: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":8,"error_type":"rate_limit_reached","job_set_type":"soul_cinemati
+07:48:16   CREATE FAIL henley-dunloe-5kw: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":8,"error_type":"rate_limit_reached","job_set_type":"soul_cinemati
+07:48:19   created kratki-antek-10kw -> 44798649-c31a-4416-be38-c12e411bd22e
+07:48:23   created hamco-oslo-eco-5kw -> 50abd334-1df3-40c5-9ed3-1816765aeb0d
+07:48:26   created henley-apollo-5kw -> e89c0921-49a3-4caf-af6e-95194eff22af
+07:48:28   created heat-design-hd5-v2 -> 70cbadc8-1059-46a7-9986-7a757595761b
+07:48:31   created henley-muckross-4-6kw -> 3769f0c9-e129-4a73-858e-8508ae28b6e9
+07:48:34   created henley-arklow-4-6kw -> ceacdb80-a8a0-473f-8ff4-2ea741ff963d
+07:48:37   created torn-lux-14kw -> 8af289f2-cd3f-483b-b34e-c4903c5b1d0d
+07:48:40   CREATE FAIL atlantic-bay5-5kw: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":8,"error_type":"rate_limit_reached","job_set_type":"soul_cinemati
+07:48:42   created nordflam-corno-13kw -> b2290e0a-b62f-4427-857a-91fc52ff877b
+07:48:45   CREATE FAIL nordflam-etna-13kw: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":8,"error_type":"rate_limit_reached","job_set_type":"soul_cinemati
+07:48:47   CREATE FAIL kratki-antek-10kw-deco: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":8,"error_type":"rate_limit_reached","job_set_type":"soul_cinemati
+07:48:50   CREATE FAIL lb-700-piroliza-14kw: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":8,"error_type":"rate_limit_reached","job_set_type":"soul_cinemati
+07:48:52   CREATE FAIL henley-apollo-7kw: Error: {"actions":[{"type":"upgrade_plan"}],"billing_period":"monthly","concurrent_jobs_limit":8,"error_type":"rate_limit_reached","job_set_type":"soul_cinemati
+07:48:55   created eco-c400-5kw -> ac2ab07c-c82d-4b1b-9a35-36347926ca73
+07:48:58   created atlantic-wave-5 -> 4980c6c9-1452-4842-8213-a7a88f7c95ad
+07:49:01   created henley-athens-400-5kw -> 9615f094-3ca4-4781-81eb-0fba3bcb0b4d
+07:50:18 === pool run: 53 products need images; 19 known job ids to salvage ===
+07:50:18   pre-seeded 18 salvaged jobs; 35 to create
+07:50:20   saved henley-burnbright-6-7kw  (1/53)
+07:50:21   saved aspen-5kw  (2/53)
+07:50:22   saved fokus-4kw  (3/53)
+07:50:24   saved palestro-eco-7-6kw  (4/53)
+07:50:26   saved palestro-patyna-7-6kw  (5/53)
+07:50:27   saved merido-5-5kw  (6/53)
+07:50:29   saved arco-7kw  (7/53)
+07:50:30   saved kratki-antek-10kw  (8/53)
+07:50:32   saved hamco-oslo-eco-5kw  (9/53)
+07:50:34   saved henley-apollo-5kw  (10/53)
+07:50:35   saved heat-design-hd5-v2  (11/53)
+07:50:37   saved henley-muckross-4-6kw  (12/53)
+07:50:39   saved henley-arklow-4-6kw  (13/53)
+07:50:40   saved torn-lux-14kw  (14/53)
+07:50:42   saved nordflam-corno-13kw  (15/53)
+07:50:43   saved eco-c400-5kw  (16/53)
+07:50:45   saved atlantic-wave-5  (17/53)
+07:50:46   saved henley-athens-400-5kw  (18/53)
+07:50:54   created adria-7kw -> 879d0614-90ae-4d6e-b54b-e21ec068b485
+07:50:57   created erino-7kw -> f86d2646-1574-46fb-bd68-ed4aafa31273
+07:51:00   created nordflam-primo-7kw -> a09dc793-72a0-4d5b-a486-d38507d1b9eb
+07:51:03   created poplar-6kw -> 3f3abebd-ab2d-4b8d-9ab4-5ec183d9b8da
+07:51:06   created henley-ascot-5kw -> 8f748cfc-3f38-4c55-9c34-d78ae32f283c
+07:51:10   created henley-clearwood-5kw -> 55269025-9940-4910-a2ae-9afcdea91d0d
+07:51:29   saved adria-7kw  (19/53)
+07:51:38   created henley-thames-5kw -> 5b197454-2e8f-44be-b2df-74667a20f1e0
+07:51:41   saved erino-7kw  (20/53)
+07:51:43   saved nordflam-primo-7kw  (21/53)
+07:51:44   saved poplar-6kw  (22/53)
+07:51:46   saved henley-ascot-5kw  (23/53)
+07:51:47   saved henley-clearwood-5kw  (24/53)
+07:51:55   created henley-dunloe-5kw -> 40bc2c47-0a3d-46d4-9b6c-00b23c246702
+07:51:58   created atlantic-bay5-5kw -> 64f796a7-e1cd-46ed-a1a3-9c787df978b7
+07:52:01   created nordflam-etna-13kw -> 31bb6454-3faa-456d-bb52-ac5d55a90862
+07:52:04   created kratki-antek-10kw-deco -> a0ecde06-032a-4690-a714-69274e27b360
+07:52:07   created lb-700-piroliza-14kw -> aee40e0f-d03b-46df-9942-0e09574cf286
+07:52:17   saved henley-thames-5kw  (25/53)
+07:52:26   created henley-apollo-7kw -> 7c23e1ca-a571-4bc2-9805-12113885f1db
+07:52:29   saved henley-dunloe-5kw  (26/53)
+07:52:39   created henley-eco-c550-7kw -> d0c53002-cbc7-4a8d-b839-0f6f24148597
+07:53:06   saved kratki-antek-10kw-deco  (27/53)
+07:53:07   saved lb-700-piroliza-14kw  (28/53)
+07:53:16   created hamco-helsinki-5kw -> c7a3bb13-932f-4ff2-9566-645eab46fa58
+07:53:18   created vitae-5-landscape -> 475aadd7-b988-47fd-8ba2-39dab814e2c4
+07:53:22   saved henley-apollo-7kw  (29/53)
+07:53:30   created hamco-copenhagen-5kw -> a46cea67-1686-4371-9ae7-d16e30e6e4cd
+07:53:34   saved henley-eco-c550-7kw  (30/53)
+07:53:43   created henley-athens-500-6-2kw -> 11e32e0c-9b18-4bb6-9fae-25d28e27c24b
+07:53:55   saved hamco-helsinki-5kw  (31/53)
+07:53:57   saved vitae-5-landscape  (32/53)
+07:54:05   created hamco-helsinki-8kw -> 15a8abdf-d2a9-4f38-8446-068b1886e8fb
+07:54:08   created kratki-zibi-11kw -> 95268fd1-5d18-47bc-8b04-2203288fe166
+07:54:11   saved hamco-copenhagen-5kw  (33/53)
+07:54:21   created vitae-8-landscape -> 32260fcb-34ba-4e9d-9285-876009462c7c
+07:54:25   saved henley-athens-500-6-2kw  (34/53)
+07:54:33   created kratki-blanka-8kw -> fec1d5cb-b0f1-4464-95a6-6e288fccab3c
+07:54:45   saved kratki-zibi-11kw  (35/53)
+07:54:54   created kratki-arke-70-8kw -> 6aa507bb-f23a-41b3-9ca1-6e70e8f175b0
+07:54:57   saved hamco-helsinki-8kw  (36/53)
+07:55:05   created artel-petite-6 -> f874de58-81b7-45a5-974a-d91ead19192b
+07:55:17   saved vitae-8-landscape  (37/53)
+07:55:18   saved kratki-blanka-8kw  (38/53)
+07:55:27   created artel-mini-5 -> 0d29f485-cd36-453f-881c-79a06247935a
+07:55:30   created artel-nina-7kw -> 38f60cbe-c384-4037-8549-2c77dedf316c
+07:55:33   saved kratki-arke-70-8kw  (39/53)
+07:55:41   created henley-elm-4kw -> c00a0c03-183f-4e56-bae6-1b9dc7cf112a
+07:55:44   saved nordflam-etna-13kw  (40/53)
+07:55:54   created artel-easy-s-7kw -> e5d16580-4b9e-482f-96ee-089191711c83
+07:55:57   saved atlantic-bay5-5kw  (41/53)
+07:56:06   created artel-easy-m-9kw -> 2185803a-ad5f-40c9-886e-b31e83162198
+07:56:17   saved artel-petite-6  (42/53)
+07:56:18   saved artel-mini-5  (43/53)
+07:56:28   created subtile-6-slimline -> e4a9a53f-3e2d-4f14-9d33-bd3dac7815fb
+07:56:30   created emy-7-5kw -> 1b9e91b3-da43-4810-afdd-662f4a37d4bb
+07:56:33   saved artel-nina-7kw  (44/53)
+07:56:34   saved henley-elm-4kw  (45/53)
+07:56:44   created henley-elm-8kw -> c610bd0e-823e-4b00-919e-17493181dbb8
+07:56:47   created artel-cayenne-7 -> 99d279b8-dff8-4271-8c15-0a41b7de69e5
+07:56:50   saved artel-easy-s-7kw  (46/53)
+07:57:00   created rita-8kw -> bd0d3822-0562-415c-8f4a-768bf0863638
+07:57:03   saved artel-easy-m-9kw  (47/53)
+07:57:13   created iconic-500 -> 94e8c40d-d2fc-4f5f-8d67-a2bae94da591
+07:57:31   saved emy-7-5kw  (48/53)
+07:57:33   saved henley-elm-8kw  (49/53)
+07:57:34   saved artel-cayenne-7  (50/53)
+07:57:43   saved subtile-6-slimline  (51/53)
+07:57:51   saved rita-8kw  (52/53)
+07:58:05   saved iconic-500  (53/53)
+07:58:11 === DONE: 53 saved, 0 failed: [] ===
+08:01:24 === surrounds blind regen: 16 items ===
+08:01:25   created emma-fireplace -> bee92713-9753-4367-9599-a57ca62f3f98
+08:01:27   created fermoy-black-granite -> 4317ce0e-7eb9-458c-aa06-b889cfcf1d07
+08:01:28   created kildare-fireplace -> 9eec42b7-6076-406f-9309-756187e4b189
+08:01:30   created plain-tudor -> c37588f3-079b-416b-969e-beb7df058cfc
+08:01:32   created tara-surround -> 5c8e89af-c9db-487c-b573-dff150a605b6
+08:01:34   created renoir-fireplace -> 065695e7-da3d-46d0-be01-f0dbc652ef31
+08:02:00   saved emma-fireplace (1/16)
+08:02:02   saved fermoy-black-granite (2/16)
+08:02:04   saved plain-tudor (3/16)
+08:02:06   saved renoir-fireplace (4/16)
+08:02:12   created incised-victorian -> b46314f5-f901-4f4d-baf0-020a814fb108
+08:02:14   created abbey-surround -> a6ca3cc4-e090-4acb-b808-3cb2574cffd2
+08:02:16   created roma-fireplace -> b3a3c647-6cf5-4f50-aed6-c08deaa75f88
+08:02:18   created astoria-surround -> cb626d84-f53a-42fd-b875-a66a95813dc3
+08:02:20   saved kildare-fireplace (5/16)
+08:02:22   saved tara-surround (6/16)
+08:02:30   created dublin-corbel -> 6719b5a5-1f2c-4474-a41d-190f302bc5a5
+08:02:32   created florence-fireplace -> 622c1bbe-58ea-46e7-8af6-32d9b80ad293
+08:02:51   saved incised-victorian (7/16)
+08:02:52   saved abbey-surround (8/16)
+08:03:00   created darwin-surround -> 42dd1f16-f6b5-491b-a21a-171ed8c5c048
+08:03:02   created valley-fireplace -> 76e4301b-9648-40b9-a986-b9a1a52619ca
+08:03:06   saved astoria-surround (9/16)
+08:03:07   saved dublin-corbel (10/16)
+08:03:15   created marseilles-surround -> f29ddfac-6609-46b4-973f-2971f429b9b1
+08:03:16   created wexford-fireplace -> 1932d7f7-3884-4871-8dcb-e1722d42109f
+08:03:28   saved valley-fireplace (11/16)
+08:03:53   saved wexford-fireplace (12/16)
+08:04:00   saved roma-fireplace (13/16)
+08:04:16   saved darwin-surround (14/16)
+08:04:24   saved florence-fireplace (15/16)
+08:04:38   saved marseilles-surround (16/16)
+08:04:44 === surrounds DONE: 16/16 ===

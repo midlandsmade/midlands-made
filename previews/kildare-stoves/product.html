@@ -52,6 +52,12 @@ h1{font-family:'Playfair Display',Georgia,serif;font-weight:800;font-size:clamp(
 .feat{display:grid;gap:12px;margin-bottom:28px}
 .feat div{display:flex;gap:12px;align-items:center;font-size:14.5px}
 .feat .li-ic{width:34px;height:34px;border-radius:9px;background:rgba(255,122,26,.14);color:var(--ember2);display:grid;place-items:center;font-size:18px;flex-shrink:0}
+.popts{display:grid;gap:16px;margin:0 0 24px}
+.optgrp .optlab{font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--ember2);font-weight:800;margin-bottom:9px}
+.optrow{display:flex;flex-wrap:wrap;gap:9px}
+.optpill{background:var(--panel);border:1px solid var(--line);color:var(--cream);padding:9px 15px;border-radius:10px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:border-color .18s,background .18s,transform .12s}
+.optpill:hover{transform:translateY(-1px);border-color:var(--ember2)}
+.optpill.on{background:linear-gradient(135deg,var(--red),var(--ember));border-color:transparent;color:#fff}
 .btnrow{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:14px}
 .btn{display:inline-flex;align-items:center;gap:9px;padding:15px 26px;border-radius:12px;font-weight:800;font-size:15px;cursor:pointer;border:0;font-family:inherit}
 .btn.fire{background:linear-gradient(135deg,var(--red),var(--ember));color:#fff;box-shadow:0 14px 30px -12px rgba(255,122,26,.6)}
@@ -123,6 +129,7 @@ footer a{color:var(--ember2)}
       <div><span class="li-ic"><svg class="ic"><use href="#i-flame"/></svg></span>See it lit in our Monasterevin showroom before you buy</div>
       <div><span class="li-ic"><svg class="ic"><use href="#i-wrench"/></svg></span>Free, no-obligation fitting quote for your room</div>
     </div>
+    <div class="popts" id="popts"></div>
     <div class="btnrow">
       <button class="btn fire" id="enqBtn">Enquire about this <svg class="ic"><use href="#i-arrow"/></svg></button>
       <a class="btn wa" id="waBtn" href="#"><svg class="ic"><use href="#i-wa"/></svg> WhatsApp</a>
@@ -169,7 +176,10 @@ const params=new URLSearchParams(location.search), id=params.get('id');
 const aiImg=p=>'./assets/products/'+p.id+'.webp';
 const styleDesc={freestanding:'A freestanding wood-burning stove',insert:'An inset stove',cassette:'A cassette fire',pellet:'A pellet stove',electric:'An electric fire',boiler:'A boiler stove',surround:'A fireplace surround'};
 
-fetch('./data/products.json').then(r=>r.json()).then(d=>{
+Promise.all([
+  fetch('./data/products.json').then(r=>r.json()),
+  fetch('./data/options.json').then(r=>r.json()).catch(()=>({}))
+]).then(([d,OPTS])=>{
   const p=d.products.find(x=>x.id===id)||d.products[0];
   document.title='Kildare Stoves — '+p.name;
   document.getElementById('pcat').textContent=p.cat;
@@ -193,6 +203,26 @@ fetch('./data/products.json').then(r=>r.json()).then(d=>{
   document.getElementById('waBtn').href='https://wa.me/353858754191?text='+encodeURIComponent('Hi, I’m interested in the '+p.name+' — could you tell me more?');
   document.getElementById('fProduct').value=p.name;
   document.getElementById('fSubject').value='Product enquiry: '+p.name;
+  // real product options (colour / finish / size) -> pills that feed the enquiry + WhatsApp
+  const selected={},optWrap=document.getElementById('popts'),groups=(OPTS[p.id]||[]);
+  groups.forEach(g=>{
+    const grp=document.createElement('div');grp.className='optgrp';
+    const lab=document.createElement('div');lab.className='optlab';lab.textContent=g.label;grp.appendChild(lab);
+    const row=document.createElement('div');row.className='optrow';
+    g.values.forEach((v,vi)=>{
+      const b=document.createElement('button');b.type='button';b.className='optpill'+(vi===0?' on':'');b.textContent=v;
+      if(vi===0)selected[g.label]=v;
+      b.onclick=()=>{[].forEach.call(row.children,c=>c.classList.remove('on'));b.classList.add('on');selected[g.label]=v;syncOpts();};
+      row.appendChild(b);
+    });
+    grp.appendChild(row);optWrap.appendChild(grp);
+  });
+  function syncOpts(){
+    const s=Object.keys(selected).map(k=>k+': '+selected[k]).join(', ');
+    document.getElementById('fProduct').value=p.name+(s?' — '+s:'');
+    document.getElementById('waBtn').href='https://wa.me/353858754191?text='+encodeURIComponent('Hi, I’m interested in the '+p.name+(s?' ('+s+')':'')+' — could you tell me more?');
+  }
+  syncOpts();
   const form=document.getElementById('enqForm');
   document.getElementById('enqBtn').onclick=()=>{form.style.display=form.style.display==='none'?'block':'none';if(form.style.display==='block')form.scrollIntoView({behavior:'smooth',block:'center'});};
   // related (same category)

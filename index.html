@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Midlands Made — Websites for Local Businesses in Mullingar & the Midlands</title>
 <meta name="description" content="Websites for local businesses in Mullingar and the Irish Midlands. Free homepage preview first — then €300 flat, you own it, no monthly fees. Live in days." />
-<meta name="theme-color" content="#101114" />
+<meta name="theme-color" content="#080b14" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236d70f6'/%3E%3Cstop offset='1' stop-color='%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Arial,sans-serif' font-weight='800' fill='white' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" />
 <link rel="canonical" href="https://midlandsmade.ie/" />
 <meta property="og:type" content="website" />
@@ -44,11 +44,11 @@
 <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
 <style>
   :root{
-    --bg:#101114; --bg2:#0b0c0e; --card:#16171c; --card2:#1a1c22;
-    --line:#26282f; --line2:#32353e;
-    --ink:#f4f5f7; --muted:#9aa1ad; --muted2:#6f7681;
-    --accent:#6d70f6; --accent2:#22d3ee;
-    --grad:linear-gradient(120deg,#6d70f6 0%,#22d3ee 100%);
+    --bg:#080b14; --bg2:#05070e; --card:#0e1220; --card2:#131829;
+    --line:#1b2338; --line2:#28324c;
+    --ink:#f4f6fb; --muted:#94a0b8; --muted2:#6b7690;
+    --accent:#4f7cf7; --accent2:#38bdf8;
+    --grad:linear-gradient(100deg,#5b7cfa 0%,#38bdf8 100%);
     --shadow:0 24px 60px -24px rgba(0,0,0,.65);
     --radius:18px;
   }
@@ -128,6 +128,49 @@
     .orb{animation:floaty 12s ease-in-out infinite;animation-delay:-3s}
   }
   @media (prefers-reduced-motion: reduce){.blob,.orb{display:none}}
+
+  /* --- hero: 2-col + floating browser stack (Codex mockup) --- */
+  .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:44px;align-items:center}
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--accent2);box-shadow:0 0 10px var(--accent2)}
+  .hero h1{max-width:none}
+  .hero h1 .l2{display:block}
+  .price-chip{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;padding:11px 24px;border:1px solid var(--line2);border-radius:12px;background:rgba(255,255,255,.02);line-height:1.25;transition:border-color .2s,transform .18s}
+  .price-chip:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .price-chip b{font-family:'Poppins';font-weight:700;font-size:1.02rem;color:#fff}
+  .price-chip span{font-size:.78rem;color:var(--muted)}
+  .hero-vis{position:relative;height:430px;perspective:1500px}
+  .hero-vis .mapdot{position:absolute;left:5%;bottom:24%;width:9px;height:9px;border-radius:50%;background:var(--accent2);box-shadow:0 0 0 6px rgba(56,189,248,.14),0 0 18px var(--accent2)}
+  .hero-vis .maplbl{position:absolute;left:9%;bottom:28%;font-size:.64rem;letter-spacing:.22em;color:#5c6a86;font-weight:600}
+  .win{position:absolute;border-radius:12px;overflow:hidden;border:1px solid var(--line2);background:var(--card);box-shadow:0 50px 90px -34px rgba(0,0,0,.95);transform-style:preserve-3d}
+  .win .chrome{background:#141a2b;padding:8px 10px;display:flex;gap:6px;align-items:center;border-bottom:1px solid var(--line)}
+  .win .chrome i{width:8px;height:8px;border-radius:50%;background:#2b3450;flex-shrink:0}
+  .win .chrome .u{margin-left:8px;flex:1;height:16px;background:#080c16;border-radius:5px;font-size:.6rem;color:#5d6880;display:flex;align-items:center;padding:0 8px;overflow:hidden;white-space:nowrap}
+  .win img{display:block;width:100%;height:auto}
+  .win.w1{width:82%;right:0;top:0;transform:rotateY(-17deg) rotateX(5deg) rotateZ(-1.5deg);z-index:1}
+  .win.w2{width:82%;right:11%;top:31%;transform:rotateY(-17deg) rotateX(5deg) rotateZ(-1.5deg);z-index:2}
+  @media (prefers-reduced-motion: no-preference){
+    .hero-vis{animation:fadeUp .8s .2s both}
+    .win{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+    .win:hover{transform:rotateY(-8deg) rotateX(2deg) translateY(-6px)}
+  }
+
+  /* --- feature strip (4-up under hero) --- */
+  .fstrip-wrap{padding:0 0 84px;background:radial-gradient(900px 300px at 50% -60%,rgba(79,124,247,.07),transparent 60%)}
+  .fstrip{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.015)}
+  .fs{display:flex;gap:13px;padding:20px 22px;align-items:flex-start;border-right:1px solid var(--line)}
+  .fs:last-child{border-right:0}
+  .fs svg{width:21px;height:21px;stroke:var(--accent2);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:2px}
+  .fs b{display:block;font-family:'Poppins';font-weight:600;font-size:.95rem;color:#fff;margin-bottom:2px}
+  .fs span{font-size:.82rem;color:var(--muted);line-height:1.45}
+  @media(max-width:980px){
+    .hero-grid{grid-template-columns:1fr;gap:32px}
+    .hero-vis{height:300px;order:2}
+    .fstrip{grid-template-columns:1fr 1fr}
+    .fs:nth-child(2){border-right:0}
+    .fs:nth-child(1),.fs:nth-child(2){border-bottom:1px solid var(--line)}
+    .fstrip-wrap{padding-bottom:56px}
+  }
+  @media(max-width:520px){.hero-vis{height:225px}}
 
   /* rotating hero word (typewriter) */
   .rotwrap{display:block;min-height:1.25em;white-space:nowrap}
@@ -297,7 +340,7 @@
       <a href="#work">Recent work</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
-      <a href="#contact" class="btn btn-primary magnetic">Free preview</a>
+      <a href="#contact" class="btn btn-primary magnetic">Get a free homepage preview</a>
     </nav>
     <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
@@ -306,22 +349,45 @@
 <a id="top"></a>
 <section class="hero">
   <div class="blob b1" data-move="26"></div><div class="blob b2" data-move="-18"></div>
-  <div class="orb" data-move="12"></div>
-  <div class="wrap">
-    <span class="eyebrow"><span class="star">✳</span> Mullingar &amp; the Irish Midlands</span>
-    <h1><span class="split-hero">A website that brings your local business</span> <span class="rotwrap"><span class="rot-word grad-text">more customers</span><span class="rot-cursor"></span></span></h1>
-    <p class="lead">Clean, mobile-friendly websites for local businesses — with a booking form built in, ready for Google, and live in a few days. €300 flat, and the site is completely yours. No agency prices, no monthly fees.</p>
-    <div class="hero-cta">
-      <a href="#contact" class="btn btn-primary magnetic">Get a free preview of your site →</a>
-      <a href="#work" class="btn btn-ghost magnetic">See recent work</a>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow"><span class="dot"></span> Mullingar &amp; the Irish Midlands</span>
+      <h1><span class="split-hero">Websites built locally.</span><span class="l2 grad-text">Made to win work.</span></h1>
+      <p class="lead">Clean, fast websites for Midlands businesses — live in days, owned by you.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary magnetic">Get a free homepage preview →</a>
+        <a href="#pricing" class="price-chip"><b>€300 flat</b><span>No monthly fees</span></a>
+      </div>
+      <div class="hero-trust">
+        <span><span class="ck">✓</span> <b>Live in days</b></span>
+        <span><span class="ck">✓</span> <b>Owned by you</b></span>
+        <span><span class="ck">✓</span> <b>Local, not an agency</b></span>
+      </div>
     </div>
-    <div class="hero-trust">
-      <span class="ck">✓</span> <span><b>Live in ~3 days</b></span>
-      <span class="ck">✓</span> <span><b>€300 flat — no monthly fees</b></span>
-      <span class="ck">✓</span> <span><b>Local, not an agency</b></span>
+    <div class="hero-vis" data-move="10" aria-hidden="true">
+      <span class="maplbl">MULLINGAR</span><span class="mapdot"></span>
+      <div class="win w1">
+        <div class="chrome"><i></i><i></i><i></i><div class="u">tradingbuddyapp.com</div></div>
+        <img src="work/tradingbuddy.jpg" alt="" loading="eager" />
+      </div>
+      <div class="win w2">
+        <div class="chrome"><i></i><i></i><i></i><div class="u">mullingarlatindance.ie</div></div>
+        <img src="work/mullingar.jpg" alt="" loading="eager" />
+      </div>
     </div>
   </div>
 </section>
+
+<div class="fstrip-wrap">
+  <div class="wrap">
+    <div class="fstrip">
+      <div class="fs"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg><div><b>Live in days</b><span>Most sites up in ~3 days</span></div></div>
+      <div class="fs"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 3.2 2.6 14.8 0 18M12 3c-2.6 3.2-2.6 14.8 0 18"/></svg><div><b>Google ready</b><span>Search, Maps &amp; mobile sorted</span></div></div>
+      <div class="fs"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg><div><b>Yours, completely</b><span>You own it. Every login, every password.</span></div></div>
+      <div class="fs"><svg viewBox="0 0 24 24"><path d="M16.5 7A5 5 0 0 0 8 10.5v3A5 5 0 0 0 16.5 17"/><path d="M4.5 11h8M4.5 14h8"/></svg><div><b>€300 flat</b><span>No monthly fees. Ever.</span></div></div>
+    </div>
+  </div>
+</div>
 
 <div class="marq" aria-hidden="true">
   <div class="track">
@@ -399,7 +465,7 @@
   <div class="wrap">
     <div class="sec-head">
       <div class="kick">Recent work</div>
-      <h2 class="split-up">Real, polished sites — built end to end.</h2>
+      <h2 class="split-up">Real websites for local businesses</h2>
       <p>From an elegant local dance studio to a full trading web app with accounts and billing — a sense of the range.</p>
     </div>
     <div class="work-grid">

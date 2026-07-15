@@ -138,7 +138,7 @@
   .price-chip:hover{border-color:var(--accent);transform:translateY(-2px)}
   .price-chip b{font-family:'Poppins';font-weight:700;font-size:1.02rem;color:#fff}
   .price-chip span{font-size:.78rem;color:var(--muted)}
-  .hero-vis{position:relative;height:430px;perspective:1500px}
+  .hero-vis{position:relative;height:520px;perspective:1500px}
   .hero-vis .mapdot{position:absolute;left:5%;bottom:24%;width:9px;height:9px;border-radius:50%;background:var(--accent2);box-shadow:0 0 0 6px rgba(56,189,248,.14),0 0 18px var(--accent2)}
   .hero-vis .maplbl{position:absolute;left:9%;bottom:28%;font-size:.64rem;letter-spacing:.22em;color:#5c6a86;font-weight:600}
   .win{position:absolute;border-radius:12px;overflow:hidden;border:1px solid var(--line2);background:var(--card);box-shadow:0 50px 90px -34px rgba(0,0,0,.95);transform-style:preserve-3d}
@@ -146,8 +146,9 @@
   .win .chrome i{width:8px;height:8px;border-radius:50%;background:#2b3450;flex-shrink:0}
   .win .chrome .u{margin-left:8px;flex:1;height:16px;background:#080c16;border-radius:5px;font-size:.6rem;color:#5d6880;display:flex;align-items:center;padding:0 8px;overflow:hidden;white-space:nowrap}
   .win img{display:block;width:100%;height:auto}
-  .win.w1{width:82%;right:0;top:0;transform:rotateY(-17deg) rotateX(5deg) rotateZ(-1.5deg);z-index:1}
-  .win.w2{width:82%;right:11%;top:31%;transform:rotateY(-17deg) rotateX(5deg) rotateZ(-1.5deg);z-index:2}
+  .win.w1{width:74%;right:0;top:0;transform:rotateY(-17deg) rotateX(5deg) rotateZ(-1.5deg);z-index:1}
+  .win.w2{width:74%;right:9%;top:24%;transform:rotateY(-17deg) rotateX(5deg) rotateZ(-1.5deg);z-index:2}
+  .win.w3{width:74%;right:18%;top:48%;transform:rotateY(-17deg) rotateX(5deg) rotateZ(-1.5deg);z-index:3}
   @media (prefers-reduced-motion: no-preference){
     .hero-vis{animation:fadeUp .8s .2s both}
     .win{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
@@ -164,13 +165,13 @@
   .fs span{font-size:.82rem;color:var(--muted);line-height:1.45}
   @media(max-width:980px){
     .hero-grid{grid-template-columns:1fr;gap:32px}
-    .hero-vis{height:300px;order:2}
+    .hero-vis{height:380px;order:2}
     .fstrip{grid-template-columns:1fr 1fr}
     .fs:nth-child(2){border-right:0}
     .fs:nth-child(1),.fs:nth-child(2){border-bottom:1px solid var(--line)}
     .fstrip-wrap{padding-bottom:56px}
   }
-  @media(max-width:520px){.hero-vis{height:225px}}
+  @media(max-width:520px){.hero-vis{height:320px}}
 
   /* rotating hero word (typewriter) */
   .rotwrap{display:block;min-height:1.25em;white-space:nowrap}
@@ -367,10 +368,14 @@
     <div class="hero-vis" data-move="10" aria-hidden="true">
       <span class="maplbl">MULLINGAR</span><span class="mapdot"></span>
       <div class="win w1">
+        <div class="chrome"><i></i><i></i><i></i><div class="u"></div></div>
+        <img src="work/kildare.jpg" alt="" loading="eager" />
+      </div>
+      <div class="win w2">
         <div class="chrome"><i></i><i></i><i></i><div class="u">tradingbuddyapp.com</div></div>
         <img src="work/tradingbuddy.jpg" alt="" loading="eager" />
       </div>
-      <div class="win w2">
+      <div class="win w3">
         <div class="chrome"><i></i><i></i><i></i><div class="u">mullingarlatindance.ie</div></div>
         <img src="work/mullingar.jpg" alt="" loading="eager" />
       </div>

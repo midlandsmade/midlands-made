@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Midlands Made | Websites for Local Businesses in Mullingar & the Midlands</title>
-<meta name="description" content="Websites for local businesses in Mullingar and the Irish Midlands. Free homepage preview first, then €300 flat, you own it, no monthly fees. Live in days." />
+<title>Midlands Made — Websites for Local Businesses in Mullingar & the Midlands</title>
+<meta name="description" content="Websites for local businesses in Mullingar and the Irish Midlands. Free homepage preview first — then €300 flat, you own it, no monthly fees. Live in days." />
 <meta name="theme-color" content="#080b14" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236d70f6'/%3E%3Cstop offset='1' stop-color='%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Arial,sans-serif' font-weight='800' fill='white' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" />
 <link rel="canonical" href="https://midlandsmade.ie/" />
@@ -14,13 +14,13 @@
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:site_name" content="Midlands Made" />
-<meta property="og:title" content="Midlands Made | Websites for Local Businesses in Mullingar & the Midlands" />
-<meta property="og:description" content="Websites for local businesses in Mullingar and the Irish Midlands. Free homepage preview first, then €300 flat, you own it, no monthly fees." />
+<meta property="og:title" content="Midlands Made — Websites for Local Businesses in Mullingar & the Midlands" />
+<meta property="og:description" content="Websites for local businesses in Mullingar and the Irish Midlands. Free homepage preview first — then €300 flat, you own it, no monthly fees." />
 <meta property="og:locale" content="en_IE" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://midlandsmade.ie/og.jpg" />
-<meta name="twitter:title" content="Midlands Made | Websites for Local Businesses" />
-<meta name="twitter:description" content="Free homepage preview first, then €300 flat, you own it. Websites for Mullingar & Midlands businesses." />
+<meta name="twitter:title" content="Midlands Made — Websites for Local Businesses" />
+<meta name="twitter:description" content="Free homepage preview first — then €300 flat, you own it. Websites for Mullingar & Midlands businesses." />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -28,7 +28,7 @@
   "name": "Midlands Made",
   "url": "https://midlandsmade.ie/",
   "telephone": "+353851161036",
-  "description": "Websites for local businesses in Mullingar and the Irish Midlands. €300 flat, no monthly fees.",
+  "description": "Websites for local businesses in Mullingar and the Irish Midlands. €300 flat — no monthly fees.",
   "areaServed": ["Mullingar", "Westmeath", "Irish Midlands"],
   "address": { "@type": "PostalAddress", "addressLocality": "Mullingar", "addressRegion": "County Westmeath", "addressCountry": "IE" },
   "priceRange": "€€",
@@ -38,7 +38,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<!-- Animation engine (site works fine without these, everything guards on window.gsap) -->
+<!-- Animation engine (site works fine without these — everything guards on window.gsap) -->
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
@@ -354,7 +354,7 @@
     <div class="hero-copy">
       <span class="eyebrow"><span class="dot"></span> Mullingar &amp; the Irish Midlands</span>
       <h1><span class="split-hero">Websites built locally.</span><span class="l2 grad-text">Made to win work.</span></h1>
-      <p class="lead">Clean, fast websites for Midlands businesses, live in days, owned by you.</p>
+      <p class="lead">Clean, fast websites for Midlands businesses — live in days, owned by you.</p>
       <div class="hero-cta">
         <a href="#contact" class="btn btn-primary magnetic">Get a free homepage preview →</a>
         <a href="#pricing" class="price-chip"><b>€300 flat</b><span>No monthly fees</span></a>
@@ -403,7 +403,7 @@
 
 <section class="statement">
   <div class="wrap">
-    <h2 class="reveal-text">Most people check you online before they ever walk in. I make sure what they find looks worth choosing.</h2>
+    <h2 class="reveal-text">Most people check you online before they ever walk in — I make sure what they find looks worth choosing.</h2>
   </div>
 </section>
 
@@ -411,7 +411,7 @@
   <div class="wrap">
     <div class="sec-head">
       <div class="kick">What you get</div>
-      <h2 class="split-up">Everything a local business needs online. Nothing it doesn't.</h2>
+      <h2 class="split-up">Everything a local business needs online — nothing it doesn't.</h2>
       <p>A site that looks great on a phone, gets found on Google, and turns visitors into bookings.</p>
     </div>
     <div class="grid g3 feat">
@@ -423,12 +423,12 @@
       <div class="card feat">
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
         <h3>Booking &amp; enquiry form</h3>
-        <p>Customers send you their details in one tap, straight to your inbox or WhatsApp. No third-party fees.</p>
+        <p>Customers send you their details in one tap — straight to your inbox or WhatsApp. No third-party fees.</p>
       </div>
       <div class="card feat">
         <div class="ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg></div>
         <h3>Ready for Google</h3>
-        <p>Set up with a Google Maps pin, your real address, and the basics search engines look for, so locals can find you.</p>
+        <p>Set up with a Google Maps pin, your real address, and the basics search engines look for — so locals can find you.</p>
       </div>
       <div class="card feat">
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></div>
@@ -438,7 +438,7 @@
       <div class="card feat">
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg></div>
         <h3>Done completely for you</h3>
-        <p>Send me your photos and details, I do the rest. You review it, we tweak it, then it goes live.</p>
+        <p>Send me your photos and details — I do the rest. You review it, we tweak it, then it goes live.</p>
       </div>
       <div class="card feat">
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
@@ -454,13 +454,13 @@
     <div class="steps clipin">
       <div class="sec-head">
         <div class="kick">How it works</div>
-        <h2 class="split-up">From your photos to live, in three steps.</h2>
+        <h2 class="split-up">From your photos to live — in three steps.</h2>
         <p>Most sites are ready to review within a few days.</p>
       </div>
       <div class="step-row">
         <div class="step"><div class="n">1</div><h3>You send the details</h3><p>Your services, prices, a few photos, and how you want customers to reach you. A quick chat or a few messages.</p></div>
-        <div class="step"><div class="n">2</div><h3>I build it</h3><p>I design and build the whole site around your business, usually ready to look at within 2–3 days.</p></div>
-        <div class="step"><div class="n">3</div><h3>Review, go live &amp; handover</h3><p>You check it, we fine-tune anything, then it goes live on your own web address, and I hand you every login. It's yours.</p></div>
+        <div class="step"><div class="n">2</div><h3>I build it</h3><p>I design and build the whole site around your business — usually ready to look at within 2–3 days.</p></div>
+        <div class="step"><div class="n">3</div><h3>Review, go live &amp; handover</h3><p>You check it, we fine-tune anything, then it goes live on your own web address — and I hand you every login. It's yours.</p></div>
       </div>
     </div>
   </div>
@@ -471,7 +471,7 @@
     <div class="sec-head">
       <div class="kick">Recent work</div>
       <h2 class="split-up">Real websites for local businesses</h2>
-      <p>From an elegant local dance studio to a full trading web app with accounts and billing, a sense of the range.</p>
+      <p>From an elegant local dance studio to a full trading web app with accounts and billing — a sense of the range.</p>
     </div>
     <div class="work-grid">
       <div class="work-card clipin">
@@ -497,7 +497,7 @@
         <div class="work-body">
           <div class="type">Web app / SaaS</div>
           <h3>Trading Buddy</h3>
-          <p>A full web application with user accounts, subscriptions and live dashboards, plus a companion Chrome extension. Built end to end: proof I handle serious, production-grade builds, not just brochure sites.</p>
+          <p>A full web application with user accounts, subscriptions and live dashboards — plus a companion Chrome extension. Built end to end: proof I handle serious, production-grade builds, not just brochure sites.</p>
           <div class="tags"><span>Web app</span><span>Accounts &amp; billing</span><span>Dashboard</span><span>Chrome extension</span></div>
           <a href="#" class="btn btn-ghost magnetic" data-live="tradingbuddy">View live site →</a>
         </div>
@@ -511,26 +511,26 @@
     <div class="sec-head">
       <div class="kick">Simple pricing</div>
       <h2 class="split-up">One flat price. No surprises. Ever.</h2>
-      <p>What a local agency charges thousands for, built once, owned by you forever.</p>
+      <p>What a local agency charges thousands for — built once, owned by you forever.</p>
     </div>
     <div class="price-card clipin">
       <div class="price-top">
         <div class="plan">Complete website</div>
         <div class="amt">€<span class="count" data-to="300">300</span> <small>once</small></div>
-        <div class="sub">No monthly fees. You own everything, your only running cost is your domain (~€25/year), paid in your own name.</div>
+        <div class="sub">No monthly fees. You own everything — your only running cost is your domain (~€25/year), paid in your own name.</div>
       </div>
       <ul class="price-list">
         <li><span class="ck">✓</span> A complete, custom website built around your business</li>
         <li><span class="ck">✓</span> Looks perfect on phones, tablets and computers</li>
         <li><span class="ck">✓</span> Booking / enquiry form to your inbox or WhatsApp</li>
         <li><span class="ck">✓</span> Set up for Google &amp; Google Maps</li>
-        <li><span class="ck">✓</span> Your own web address (.ie or .com), registered in your name</li>
+        <li><span class="ck">✓</span> Your own web address (.ie or .com) — registered in your name</li>
         <li><span class="ck">✓</span> Free hosting, set up in your own account</li>
-        <li><span class="ck">✓</span> Full handover, every login and password is yours</li>
+        <li><span class="ck">✓</span> Full handover — every login and password is yours</li>
       </ul>
       <div class="price-foot">
         <a href="#contact" class="btn btn-primary magnetic">Get my free homepage preview →</a>
-        <div class="note">No deposit to enquire. No subscriptions to me, ever. Need changes down the line? Small updates quoted from €30.</div>
+        <div class="note">No deposit to enquire. No subscriptions to me — ever. Need changes down the line? Small updates quoted from €30.</div>
       </div>
     </div>
   </div>
@@ -543,12 +543,12 @@
       <h2 class="split-up">Good questions, straight answers.</h2>
     </div>
     <div class="faq">
-      <div class="faq-item"><button class="faq-q">How does the free preview work? <span class="pm">+</span></button><div class="faq-a"><p>Send the form with a line about your business. Within a couple of days I'll send you a preview of your new homepage, built around your actual business, not a template. If you love it, we finish the full site for €300. If it's not for you, no charge and no hard feelings.</p></div></div>
+      <div class="faq-item"><button class="faq-q">How does the free preview work? <span class="pm">+</span></button><div class="faq-a"><p>Send the form with a line about your business. Within a couple of days I'll send you a preview of your new homepage — built around your actual business, not a template. If you love it, we finish the full site for €300. If it's not for you, no charge and no hard feelings.</p></div></div>
       <div class="faq-item"><button class="faq-q">How long does it take? <span class="pm">+</span></button><div class="faq-a"><p>Most sites are ready for you to review within 2–3 days of getting your photos and details. Once you're happy, it goes live the same day.</p></div></div>
-      <div class="faq-item"><button class="faq-q">What do you need from me? <span class="pm">+</span></button><div class="faq-a"><p>Your services and prices, a handful of decent photos (your phone is fine), and how you'd like customers to reach you. That's it, I handle everything else.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Are there any ongoing costs? <span class="pm">+</span></button><div class="faq-a"><p>None to me. Your only recurring cost is your domain, about €25 a year for a .ie, paid directly to the registrar in your own name. Hosting for a typical local-business site is free. If your site ever grows into something heavier (very high traffic, online ordering, extra tools), those services have their own subscriptions, I'll set them up in your name, at cost, so there's never a surprise bill from me.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Do I own the website? <span class="pm">+</span></button><div class="faq-a"><p>Yes, completely. The site, the domain and the hosting are all in your name from day one, and I hand over every login at the end. Nothing is held hostage. If you want changes later, I'm a message away, small updates from €30.</p></div></div>
-      <div class="faq-item"><button class="faq-q">I already have a Facebook/Instagram, do I need a site? <span class="pm">+</span></button><div class="faq-a"><p>Social is great for staying in touch, but a website is where new customers check you're real, see your prices, and book. It's the one place Google can send people looking for exactly what you do.</p></div></div>
+      <div class="faq-item"><button class="faq-q">What do you need from me? <span class="pm">+</span></button><div class="faq-a"><p>Your services and prices, a handful of decent photos (your phone is fine), and how you'd like customers to reach you. That's it — I handle everything else.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Are there any ongoing costs? <span class="pm">+</span></button><div class="faq-a"><p>None to me. Your only recurring cost is your domain — about €25 a year for a .ie, paid directly to the registrar in your own name. Hosting for a typical local-business site is free. If your site ever grows into something heavier (very high traffic, online ordering, extra tools), those services have their own subscriptions — I'll set them up in your name, at cost, so there's never a surprise bill from me.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Do I own the website? <span class="pm">+</span></button><div class="faq-a"><p>Yes — completely. The site, the domain and the hosting are all in your name from day one, and I hand over every login at the end. Nothing is held hostage. If you want changes later, I'm a message away — small updates from €30.</p></div></div>
+      <div class="faq-item"><button class="faq-q">I already have a Facebook/Instagram — do I need a site? <span class="pm">+</span></button><div class="faq-a"><p>Social is great for staying in touch, but a website is where new customers check you're real, see your prices, and book. It's the one place Google can send people looking for exactly what you do.</p></div></div>
     </div>
   </div>
 </section>
@@ -558,7 +558,7 @@
     <div class="sec-head">
       <div class="kick">Get started</div>
       <h2 class="split-up">See your homepage before you pay a cent.</h2>
-      <p>Tell me about your business and I'll build you a <b style="color:#fff">free preview of your new homepage</b>, no obligation, nothing to pay. Love it, and we finish the site for €300. Not for you? You owe nothing.</p>
+      <p>Tell me about your business and I'll build you a <b style="color:#fff">free preview of your new homepage</b> — no obligation, nothing to pay. Love it, and we finish the site for €300. Not for you? You owe nothing.</p>
     </div>
     <form class="form clipin" id="quoteForm">
       <input type="hidden" name="access_key" value="a94518f5-8439-4df0-a4fe-5395cae194d5" />
@@ -568,7 +568,7 @@
       <div class="field"><label>Your name</label><input type="text" name="name" required placeholder="John Murphy" /></div>
       <div class="field"><label>Your business</label><input type="text" name="business" required placeholder="e.g. John's Electrical, Mullingar" /></div>
       <div class="field"><label>Email or phone</label><input type="text" name="contact" required placeholder="john@gmail.com or 085..." /></div>
-      <div class="field"><label>What do you need? <span style="color:#7a8296">(optional)</span></label><textarea name="message" data-typeph placeholder="A quick line about your business and what you'd like, services, a booking form, a fresh look, etc."></textarea></div>
+      <div class="field"><label>What do you need? <span style="color:#7a8296">(optional)</span></label><textarea name="message" data-typeph placeholder="A quick line about your business and what you'd like — services, a booking form, a fresh look, etc."></textarea></div>
       <button type="submit" class="btn btn-primary magnetic">Send my request →</button>
       <div class="form-msg" id="formMsg"></div>
       <div class="alt-contact">Prefer to just chat? <a id="waAlt" target="_blank" rel="noopener">WhatsApp me directly →</a> or call <a href="tel:+353851161036">085&nbsp;116&nbsp;1036</a></div>
@@ -578,7 +578,7 @@
 
 <footer>
   <div class="wrap">
-    <p><strong style="color:#fff">Midlands Made</strong>, websites for local businesses in Mullingar &amp; across the Irish Midlands.</p>
+    <p><strong style="color:#fff">Midlands Made</strong> — websites for local businesses in Mullingar &amp; across the Irish Midlands.</p>
     <p style="margin-top:6px">Made locally. <a href="tel:+353851161036">085&nbsp;116&nbsp;1036</a> · <a href="#contact">Get a quote →</a></p>
   </div>
 </footer>
@@ -608,13 +608,13 @@
   document.querySelectorAll('[data-live]').forEach(el=>{
     const url=LIVE[el.dataset.live];
     if(url){el.href=url;el.target='_blank';el.rel='noopener';}
-    else{el.addEventListener('click',e=>{e.preventDefault();alert('Live link coming soon, this site is being deployed.');});}
+    else{el.addEventListener('click',e=>{e.preventDefault();alert('Live link coming soon — this site is being deployed.');});}
   });
 
   // whatsapp float
   const WHATSAPP='353851161036';
   if(WHATSAPP){
-    const waUrl='https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent("Hi! I saw Midlands Made, I'd like a website for my business.");
+    const waUrl='https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent("Hi! I saw Midlands Made — I'd like a website for my business.");
     const w=document.getElementById('waFloat');w.href=waUrl;w.style.display='inline-flex';
     const wa2=document.getElementById('waAlt');if(wa2)wa2.href=waUrl;
   }
@@ -637,14 +637,14 @@
   };
   onScroll();addEventListener('scroll',onScroll,{passive:true});
 
-  // rotating hero word, typewriter (centos cd-headline "type")
+  // rotating hero word — typewriter (centos cd-headline "type")
   const rot=document.querySelector('.rot-word');
   if(rot && MOTION_OK){
     const WORDS=['more customers','more bookings','found on Google','taken seriously'];
     let wi=0, busy=false;
     const type=(s,i,done)=>{rot.textContent=s.slice(0,i);if(i<s.length)setTimeout(()=>type(s,i+1,done),55+Math.random()*45);else done&&done();};
     const del=(done)=>{const s=rot.textContent;if(s.length){rot.textContent=s.slice(0,-1);setTimeout(()=>del(done),26);}else done&&done();};
-    // one cycle at a time, and never start a cycle while the tab is hidden, 
+    // one cycle at a time, and never start a cycle while the tab is hidden —
     // stops the rapid catch-up spam when you come back to the tab
     const cycle=()=>{
       if(document.hidden||busy)return;
@@ -701,8 +701,8 @@
       const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(form)))});
       const data=await res.json();
       if(data.success){msg.style.color='#34d399';msg.textContent='Got it! I\'ll be in touch shortly. 🎉';form.reset();}
-      else{msg.style.color='#f87171';msg.textContent='Something went wrong, email hello@ or try again.';}
-    }catch(err){msg.style.color='#f87171';msg.textContent='Network error, please try again.';}
+      else{msg.style.color='#f87171';msg.textContent='Something went wrong — email hello@ or try again.';}
+    }catch(err){msg.style.color='#f87171';msg.textContent='Network error — please try again.';}
   });
 
   // ---- GSAP layer (all optional; page is complete without it) ----

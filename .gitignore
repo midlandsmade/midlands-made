@@ -1,0 +1,20 @@
+# ── Secrets: NEVER commit these ──────────────────────────
+.env
+.env.*
+*.key
+*.pem
+*.p12
+secrets.json
+credentials.json
+# ── Local backups / working files ────────────────────────
+*.pre-taste
+*.bak
+*.tmp
+_backups/
+# ── Dev tooling / runtime ────────────────────────────────
+.devloop/
+node_modules/
+# ── OS cruft ─────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini

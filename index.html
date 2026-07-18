@@ -426,6 +426,35 @@
     .steps{padding:44px 22px}
     .orb{display:none}
   }
+
+  /* ---- client review ---- */
+  .review-wrap{margin-top:34px}
+  .review-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:34px 38px;position:relative;overflow:hidden}
+  .review-card::before{content:"“";position:absolute;top:-18px;left:18px;font-family:Georgia,serif;font-size:9rem;color:rgba(109,112,246,.14);line-height:1}
+  .review-stars{color:#fbbf24;font-size:1.05rem;letter-spacing:3px;margin-bottom:14px}
+  .review-text{color:var(--soft);font-size:1.02rem;line-height:1.75;max-width:62em}
+  .review-attr{margin-top:18px;display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--muted);flex-wrap:wrap}
+  .review-attr strong{color:var(--ink)}
+  .review-attr .gbadge{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:.78rem}
+  /* ---- form success popup ---- */
+  .sent-overlay{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;background:rgba(5,8,16,.65);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity .3s ease-out}
+  .sent-overlay.show{opacity:1;pointer-events:auto}
+  .sent-card{background:linear-gradient(180deg,#12182b,#0d1322);border:1px solid rgba(109,112,246,.4);border-radius:22px;padding:42px 48px;text-align:center;max-width:min(400px,88vw);box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 60px rgba(109,112,246,.18);transform:translateY(14px) scale(.92)}
+  .sent-overlay.show .sent-card{transform:none;transition:transform .42s cubic-bezier(.22,1,.36,1)}
+  .sent-check{width:76px;height:76px;margin:0 auto 20px}
+  .sent-check circle{fill:none;stroke:url(#sentGrad);stroke-width:2.6;stroke-dasharray:214;stroke-dashoffset:214}
+  .sent-check path{fill:none;stroke:#22d3ee;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:48;stroke-dashoffset:48}
+  .sent-overlay.show .sent-check circle{animation:sentDraw .55s ease-out .1s forwards}
+  .sent-overlay.show .sent-check path{animation:sentDraw .35s ease-out .55s forwards}
+  @keyframes sentDraw{to{stroke-dashoffset:0}}
+  .sent-card h3{font-family:'Poppins';font-size:1.5rem;margin-bottom:8px}
+  .sent-card p{color:var(--muted);font-size:.96rem;line-height:1.6}
+  .sent-card .hint{margin-top:18px;font-size:.78rem;color:#5b6478}
+  @media (prefers-reduced-motion:reduce){
+    .sent-overlay,.sent-overlay.show .sent-card{transition:none}
+    .sent-check circle,.sent-check path{stroke-dashoffset:0;animation:none!important}
+  }
+
 </style>
 </head>
 <body>
@@ -599,6 +628,14 @@
           <div class="tags"><span>Web app</span><span>Accounts &amp; billing</span><span>Dashboard</span><span>Chrome extension</span></div>
           <a href="#" class="btn btn-ghost magnetic" data-live="tradingbuddy">View live site →</a>
         </div>
+      </div>
+    </div>
+
+    <div class="review-wrap clipin">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"We had a great experience working with our website designer. They created a beautiful, professional website that perfectly captures the energy of our Latin American dance studio. They were responsive, easy to work with, and happy to make any changes we requested. The whole process was smooth, and we're delighted with the final result. We highly recommend their services to anyone looking for a talented and reliable web designer!"</p>
+        <div class="review-attr"><strong>Emil Bielinski</strong> · Mullingar Latin Dance <span class="gbadge">Google review</span></div>
       </div>
     </div>
   </div>
@@ -790,6 +827,17 @@
     });
   }
 
+
+  // success popup
+  const sentOv=document.getElementById('sentOverlay');let sentTimer;
+  function showSent(){
+    sentOv.classList.add('show');
+    clearTimeout(sentTimer);sentTimer=setTimeout(hideSent,5200);
+  }
+  function hideSent(){sentOv.classList.remove('show');clearTimeout(sentTimer);}
+  sentOv.addEventListener('click',hideSent);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')hideSent();});
+
   // web3forms submit
   const form=document.getElementById('quoteForm'), msg=document.getElementById('formMsg');
   form.addEventListener('submit',async e=>{
@@ -799,7 +847,7 @@
     try{
       const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(form)))});
       const data=await res.json();
-      if(data.success){msg.style.color='#34d399';msg.textContent='Got it! I\'ll be in touch shortly. 🎉';form.reset();}
+      if(data.success){msg.style.color='#34d399';msg.textContent='Got it! I\'ll be in touch shortly. 🎉';form.reset();showSent();}
       else{msg.style.color='#f87171';msg.textContent='Something went wrong, email hello@ or try again.';}
     }catch(err){msg.style.color='#f87171';msg.textContent='Network error, please try again.';}
   });
@@ -895,5 +943,18 @@
     }
   });
 </script>
+
+<div class="sent-overlay" id="sentOverlay" role="dialog" aria-modal="true" aria-label="Request sent">
+  <div class="sent-card">
+    <svg class="sent-check" viewBox="0 0 76 76" aria-hidden="true">
+      <defs><linearGradient id="sentGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6d70f6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>
+      <circle cx="38" cy="38" r="34"/>
+      <path d="M24 39.5 L34 49 L53 29"/>
+    </svg>
+    <h3>Request sent</h3>
+    <p>Grand — I'll be back to you within a day with your free homepage preview.</p>
+    <div class="hint">Click anywhere to close</div>
+  </div>
+</div>
 </body>
 </html>

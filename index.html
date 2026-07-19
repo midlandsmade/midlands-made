@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Midlands Made | Websites for Local Businesses in Mullingar & the Midlands</title>
+<title>Web Design Mullingar | €300 Websites — Midlands Made</title>
 <meta name="description" content="Websites for local businesses in Mullingar and the Irish Midlands. Free homepage preview first, then €300 flat, you own it, no monthly fees. Live in days." />
 <meta name="theme-color" content="#080b14" />
 <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -25,6 +25,7 @@
 <meta name="twitter:image" content="https://midlandsmade.ie/og.jpg" />
 <meta name="twitter:title" content="Midlands Made | Websites for Local Businesses" />
 <meta name="twitter:description" content="Free homepage preview first, then €300 flat, you own it. Websites for Mullingar & Midlands businesses." />
+<!-- TODO sameAs: add Google Business Profile URL + socials here once live/verified — never guess URLs -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -34,15 +35,62 @@
   "url": "https://midlandsmade.ie/",
   "image": "https://midlandsmade.ie/og.jpg",
   "telephone": "+353851161036",
+  "email": "midlandsmadeweb@gmail.com",
   "slogan": "Websites built locally. Made to get you more customers.",
   "description": "Midlands Made builds websites for local businesses in Mullingar and the Irish Midlands — €300 flat, no monthly fees, free homepage preview first, live in days, fully owned by the client.",
+  "sameAs": [
+    "https://midlandsmade.ie"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Noah",
+    "jobTitle": "Web designer",
+    "homeLocation": {
+      "@type": "Place",
+      "name": "Mullingar, Ireland"
+    }
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 53.52639,
+    "longitude": -7.34917
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "opens": "09:00",
+    "closes": "18:00"
+  },
   "areaServed": [
-    "Mullingar",
-    "Westmeath",
-    "Longford",
-    "Offaly",
-    "Meath",
-    "Irish Midlands"
+    {
+      "@type": "City",
+      "name": "Mullingar",
+      "sameAs": "https://en.wikipedia.org/wiki/Mullingar"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "County Westmeath",
+      "sameAs": "https://en.wikipedia.org/wiki/County_Westmeath"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "County Longford",
+      "sameAs": "https://en.wikipedia.org/wiki/County_Longford"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "County Offaly",
+      "sameAs": "https://en.wikipedia.org/wiki/County_Offaly"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "County Meath",
+      "sameAs": "https://en.wikipedia.org/wiki/County_Meath"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Irish Midlands"
+    }
   ],
   "address": {
     "@type": "PostalAddress",
@@ -138,7 +186,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 <!-- Animation engine (site works fine without these, everything guards on window.gsap) -->
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
@@ -300,6 +348,7 @@
   /* grey→white scroll statement */
   .statement{background:var(--bg2);padding:110px 0;border-bottom:1px solid var(--line)}
   .statement h2{font-family:'Poppins';font-weight:700;font-size:clamp(1.6rem,4.2vw,2.9rem);line-height:1.3;text-align:center;max-width:24ch;margin:0 auto;letter-spacing:-.01em;color:#fff}
+  .statement .fact{text-align:center;color:var(--muted);font-size:.98rem;max-width:58ch;margin:26px auto 0;line-height:1.7}
   .sw{color:rgba(255,255,255,.13);transition:color .1s linear}
 
   /* features */
@@ -357,7 +406,7 @@
   .price-top{padding:38px 40px;text-align:center;border-bottom:1px solid var(--line);background:radial-gradient(600px 200px at 50% 0,rgba(109,112,246,.14),transparent)}
   .price-top .plan{font-weight:600;color:var(--accent2);letter-spacing:.08em;text-transform:uppercase;font-size:.82rem}
   .price-top .amt{font-family:'Poppins';font-weight:800;font-size:3rem;margin:10px 0 2px;color:#fff}
-  .price-top .amt small{font-size:1.05rem;color:var(--muted);font-weight:500}
+  .price-top .amt small{font-size:1.05rem;color:var(--muted);font-weight:600}
   .price-top .sub{color:var(--muted)}
   .price-list{padding:30px 40px;display:grid;gap:13px}
   .price-list li{list-style:none;display:flex;gap:11px;align-items:flex-start;font-size:.98rem;color:#d5d8de}
@@ -496,15 +545,15 @@
     <div class="hero-vis" data-move="10" aria-hidden="true">
       <div class="win w1">
         <div class="chrome"><i></i><i></i><i></i><div class="u"></div></div>
-        <img src="work/kildare.jpg" alt="" loading="eager" />
+        <img src="work/kildare.jpg" alt="" width="1280" height="800" loading="eager" />
       </div>
       <div class="win w2">
         <div class="chrome"><i></i><i></i><i></i><div class="u">tradingbuddyapp.com</div></div>
-        <img src="work/tradingbuddy.jpg" alt="" loading="eager" />
+        <img src="work/tradingbuddy.jpg" alt="" width="1600" height="1000" loading="eager" />
       </div>
       <div class="win w3">
         <div class="chrome"><i></i><i></i><i></i><div class="u">mullingarlatindance.ie</div></div>
-        <img src="work/mullingar.jpg" alt="" loading="eager" />
+        <img src="work/mullingar.jpg" alt="" width="1600" height="1000" loading="eager" />
       </div>
     </div>
   </div>
@@ -531,6 +580,7 @@
 <section class="statement">
   <div class="wrap">
     <h2 class="reveal-text">Most people check you online before they ever walk in. I make sure what they find looks worth choosing.</h2>
+    <p class="fact">Midlands Made is a web design service in Mullingar, Co. Westmeath. A complete small-business website costs €300 once-off — no monthly fees — and is typically live within 3 days.</p>
   </div>
 </section>
 
@@ -604,7 +654,7 @@
       <div class="work-card clipin">
         <div class="browser"><i></i><i></i><i></i><div class="bar">mullingarlatindance.ie</div></div>
         <div class="shot" style="background:linear-gradient(135deg,#7a1420,#c9a24d)">
-          <img src="work/mullingar.jpg" alt="Mullingar Latin Dance website" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'" />
+          <img src="work/mullingar.jpg" alt="Mullingar Latin Dance website" width="1600" height="1000" loading="lazy" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'" />
           <div class="ph"><div class="nm">Mullingar Latin Dance</div><div class="tag">Latin dance classes</div></div>
         </div>
         <div class="work-body">
@@ -618,7 +668,7 @@
       <div class="work-card clipin">
         <div class="browser"><i></i><i></i><i></i><div class="bar">tradingbuddyapp.com</div></div>
         <div class="shot" style="background:linear-gradient(135deg,#0e1217,#3fb96a)">
-          <img src="work/tradingbuddy.jpg" alt="Trading Buddy web app" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'" />
+          <img src="work/tradingbuddy.jpg" alt="Trading Buddy web app" width="1600" height="1000" loading="lazy" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'" />
           <div class="ph"><div class="nm">Trading Buddy</div><div class="tag">Web app &amp; Chrome extension</div></div>
         </div>
         <div class="work-body">
@@ -715,6 +765,7 @@
 <footer>
   <div class="wrap">
     <p><strong style="color:#fff">Midlands Made</strong>, websites for local businesses in Mullingar &amp; across the Irish Midlands.</p>
+    <p style="margin-top:6px">Built by Noah, a web designer based in Mullingar.</p>
     <p style="margin-top:6px">Made locally. <a href="tel:+353851161036">085&nbsp;116&nbsp;1036</a> · <a href="#contact">Get a quote →</a></p>
   </div>
 </footer>
@@ -861,7 +912,7 @@
       const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(form)))});
       const data=await res.json();
       if(data.success){msg.style.color='#34d399';msg.textContent='Got it! I\'ll be in touch shortly. 🎉';form.reset();showSent();}
-      else{msg.style.color='#f87171';msg.textContent='Something went wrong, email hello@ or try again.';}
+      else{msg.style.color='#f87171';msg.textContent='Something went wrong, please try again or ring 085 116 1036.';}
     }catch(err){msg.style.color='#f87171';msg.textContent='Network error, please try again.';}
   });
 

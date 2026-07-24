@@ -359,12 +359,12 @@
   .feat .ico svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
   .feat h3{font-size:1.15rem;font-weight:600;margin-bottom:6px;color:#fff}
   .feat p{color:var(--muted);font-size:.96rem}
-  .card.feat{transition:transform .25s,box-shadow .25s,border-color .25s;counter-increment:feat;position:relative;overflow:hidden}
+  .card.feat{transition:transform 220ms cubic-bezier(.2,.8,.2,1),box-shadow .22s ease,border-color 220ms ease,background-color 220ms ease;counter-increment:feat;position:relative;overflow:hidden}
   .grid.feat{counter-reset:feat}
   .card.feat::before{content:counter(feat,decimal-leading-zero);position:absolute;top:0;right:14px;font-family:'Space Grotesk';font-weight:800;font-size:3.1rem;color:#22242c;z-index:0;transform:translateY(8px);opacity:.9;transition:transform .28s,color .28s;pointer-events:none}
-  .card.feat:hover::before{transform:translateY(-2px) scale(1.06);color:#eef0f5;opacity:1}
+  .card.feat:hover::before{transform:translateY(-2px) scale(1.06);color:#4a90ff;opacity:1}
   .card.feat>*{position:relative;z-index:1}
-  .card.feat:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:var(--line2)}
+  .card.feat:hover,.card.feat:focus-visible{transform:translateY(-3px);border-color:rgba(74,144,255,.55);background:#131927;box-shadow:0 20px 44px -26px rgba(74,144,255,.5)}
   .card.feat .ico{transition:transform .28s}
   .card.feat:hover .ico{transform:translateY(-6px) rotate(-4deg)}
 

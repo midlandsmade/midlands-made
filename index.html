@@ -227,7 +227,10 @@
   header.hide{transform:translateY(-100%)}
   header.scrolled{box-shadow:0 14px 34px -20px rgba(0,0,0,.8)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-  .logo{font-weight:800;font-size:1.25rem;display:flex;align-items:center;gap:11px;color:#fff}
+  .logo{font-size:1.2rem;display:inline-flex;align-items:baseline;color:#fff;text-transform:uppercase;letter-spacing:.05em;position:relative}
+  .logo .m1{font-weight:500;color:#aeb4c2}
+  .logo .m2{font-weight:800;color:#fff}
+  .logo::after{content:"";position:absolute;left:0;bottom:-6px;width:22px;height:2px;background:#4a90ff;border-radius:2px}
   .logo .mark{width:34px;height:34px;border-radius:9px;background:var(--grad);display:grid;place-items:center;font-family:'Space Grotesk';font-weight:800;font-size:1.05rem;color:#fff;box-shadow:0 0 16px rgba(109,112,246,.7);flex-shrink:0}
   .nav-links{display:flex;align-items:center;gap:28px}
   .nav-links a{color:var(--muted);font-weight:500;font-size:.95rem}
@@ -512,7 +515,7 @@
 
 <header id="hdr">
   <div class="wrap nav">
-    <a href="#top" class="logo"><span class="mark">M</span>Midlands&nbsp;Made</a>
+    <a href="#top" class="logo"><span class="m1">Midlands</span>&nbsp;<span class="m2">Made</span></a>
     <nav class="nav-links" id="nav">
       <a href="#what">What you get</a>
       <a href="#work">Recent work</a>

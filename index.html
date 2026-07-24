@@ -186,7 +186,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 <!-- Animation engine (site works fine without these, everything guards on window.gsap) -->
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
@@ -205,7 +205,7 @@
   html{scroll-behavior:smooth}
   html.lenis,html.lenis body{scroll-behavior:auto}
   body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
-  h1,h2,h3,.logo{font-family:'Poppins',sans-serif;letter-spacing:-.02em;line-height:1.12}
+  h1,h2,h3,.logo{font-family:'Space Grotesk',sans-serif;letter-spacing:-.02em;line-height:1.12}
   a{color:inherit;text-decoration:none}
   a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
   .wrap{width:min(1120px,92vw);margin:0 auto}
@@ -228,12 +228,12 @@
   header.scrolled{box-shadow:0 14px 34px -20px rgba(0,0,0,.8)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
   .logo{font-weight:800;font-size:1.25rem;display:flex;align-items:center;gap:11px;color:#fff}
-  .logo .mark{width:34px;height:34px;border-radius:9px;background:var(--grad);display:grid;place-items:center;font-family:'Poppins';font-weight:800;font-size:1.05rem;color:#fff;box-shadow:0 0 16px rgba(109,112,246,.7);flex-shrink:0}
+  .logo .mark{width:34px;height:34px;border-radius:9px;background:var(--grad);display:grid;place-items:center;font-family:'Space Grotesk';font-weight:800;font-size:1.05rem;color:#fff;box-shadow:0 0 16px rgba(109,112,246,.7);flex-shrink:0}
   .nav-links{display:flex;align-items:center;gap:28px}
   .nav-links a{color:var(--muted);font-weight:500;font-size:.95rem}
   .nav-links a:hover{color:#fff}
   .nav-links a.btn-primary,.nav-links a.btn-primary:hover{color:#fff}
-  .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Poppins';font-weight:600;font-size:.95rem;padding:12px 22px;border-radius:12px;border:0;cursor:pointer;transition:transform .18s,box-shadow .18s,border-color .18s,color .18s;white-space:nowrap;will-change:transform}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Space Grotesk';font-weight:600;font-size:.95rem;padding:12px 22px;border-radius:12px;border:0;cursor:pointer;transition:transform .18s,box-shadow .18s,border-color .18s,color .18s;white-space:nowrap;will-change:transform}
   .btn-primary{background:var(--grad);color:#fff;box-shadow:0 10px 26px -10px rgba(109,112,246,.75)}
   .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 34px -10px rgba(109,112,246,.85)}
   .btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line2)}
@@ -285,7 +285,7 @@
   .hero h1 .l2{display:block}
   .price-chip{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;padding:11px 24px;border:1px solid var(--line2);border-radius:12px;background:rgba(255,255,255,.02);line-height:1.25;transition:border-color .2s,transform .18s}
   .price-chip:hover{border-color:var(--accent);transform:translateY(-2px)}
-  .price-chip b{font-family:'Poppins';font-weight:700;font-size:1.02rem;color:#fff}
+  .price-chip b{font-family:'Space Grotesk';font-weight:700;font-size:1.02rem;color:#fff}
   .price-chip span{font-size:.78rem;color:var(--muted)}
   .hero-vis{position:relative;height:520px;perspective:1500px}
   .win{position:absolute;border-radius:12px;overflow:hidden;border:1px solid var(--line2);background:var(--card);box-shadow:0 50px 90px -34px rgba(0,0,0,.95);transform-style:preserve-3d}
@@ -308,7 +308,7 @@
   .fs{display:flex;gap:13px;padding:20px 22px;align-items:flex-start;border-right:1px solid var(--line)}
   .fs:last-child{border-right:0}
   .fs svg{width:21px;height:21px;stroke:var(--accent2);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:2px}
-  .fs b{display:block;font-family:'Poppins';font-weight:600;font-size:.95rem;color:#fff;margin-bottom:2px}
+  .fs b{display:block;font-family:'Space Grotesk';font-weight:600;font-size:.95rem;color:#fff;margin-bottom:2px}
   .fs span{font-size:.82rem;color:var(--muted);line-height:1.45}
   @media(max-width:980px){
     .hero-grid{grid-template-columns:1fr;gap:32px}
@@ -332,7 +332,7 @@
   .marq .track{display:flex;gap:0;width:max-content;will-change:transform;animation:marq 30s linear infinite}
   .marq:hover .track{animation-play-state:paused}
   .marq .set{display:flex;align-items:center;gap:44px;padding-right:44px}
-  .marq span{white-space:nowrap;font-family:'Poppins';font-weight:600;font-size:1rem;color:var(--muted);letter-spacing:.16em;text-transform:uppercase}
+  .marq span{white-space:nowrap;font-family:'Space Grotesk';font-weight:600;font-size:1rem;color:var(--muted);letter-spacing:.16em;text-transform:uppercase}
   .marq b{font-weight:600;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
   @keyframes marq{to{transform:translateX(-50%)}}
   @media (prefers-reduced-motion: reduce){.marq .track{animation:none}}
@@ -347,7 +347,7 @@
 
   /* grey→white scroll statement */
   .statement{background:var(--bg2);padding:110px 0;border-bottom:1px solid var(--line)}
-  .statement h2{font-family:'Poppins';font-weight:700;font-size:clamp(1.6rem,4.2vw,2.9rem);line-height:1.3;text-align:center;max-width:24ch;margin:0 auto;letter-spacing:-.01em;color:#fff}
+  .statement h2{font-family:'Space Grotesk';font-weight:700;font-size:clamp(1.6rem,4.2vw,2.9rem);line-height:1.3;text-align:center;max-width:24ch;margin:0 auto;letter-spacing:-.01em;color:#fff}
   .statement .fact{text-align:center;color:var(--muted);font-size:.98rem;max-width:58ch;margin:26px auto 0;line-height:1.7}
   .sw{color:rgba(255,255,255,.13);transition:color .1s linear}
 
@@ -361,7 +361,7 @@
   .feat p{color:var(--muted);font-size:.96rem}
   .card.feat{transition:transform .25s,box-shadow .25s,border-color .25s;counter-increment:feat;position:relative;overflow:hidden}
   .grid.feat{counter-reset:feat}
-  .card.feat::before{content:counter(feat,decimal-leading-zero);position:absolute;top:0;right:14px;font-family:'Poppins';font-weight:800;font-size:3.1rem;color:#22242c;z-index:0;transform:translateY(8px);opacity:.9;transition:transform .28s,color .28s;pointer-events:none}
+  .card.feat::before{content:counter(feat,decimal-leading-zero);position:absolute;top:0;right:14px;font-family:'Space Grotesk';font-weight:800;font-size:3.1rem;color:#22242c;z-index:0;transform:translateY(8px);opacity:.9;transition:transform .28s,color .28s;pointer-events:none}
   .card.feat:hover::before{transform:translateY(-2px) scale(1.06);color:#eef0f5;opacity:1}
   .card.feat>*{position:relative;z-index:1}
   .card.feat:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:var(--line2)}
@@ -376,7 +376,7 @@
   .step-row{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
   .step{position:relative;padding:26px;background:var(--card2);border:1px solid var(--line2);border-radius:16px;transition:transform .25s,border-color .25s}
   .step:hover{transform:translateY(-4px);border-color:#3d4150}
-  .step .n{font-family:'Poppins';font-weight:800;font-size:1.1rem;width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:var(--grad);margin-bottom:14px}
+  .step .n{font-family:'Space Grotesk';font-weight:800;font-size:1.1rem;width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:var(--grad);margin-bottom:14px}
   .step h3{font-size:1.12rem;margin-bottom:6px;color:#fff}
   .step p{color:var(--muted);font-size:.95rem}
 
@@ -390,7 +390,7 @@
   .shot{aspect-ratio:16/10;position:relative;display:grid;place-items:center;text-align:center;color:#fff;overflow:hidden}
   .shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center}
   .shot .ph{padding:24px}
-  .shot .ph .nm{font-family:'Poppins';font-weight:800;font-size:1.5rem}
+  .shot .ph .nm{font-family:'Space Grotesk';font-weight:800;font-size:1.5rem}
   .shot .ph .tag{opacity:.9;font-size:.9rem;margin-top:4px}
   .work-body{padding:22px 24px 26px}
   .work-body h3{font-size:1.25rem;font-weight:700;color:#fff}
@@ -405,7 +405,7 @@
   .price-card::after{content:'';position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--grad)}
   .price-top{padding:38px 40px;text-align:center;border-bottom:1px solid var(--line);background:radial-gradient(600px 200px at 50% 0,rgba(109,112,246,.14),transparent)}
   .price-top .plan{font-weight:600;color:var(--accent2);letter-spacing:.08em;text-transform:uppercase;font-size:.82rem}
-  .price-top .amt{font-family:'Poppins';font-weight:800;font-size:3rem;margin:10px 0 2px;color:#fff}
+  .price-top .amt{font-family:'Space Grotesk';font-weight:800;font-size:3rem;margin:10px 0 2px;color:#fff}
   .price-top .amt small{font-size:1.05rem;color:var(--muted);font-weight:600}
   .price-top .sub{color:var(--muted)}
   .price-list{padding:30px 40px;display:grid;gap:13px}
@@ -417,7 +417,7 @@
 
   /* faq */
   .faq-item{border-bottom:1px solid var(--line)}
-  .faq-q{width:100%;text-align:left;background:none;border:0;cursor:pointer;padding:22px 0;display:flex;justify-content:space-between;gap:20px;align-items:center;font-family:'Poppins';font-weight:600;font-size:1.06rem;color:var(--ink)}
+  .faq-q{width:100%;text-align:left;background:none;border:0;cursor:pointer;padding:22px 0;display:flex;justify-content:space-between;gap:20px;align-items:center;font-family:'Space Grotesk';font-weight:600;font-size:1.06rem;color:var(--ink)}
   .faq-q:hover{color:#fff}
   .faq-q .pm{flex-shrink:0;width:26px;height:26px;transition:.2s;color:var(--accent2);font-size:1.5rem;line-height:1;display:grid;place-items:center}
   .faq-a{max-height:0;overflow:hidden;transition:max-height .28s ease;color:var(--muted)}
@@ -445,7 +445,7 @@
   footer a{color:#c3c8d2}
   footer a:hover{color:#fff}
 
-  .wa-float{position:fixed;right:20px;bottom:20px;z-index:60;display:none;align-items:center;gap:9px;background:#25d366;color:#fff;font-family:'Poppins';font-weight:600;font-size:.95rem;padding:12px 18px;border-radius:100px;box-shadow:0 12px 30px -8px rgba(37,211,102,.55);transition:transform .18s,box-shadow .18s;will-change:transform}
+  .wa-float{position:fixed;right:20px;bottom:20px;z-index:60;display:none;align-items:center;gap:9px;background:#25d366;color:#fff;font-family:'Space Grotesk';font-weight:600;font-size:.95rem;padding:12px 18px;border-radius:100px;box-shadow:0 12px 30px -8px rgba(37,211,102,.55);transition:transform .18s,box-shadow .18s;will-change:transform}
   .wa-float:hover{transform:translateY(-2px);box-shadow:0 16px 34px -8px rgba(37,211,102,.7)}
   .wa-float svg{width:22px;height:22px;fill:#fff}
 
@@ -496,7 +496,7 @@
   .sent-overlay.show .sent-check circle{animation:sentDraw .55s ease-out .1s forwards}
   .sent-overlay.show .sent-check path{animation:sentDraw .35s ease-out .55s forwards}
   @keyframes sentDraw{to{stroke-dashoffset:0}}
-  .sent-card h3{font-family:'Poppins';font-size:1.5rem;margin-bottom:8px}
+  .sent-card h3{font-family:'Space Grotesk';font-size:1.5rem;margin-bottom:8px}
   .sent-card p{color:var(--muted);font-size:.96rem;line-height:1.6}
   .sent-card .hint{margin-top:18px;font-size:.78rem;color:#5b6478}
   @media (prefers-reduced-motion:reduce){
